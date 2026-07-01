@@ -1,124 +1,116 @@
-# ANVI — Website
+# ANVI — Website (v2 · "One building. One evening.")
 
-A cinematic, editorial website for **Anvi Hospitality Ltd**, built directly from the
-Anvi 2025 Brand Guidelines, the company profile, the marketing & strategy review, and the
-live menu. Static HTML/CSS/JS — no build step, no dependencies.
+A cinematic, editorial website for **Anvi Hospitality Limited** — rebuilt from the ground
+up against the full ANVI document set: the 2025 brand guidelines, company profile,
+business plan, *Brand & Strategy Brief*, *Pre-Launch Command Plan*, the Chromed design
+plans, the Rules of Engagement (per floor), and the live **ANVI & 343 MENU** workbook.
+Static HTML/CSS/JS — no build step, no dependencies.
 
-> **Anvi** — from the Sanskrit for *“connected”; one who brings people together.*
+> **Anvi** — from the Sanskrit for *"connected"; one who brings people together.*
 > Where cultures connect.
+
+The design concept: **the site is an evening.** The homepage descends from ivory noon
+into kohl night as you scroll — arrive (manifesto), ascend (a pinned three-floor journey:
+dining room → lounge → terrace), dine (the kitchen & signatures), rise (Anvi Social).
 
 ---
 
 ## Quick start
 
-It's a plain static site. Either:
-
 ```bash
-# Option A — just open it
-open index.html
-
-# Option B — serve it (recommended; needed for fonts/SVG over http)
 cd anvi-website
-python3 -m http.server 8712
-# → http://localhost:8712
+python3 -m http.server 8712      # → http://localhost:8712
+# or just double-click "Open ANVI Website.command"
 ```
 
 Deploy by uploading the folder to any static host (Netlify, Vercel, Cloudflare Pages,
-GitHub Pages, S3, or a normal web server).
+GitHub Pages, S3). v1 of the site is preserved in git history (`git log`).
 
 ---
 
 ## Pages
 
-| File | Page | Purpose |
-|------|------|---------|
-| `index.html` | **Home** | Hero, brand statement, the three floors, signatures, Anvi Social teaser, activations, gallery, guest-list capture |
-| `lagos.html` | **Anvi Lagos** | The dining experience — ground + first floor, the kitchen, private dining, signature dishes |
-| `social.html` | **Anvi Social** | The rooftop terrace — events, nightlife, the social calendar, enquiry |
-| `menu.html` | **Menu** | The full Indo-Asian menu (123 dishes) with North Indian / Pan-Asian filtering; signatures marked ✦ |
-| `about.html` | **Story** | The name, vision, mission, values, design philosophy, the peacock |
-| `reservations.html` | **Visit** | Reserve a table · event enquiry · join the guest list · contact · hours · map |
-| `coming-soon.html` | **Coming Soon** | A standalone luxury pre-launch landing — cinematic backdrop, live countdown, guest-list capture. Use this as the public site during the tease phase (rename to `index.html`, or point the domain root here), then switch to the full site at opening. Edit the opening date in the inline `<script>` (`TARGET`). |
+| File | Page | Notes |
+|------|------|-------|
+| `index.html` | **Home** | Ken-burns hero + live T-minus counter, manifesto, **The Ascent** (scroll-pinned floor journey with elevator rail), stats band, kitchen feature, draggable signatures shelf, programme, gallery + lightbox, Founding 100 capture |
+| `lagos.html` | **Dine** | The Dining Room (72 covers), The Lounge & Bar (18+), the two private rooms (20 + 22 → 42 combined), the four kitchen stations, dining programme |
+| `social.html` | **Social** | The glasshouse terrace (80–90 guests) — bar, DJ booth + LED stage, VIP booths, event formats, terrace programme, host enquiry |
+| `menu.html` | **Menu** | **All 150 dishes from the ANVI MENU sheet**, 12 chapters with a scrollspy rail, live search, cuisine / vegetarian / signature filters, print stylesheet |
+| `about.html` | **Story** | The name, vision & mission (verbatim from the company profile), five values, design philosophy, the peacock, road-to-opening timeline |
+| `reservations.html` | **Visit** | Three journeys in one page (Reserve / Host / Founding 100) with deep links (`#reserve` `#host` `#list`), house notes from the Rules of Engagement, contact & hours |
+| `coming-soon.html` | **Take a Peek** | The pre-launch landing the Digitol plan calls for: an interactive **peephole** (mirrors the covered-storefront tease), live countdown, **email + WhatsApp capture**. Point the storefront QR here. |
+| `404.html` | Not found | "This table doesn't exist." |
 
 ---
 
-## Design system → straight from the brand guidelines
+## What's wired in from the strategy docs
 
-**Fonts** (embedded in `assets/fonts/`, the actual brand files):
-- **Eternal Compressed** → headings & display (the big serif)
-- **Silk Serif Text** → body copy
-- **Pitch Sans Bold** → sub-headings (uppercase)
-- **Pitch Sans Medium** → accents / kickers (uppercase)
+- **Soft launch: mid-August 2026.** All countdowns target `2026-08-15 18:00 WAT` —
+  change `data-count="2026-08-15"` (index, reservations, coming-soon) when the date locks.
+- **The Founding 100** — the pre-launch waitlist capture (email **and WhatsApp**, not just a
+  follow) appears on the home page, the visit page and the peek page. This is the CRM spine
+  the strategy review and the Digitol agenda both prioritise.
+- **Two brands, one destination** — Anvi Lagos and Anvi Social have distinct art direction
+  (day/cream vs night/ink) and separate booking journeys, cross-promoted "dine downstairs,
+  host upstairs".
+- **Real numbers throughout** — 72 covers, PDRs of 20 + 22 (42 combined), 80–90 on the
+  terrace, 650 sq ft kitchen, four stations — all from the Chromed plans / Master Brain.
+- **House notes** — dress code, 18+ floors, smoking, photography, outside food — condensed
+  from the three Rules of Engagement documents.
+- **Footer legal** — Anvi Hospitality Limited · RC 8404218.
 
-**Colour palette** (CSS tokens in `css/anvi.css`):
-`Saffron Burgundy #51241B` · `Ivory Stone White #E0DAD0` · `Warm Sandstone Brown #BA9477` ·
-`Rich Soil Brown #5D4133` · `Neem Leaf Green #3F3E2A` · `Sandalwood Dust Beige #E2CEC0` ·
-`Soft Rose Peach #D48E61` · `Kohl Night Black #231F20`.
-
-**Logo & peacock**: converted from the vector brand package to SVG (`assets/logo/`),
-with white / burgundy / peach variants for light and dark backgrounds.
-
-**Patterns**: the hand-drawn checkerboard motif from the brand package is used as a
-subtle section divider (`assets/img/pattern-check.png`).
-
----
-
-## How the marketing strategy is built in
-
-Drawn from the *Marketing & Strategy Review* (the "five moves that matter"):
-
-- **Two brands, one destination** — Anvi Lagos (dining) and Anvi Social (events) are
-  distinct sections, cross-promoted throughout (*"dine downstairs, host upstairs"*).
-- **Experience first, cuisine second** — the whole site leads with atmosphere and story.
-- **Contact-capturing guest list** — the pre-launch waitlist collects **email + WhatsApp**
-  (not just social follows) on the home page and `reservations.html#waitlist`, feeding the
-  CRM spine the strategy calls for.
-- **Two booking journeys** — separate **reservation** (dining) and **event enquiry** flows.
-- **Activations as engines** — Chef's Table, Guest Chef Series, Sound Sessions, Founder's
-  Club, etc. are surfaced as a programmed calendar.
-- **Discovery ready** — clean semantic HTML, per-page `<title>`/meta descriptions and
-  Open Graph tags, a WhatsApp click-to-chat, and an embedded Google map.
+### A note on "343 Degree North"
+The menu workbook and the Pre-Launch Command Plan reference **343 Degree North** as a
+sub-brand with its own 126-item menu (its fit-out programme dates to 2020). It is *not*
+presented on this site, because the public-facing documents (Rules of Engagement, Brand &
+Strategy Brief) consistently name the three ANVI floors as Anvi Restaurant / Anvi Lounge /
+**Anvi Social**. If 343°N should appear on the site (as the terrace's own identity, a
+sister venue, or a second menu), say the word and it can be added as a page or a menu tab —
+the data is already extracted.
 
 ---
 
-## ⚠️ Before you go live — please action these
+## Design system (css/anvi.css)
 
-1. **Photography.** The images in `assets/img/` are the exact shots used in the Anvi brand
-   guidelines (by ETHR Design) — they perfectly match the intended art direction and are used
-   here as *placeholders*. They were embedded in the guidelines at low resolution, so they've
-   been **AI-upscaled (super-resolution) to ~1500px and saved as optimised JPEGs** for crisp
-   display; dish labels have been matched to what each photo actually shows. Still: **confirm
-   you have rights to them, or swap in Anvi's own professional shoot** before public launch.
-   Filenames are semantic (`food-*`, `int-*`, `social-*`, `drink-*`) so replacement is a drop-in.
-2. **Wire up the forms.** All three forms (reserve / enquiry / guest list) currently run a
-   front-end demo (validate → success message; submissions logged to the console). Point
-   them at a real endpoint — Formspree, a CRM, or a WhatsApp/email webhook — in
-   `js/anvi.js` (`form[data-anvi-form]` handler). This is the CRM capture the strategy needs.
-3. **Confirm contact details.** Phone `+234 811 043 8371` and address
-   `1613B Adewunmi Ogunsanya Ave, Victoria Island` are from the company profile.
-   Instagram handles `@anvilagos` / `@anvisocial` are from the strategy doc. Add a public
-   reservations email and confirm the domain/handles.
-4. **Opening date & hours.** Currently "Opening 2026" and *Tue–Sun, 4pm till late* (from the
-   brand collateral). Update to the confirmed soft-launch date and trading hours.
-5. **Menu pricing.** Dish names and descriptions are live; prices are intentionally omitted
-   (the menu is marked "a living menu"). Add pricing when finalised.
-6. **Analytics & Google Business Profile.** Add your analytics snippet and make sure the GBP
-   is set up — the strategy flags reviews/Google as where Lagos diners "confirm" a venue.
+- **Fonts** (embedded, the actual brand files): Eternal Compressed (display),
+  Silk Serif Text (body), Pitch Sans Medium/Bold (UI).
+- **Palette tokens**: Saffron Burgundy `#51241B` · Ivory Stone `#E0DAD0` · Sandalwood
+  `#E2CEC0` · Warm Sandstone `#BA9477` · Rich Soil `#5D4133` · Neem `#3F3E2A` ·
+  Soft Rose Peach `#D48E61` · Kohl `#231F20` (+ deepened night tones).
+- **Scenes**: sections declare their hour of the evening (`t-ivory`, `t-sand`,
+  `t-oxblood`, `t-soil`, `t-night`) and every component re-themes via CSS variables.
+- **Motifs**: pure-CSS checkerboard hairlines (`repeating-conic-gradient` — no image),
+  the peacock watermark, a hand-drawn "peacock eye" SVG (veil + peek page), film-grain
+  overlay on night scenes (inline SVG turbulence).
+- **Motion**: entrance veil (once per session), masked word-reveals, clip-path image
+  reveals, parallax frames, the pinned Ascent, marquees, magnetic buttons, view-transition
+  page fades. Everything respects `prefers-reduced-motion`; the site is fully readable
+  with JavaScript disabled.
+
+Menu page content is generated from `07 Operations/MENU/ANVI & 343 MENU.xlsx`
+(ANVI MENU sheet). Signatures = dishes named *Anvi* / *Signature* / *343*;
+vegetarian tags come from the workbook's own subcategories.
 
 ---
 
-## Structure
+## ⚠️ Before you go live
 
-```
-anvi-website/
-├── index.html  lagos.html  social.html  menu.html  about.html  reservations.html
-├── css/anvi.css          # design system + all components
-├── js/anvi.js            # nav, scroll reveals, menu filter, forms
-└── assets/
-    ├── fonts/            # the four brand typefaces
-    ├── logo/             # ANVI wordmark + peacock (SVG, colour variants)
-    └── img/              # photography + brand pattern
-```
+1. **Photography** — images are the AI-upscaled brand-guideline shots (ETHR Design),
+   used as placeholders. Confirm rights or swap in the real shoot (filenames are semantic:
+   `food-*`, `int-*`, `social-*`, `drink-*`).
+2. **Wire the forms** — all four forms (reserve / host / Founding 100 / peek) validate and
+   show success states but only log to the console. Point `form[data-anvi]` in `js/anvi.js`
+   at a real endpoint (Formspree / CRM webhook / WATI) — this is the guest-data capture the
+   Digitol meeting is about.
+3. **Lock the date** — update the three `data-count` attributes and the "mid-August" copy
+   when the soft-launch date is confirmed.
+4. **Confirm contact & handles** — phone `+234 811 043 8371`, address
+   `1613B Adewunmi Ogunsanya Ave`, `@anvilagos` / `@anvisocial`, and add the public
+   reservations email + domain (then fill `sitemap.xml` / `robots.txt`).
+5. **Hours & pricing** — trading hours and menu prices are deliberately absent
+   ("a living menu"); add at opening.
+6. **Analytics + Google Business Profile** — add your snippet; the strategy flags Google
+   as where Lagos diners *confirm* a venue.
 
-Brand identity by **ETHR Design**. Website built to that identity.
-© Anvi Hospitality Ltd · *Where Cultures Connect.*
+Brand identity by **ETHR Design** · plans by **Chromed** · site built to that identity.
+© Anvi Hospitality Limited · RC 8404218 · *Where cultures connect.*

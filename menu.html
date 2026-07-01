@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Menu — Anvi · Refined Indo-Asian Dining · Lagos</title>
-<meta name="description" content="The Anvi menu: a curated journey through North Indian and Pan-Asian cuisine — clay-oven kebabs, slow-built curries, dim sum, wok, biryani and signature desserts.">
-<meta property="og:title" content="The Menu — Anvi">
+<title>The Menu — 150 Dishes Across Two Traditions · ANVI, Lagos</title>
+<meta name="description" content="The ANVI menu — 150 dishes across North Indian and Pan-Asian traditions: clay-oven kebabs, slow-built curries, dim sum folded to order, wok mains, biryani and signature desserts.">
+<meta property="og:title" content="The Menu — ANVI">
+<meta property="og:description" content="150 dishes, two great traditions, one kitchen. North Indian &amp; Pan-Asian, made for sharing.">
+<meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -18,304 +20,439 @@
 <meta name="theme-color" content="#51241B">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=2">
+<link rel="stylesheet" href="css/anvi.css?v=3">
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="announce">A living menu · dishes and pricing evolve with the season &nbsp;—&nbsp; <a href="reservations.html#reserve">Reserve a table</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="pgbar" aria-hidden="true"></div>
+<div class="ann">A living menu · dishes evolve with the season &nbsp;—&nbsp; <a href="reservations.html#reserve">Reserve a table</a></div>
 
-<header class="site-header">
-  <a class="brand-mark" href="index.html" aria-label="ANVI — home"><img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33"></a>
-  <nav class="nav" aria-label="Primary">
-    <a class="navlink" href="lagos.html">Dining</a>
-    <a class="navlink" href="social.html">Social</a>
-    <a class="navlink" href="menu.html" aria-current="page">Menu</a>
-    <a class="navlink" href="about.html">Story</a>
-    <a class="navlink" href="reservations.html">Visit</a>
-    <div class="nav-cta"><a class="btn btn--gold" href="reservations.html#reserve">Reserve</a></div>
+<header class="hd hd--dark" data-over-hero>
+  <a class="hd__brand" href="index.html" aria-label="ANVI — home">
+    <img class="lg-light" src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33">
+    <img class="lg-dark" src="assets/logo/anvi-wordmark-burgundy.svg" alt="ANVI" width="120" height="33">
+  </a>
+  <nav class="hd__nav" aria-label="Primary">
+    <a class="hd__link" href="lagos.html">Dine</a>
+    <a class="hd__link" href="social.html">Social</a>
+    <a class="hd__link" href="menu.html" aria-current="page">Menu</a>
+    <a class="hd__link" href="about.html">Story</a>
+    <a class="hd__link" href="reservations.html">Visit</a>
+    <a class="btn btn--acc hd__cta" href="reservations.html#reserve">Reserve</a>
   </nav>
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 
 <!-- HERO -->
-<section class="pagehero" id="main" style="min-height:60svh">
-  <div class="pagehero__media"><img src="assets/img/food-biryani.jpg" alt="A signature Anvi dish" fetchpriority="high"></div>
-  <div class="pagehero__inner wrap-wide">
-    <p class="kicker" data-reveal>The Menu</p>
-    <h1 class="d-xl mt-1" data-reveal data-reveal-delay="1">A curated journey.</h1>
+<section class="phero phero--short grain" id="main">
+  <div class="phero__media"><img src="assets/img/food-biryani.jpg" alt="A saffron biryani, crust broken at the table" fetchpriority="high" width="1500" height="1000"></div>
+  <div class="phero__body">
+    <p class="k k--rule" style="color:var(--peach)" data-rv>The menu · a living document</p>
+    <h1 class="d2 mt-1" data-split>Two traditions. <span class="ital" style="color:var(--peach)">150 dishes.</span></h1>
+    <p class="phero__meta" data-rv style="--d:2">
+      <span><b>I</b> — North Indian</span>
+      <span><b>II</b> — Pan-Asian</span>
+      <span>✦ house signatures · <span style="color:#9fc492">●</span> vegetarian</span>
+    </p>
   </div>
 </section>
 
-<!-- MENU -->
-<section class="section on-cream">
-  <div class="wrap" id="menu-top">
-    <div class="center" style="max-width:60ch;margin-inline:auto">
-      <p class="muted">Our kitchen moves between two great traditions — the clay ovens and slow curries of North India, and the dim sum, wok and robata of Pan-Asia. Dishes are made for sharing. Look for the <span style="color:var(--peach)">&#10022;</span> — those are the house signatures.</p>
-    </div>
-    <div class="menu-toolbar mt-3">
-      <div class="menu-tabs">
-        <button class="menu-tab active" data-target="all">All</button>
-        <button class="menu-tab" data-target="indian">North Indian</button>
-        <button class="menu-tab" data-target="asian">Pan-Asian</button>
+<!-- MENU BOOK -->
+<section class="sec sec--flush-t t-ivory" style="padding-top:0">
+  <div class="mtool">
+    <div class="wrap-x">
+      <div class="mtool__in">
+        <div class="chips" role="group" aria-label="Filter by cuisine">
+          <button class="chip on" data-cuisine="all">All</button>
+          <button class="chip" data-cuisine="indian">North Indian</button>
+          <button class="chip" data-cuisine="asian">Pan-Asian</button>
+        </div>
+        <div class="chips" role="group" aria-label="Filter by preference">
+          <button class="chip chip--dot" data-veg aria-pressed="false">Vegetarian</button>
+          <button class="chip" data-sig aria-pressed="false">✦ Signatures</button>
+        </div>
+        <div class="mtool__search" role="search">
+          <input id="msearch" type="search" placeholder="Search — a dish, an ingredient, a craving…" aria-label="Search the menu">
+        </div>
+        <p class="mcount" id="mcount" aria-live="polite"></p>
       </div>
-      <div class="menu-search" role="search">
-        <input id="menu-search" type="search" placeholder="Search the menu — a dish, an ingredient…" aria-label="Search the menu">
-      </div>
-      <p class="menu-count" id="menu-count" aria-live="polite"></p>
     </div>
+  </div>
 
-    <div id="menu-empty" class="menu-empty hidden">
-      <p class="d-sm" style="font-family:var(--f-display);color:var(--burgundy)">Nothing on the pass by that name.</p>
-      <p class="muted mt-1" style="margin-inline:auto">Try another ingredient — or clear the search and browse the full menu.</p>
-      <button class="menu-tab" id="menu-clear" style="margin-top:1.5rem">Clear search</button>
-    </div>
+  <div class="wrap-x mt-3">
+    <div class="book" data-book>
+      <aside class="book__rail" aria-label="Menu chapters">
+        <nav>
+          <a href="#m-salads"><span>Salads</span><span class="c">4</span></a>
+          <a href="#m-starters"><span>Starters</span><span class="c">6</span></a>
+          <a href="#m-kebabs"><span>From the Clay Oven — Kebabs</span><span class="c">23</span></a>
+          <a href="#m-curries"><span>Curries &amp; Mains</span><span class="c">15</span></a>
+          <a href="#m-breads"><span>Dal, Breads &amp; Rice</span><span class="c">20</span></a>
+          <a href="#m-desserts"><span>Desserts</span><span class="c">7</span></a>
+          <a href="#m-soups"><span>Soups</span><span class="c">4</span></a>
+          <a href="#m-cold"><span>Salads &amp; Cold Plates</span><span class="c">5</span></a>
+          <a href="#m-small"><span>Small Plates</span><span class="c">19</span></a>
+          <a href="#m-dimsum"><span>Dim Sum</span><span class="c">12</span></a>
+          <a href="#m-wok"><span>Wok &amp; Mains</span><span class="c">24</span></a>
+          <a href="#m-noodles"><span>Noodles &amp; Rice</span><span class="c">11</span></a>
+        </nav>
+        <p class="dim mt-2" style="font-size:.78rem;max-width:24ch">A living menu — dishes evolve with the season; pricing follows at opening.</p>
+      </aside>
+      <div class="book__pages">
+        <div id="mempty" class="mempty hide">
+          <p class="d4" style="color:var(--burgundy)">Nothing on the pass by that name.</p>
+          <p class="dim mt-1">Try another ingredient — or clear everything and browse.</p>
+          <button class="chip mt-2" id="mclear">Clear search &amp; filters</button>
+        </div>
 
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Soups</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Lobster Bisque</div><div class="mi-desc">Classic creamy, smooth and highly seasoned soup made from lobster.</div></div>
-<div class="menu-item"><div class="mi-name">Sweet Corn Crab</div><div class="mi-desc">Crab simmered with soft, tender cream corn.</div></div>
-<div class="menu-item"><div class="mi-name">Hot &amp; Sour Chicken</div><div class="mi-desc">The regional classic of Beijing and Sichuan.</div></div>
-<div class="menu-item"><div class="mi-name">Manchow Chicken</div><div class="mi-desc">Spicy broth with chicken and crispy noodles.</div></div>
-<div class="menu-item"><div class="mi-name">Cream of Mushroom</div><div class="mi-desc">A traditional cream soup flavoured with mushroom.</div></div>
-<div class="menu-item"><div class="mi-name">Roasted Tomato Chilli</div><div class="mi-desc">Garden-fresh tomatoes with roasted cumin and select spice.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Salads</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Watermelon &amp; Feta</div><div class="mi-desc">Fresh watermelon, feta and mint, balsamic glaze.</div></div>
-<div class="menu-item"><div class="mi-name">Rocca &amp; Beetroot</div><div class="mi-desc">Rocca, beetroot and peaches in a balsamic dressing.</div></div>
-<div class="menu-item"><div class="mi-name">Spicy Chicken Caesar</div><div class="mi-desc">A classic Caesar with an Indian touch.</div></div>
-<div class="menu-item"><div class="mi-name">Hummus with Naan</div><div class="mi-desc">Chickpea, sesame and lemon dip, warm naan.</div></div>
-<div class="menu-item"><div class="mi-name">Green Salad</div><div class="mi-desc">Tomato, carrot, cucumber, beetroot and onion on lettuce.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Starters</h3>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Anvi Prawns</div><div class="mi-desc">Prawns &amp; green chillies, ginger, garlic and hot spices, tossed in a homemade sauce with curry leaves.</div></div>
-<div class="menu-item"><div class="mi-name">Salt &amp; Pepper Calamari</div><div class="mi-desc">Batter-fried cuttlefish tossed in herbs and spices.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Lollipop</div><div class="mi-desc">Crispy battered chicken with schezwan sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Rock Prawns</div><div class="mi-desc">Battered rock shrimp, tangy-spicy mayo.</div></div>
-<div class="menu-item"><div class="mi-name">Crab Cakes</div><div class="mi-desc">Grilled cakes of crab, shrimp and green onion, chef’s sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Masala Roomali</div><div class="mi-desc">Crisp roomali, tangy onion-tomato-cucumber chaat.</div></div>
-<div class="menu-item"><div class="mi-name">Cheese Stuffed Mushroom</div><div class="mi-desc">Mushrooms stuffed with cheese and herbs.</div></div>
-<div class="menu-item"><div class="mi-name">Fish Koliwada</div><div class="mi-desc">Fish marinated in a thick chilli batter, fried.</div></div>
-<div class="menu-item"><div class="mi-name">Cracking Spinach</div><div class="mi-desc">Shredded spinach, deep-fried crisp, garlic and spice.</div></div>
-<div class="menu-item"><div class="mi-name">Samosa (Veg)</div><div class="mi-desc">Spiced potato or cheese, deep-fried.</div></div>
-<div class="menu-item"><div class="mi-name">Mixed Grill Platter</div><div class="mi-desc">A selection of signature chicken, mutton, fish and prawn kebabs.</div></div>
-<div class="menu-item"><div class="mi-name">Mixed Veg Kebab Platter</div><div class="mi-desc">Mushroom, vegetable and paneer kebabs to share.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">From the Clay Oven — Kebabs</h3>
-  <div class="sub">Vegetarian</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Paneer Tikka</div><div class="mi-desc">Cottage cheese and peppers, mildly spiced and barbecued.</div></div>
-<div class="menu-item"><div class="mi-name">Zafrani Aloo Gobi</div><div class="mi-desc">Saffron-spiced baby potato and floret, clay oven.</div></div>
-<div class="menu-item"><div class="mi-name">Hara Bhara Kebab</div><div class="mi-desc">A vegetarian delight of spinach and pea.</div></div>
-<div class="menu-item"><div class="mi-name">Veg Malai Seekh</div><div class="mi-desc">Minced vegetables, cheese and select spices.</div></div>
-</div>
-  <div class="sub">Chicken</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Chicken Tikka</div><div class="mi-desc">Tender chicken in yoghurt and spices, tandoor-grilled.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Malai Tikka</div><div class="mi-desc">Boneless chicken, cream and cheese, chargrilled.</div></div>
-<div class="menu-item"><div class="mi-name">Kalmi Kebab</div><div class="mi-desc">Drumsticks in ginger, garlic and cream, butter sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Pahadi Kebab</div><div class="mi-desc">Mint-flavoured boneless cubes from the clay oven.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken &amp; Cheese Seekh</div><div class="mi-desc">Chicken mince and extra cheese, select spices.</div></div>
-<div class="menu-item"><div class="mi-name">Half Tandoori</div><div class="mi-desc">Chicken in yoghurt and spices, grilled in the clay oven.</div></div>
-</div>
-  <div class="sub">Mutton</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">24K Raan Peshawari</div><div class="mi-desc">Gold-coated tender mutton leg, marinated and barbecued (35 mins).</div></div>
-<div class="menu-item"><div class="mi-name">Mutton Boti Kebab</div><div class="mi-desc">Juicy mutton in ginger, garlic and cinnamon, clay oven.</div></div>
-<div class="menu-item"><div class="mi-name">Mutton Seekh Kebab</div><div class="mi-desc">Lean mutton mince and select spices, grilled.</div></div>
-</div>
-  <div class="sub">Seafood</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Lobster Angara</div><div class="mi-desc">Fresh lobster in a fiery masala, clay oven.</div></div>
-<div class="menu-item"><div class="mi-name">Tandoori Prawns</div><div class="mi-desc">Jumbo prawns, spiced and cooked in the clay oven.</div></div>
-<div class="menu-item"><div class="mi-name">Lasooni Prawns</div><div class="mi-desc">Prawns with chef’s spices, predominant in garlic.</div></div>
-<div class="menu-item"><div class="mi-name">Fish Zafrani Tikka</div><div class="mi-desc">Saffron and cashew-flavoured fish tikka.</div></div>
-<div class="menu-item"><div class="mi-name">Fish Ajwain Tikka</div><div class="mi-desc">Boneless fish, cajun seed, yoghurt and spice.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Mains</h3>
-  <div class="sub">Vegetarian</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Paneer Tikka Masala</div><div class="mi-desc">Grilled cottage cheese, pepper, tomato and onion, spicy gravy.</div></div>
-<div class="menu-item"><div class="mi-name">Palak Paneer</div><div class="mi-desc">Cottage cheese in a creamy spinach gravy.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Paneer</div><div class="mi-desc">A fiery delicacy of cottage cheese, green chilli and pepper.</div></div>
-<div class="menu-item"><div class="mi-name">Paneer Kadhai</div><div class="mi-desc">Chilli-hot, semi-dry, colourful with bell pepper.</div></div>
-<div class="menu-item"><div class="mi-name">Veg Manchurian</div><div class="mi-desc">Vegetables in a medium-spicy soya sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Vegetable Kolhapuri</div><div class="mi-desc">A spicy mixed-vegetable blend.</div></div>
-</div>
-  <div class="sub">Chicken</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Butter Chicken</div><div class="mi-desc">Shredded tandoori chicken in rich tomato butter, fenugreek.</div></div>
-<div class="menu-item signature"><div class="mi-name">Chicken 343</div><div class="mi-desc">Boneless chicken and green chillies, ginger-garlic, homemade sauce, curry leaf.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Tikka Masala</div><div class="mi-desc">Chicken tikka in red tomato and onion gravy.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Chicken</div><div class="mi-desc">Boneless chicken, green chilli and pepper — fiery.</div></div>
-<div class="menu-item"><div class="mi-name">Kung Pao Chicken</div><div class="mi-desc">Stir-fried chicken, peanut, vegetable and chilli.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken in Black Pepper Sauce</div><div class="mi-desc">Boneless chicken in our signature black pepper sauce.</div></div>
-</div>
-  <div class="sub">Mutton &amp; Lamb</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Mutton Roganjosh</div><div class="mi-desc">The Kashmiri signature — fennel, ginger and a striking red hue.</div></div>
-<div class="menu-item"><div class="mi-name">Mutton Korma</div><div class="mi-desc">Mutton in a cashew, cream and saffron gravy.</div></div>
-<div class="menu-item"><div class="mi-name">Mutton Ra-ra</div><div class="mi-desc">Mutton and tender mince in a mouth-watering preparation.</div></div>
-<div class="menu-item"><div class="mi-name">Mongolian Lamb</div><div class="mi-desc">Stir-fried lamb, sweet and savoury sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Grilled Lamb Chops</div><div class="mi-desc">Four lamb chops, grilled, with mashed potato.</div></div>
-<div class="menu-item"><div class="mi-name">Crispy Lamb</div><div class="mi-desc">Crispy strips with cumin, green chilli and onion.</div></div>
-</div>
-  <div class="sub">Seafood</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Signature Prawn Malai Curry</div><div class="mi-desc">Prawns in our signature spiced coconut curry.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Prawns</div><div class="mi-desc">Prawns with green chilli and pepper — fiery.</div></div>
-<div class="menu-item"><div class="mi-name">Szechuan Prawns</div><div class="mi-desc">Prawns tossed in a spicy red Szechuan sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Lobster Masala</div><div class="mi-desc">Lobster in an onion and red-chilli masala.</div></div>
-<div class="menu-item"><div class="mi-name">Crispy Fish in Black Bean</div><div class="mi-desc">Batter-fried fish cubes in black bean sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Fish Tawa Masala</div><div class="mi-desc">Fish in onion, tomato and a tempered spicy gravy.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Dal, Rice &amp; Breads</h3>
-  <div class="sub">Dal</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Dal Makhani</div><div class="mi-desc">Black lentil and kidney bean, butter and a hint of ginger.</div></div>
-<div class="menu-item"><div class="mi-name">Ghee Dal Tadka</div><div class="mi-desc">Yellow lentil tempered with cumin and chilli.</div></div>
-<div class="menu-item"><div class="mi-name">Rajma</div><div class="mi-desc">Red kidney beans with onion, tomato and spice.</div></div>
-</div>
-  <div class="sub">Biryani &amp; Rice</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Lobster Biryani</div><div class="mi-desc">Saffron basmati with lobster, cooked in the traditional style.</div></div>
-<div class="menu-item"><div class="mi-name">Mutton Biryani</div><div class="mi-desc">Saffron basmati with succulent lamb.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Biryani</div><div class="mi-desc">Saffron basmati with succulent chicken.</div></div>
-<div class="menu-item"><div class="mi-name">Jeera Rice</div><div class="mi-desc">Basmati with cardamom, cinnamon, clove, bay and cumin.</div></div>
-<div class="menu-item"><div class="mi-name">Jollof Rice</div><div class="mi-desc">A Lagos table essential.</div></div>
-</div>
-  <div class="sub">From the Tandoor — Breads</div>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Assorted Bread Basket</div><div class="mi-desc">Plain, ajwain &amp; pudina roti, paratha, kulcha &amp; butter naan.</div></div>
-<div class="menu-item"><div class="mi-name">Garlic Cheese Naan</div><div class="mi-desc">Naan with butter, garlic and cheese.</div></div>
-<div class="menu-item"><div class="mi-name">Cheese Kulcha</div><div class="mi-desc">Kulcha stuffed with cheese.</div></div>
-<div class="menu-item"><div class="mi-name">Butter Naan</div><div class="mi-desc">Indian flatbread with butter.</div></div>
-<div class="menu-item"><div class="mi-name">Roomali</div><div class="mi-desc">Hand-tossed, paper-thin flatbread.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="indian">
-  <h3 class="display">Desserts</h3>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Signature Baked Yogurt</div><div class="mi-desc">Our signature — traditionally Indian with a twist, strawberry compote.</div></div>
-<div class="menu-item"><div class="mi-name">Gulab Jamun</div><div class="mi-desc">Fried milk-solid dumplings in an aromatic cardamom-rose syrup.</div></div>
-<div class="menu-item"><div class="mi-name">Ras Malai</div><div class="mi-desc">Cottage-cheese dumplings in sweet, cardamom-scented milk.</div></div>
-<div class="menu-item"><div class="mi-name">Sizzling Brownie &amp; Ice Cream</div><div class="mi-desc">Homemade brownie, chocolate and caramel, vanilla ice cream.</div></div>
-<div class="menu-item"><div class="mi-name">Carrot Halwa</div><div class="mi-desc">Fresh carrot, milk, sugar, ghee and nuts.</div></div>
-<div class="menu-item"><div class="mi-name">Pain Perdu</div><div class="mi-desc">French toast, chocolate and maple, ice cream and fruit.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="asian">
-  <h3 class="display">Salads &amp; Cold Plates</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Salmon Tartare</div><div class="mi-desc">Delicate, clean and citrus-bright.</div></div>
-<div class="menu-item"><div class="mi-name">Avocado Carpaccio</div><div class="mi-desc">Thinly layered avocado, dressed.</div></div>
-<div class="menu-item"><div class="mi-name">Smoked Chicken &amp; Avocado Salad</div><div class="mi-desc">Smoked chicken, avocado and leaves.</div></div>
-<div class="menu-item"><div class="mi-name">Silken Tofu</div><div class="mi-desc">Silky tofu, savoury dressing.</div></div>
-<div class="menu-item"><div class="mi-name">Anvi House Salad</div><div class="mi-desc">The house bowl.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="asian">
-  <h3 class="display">Small Plates</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Shrimp Tempura</div><div class="mi-desc">Light, crisp battered shrimp.</div></div>
-<div class="menu-item"><div class="mi-name">Tom Yum Prawns</div><div class="mi-desc">Prawns in a hot-and-sour Thai broth.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Yakitori</div><div class="mi-desc">Grilled skewers, tare glaze.</div></div>
-<div class="menu-item"><div class="mi-name">Salt &amp; Pepper Prawns</div><div class="mi-desc">Wok-tossed, salt and pepper.</div></div>
-<div class="menu-item"><div class="mi-name">Thai Chilli Basil Chicken</div><div class="mi-desc">Chicken with chilli and holy basil.</div></div>
-<div class="menu-item"><div class="mi-name">Burnt Garlic Mushroom</div><div class="mi-desc">Mushroom, burnt garlic, soy.</div></div>
-<div class="menu-item"><div class="mi-name">Barbeque Wings</div><div class="mi-desc">Sticky, charred wings.</div></div>
-<div class="menu-item"><div class="mi-name">Edamame</div><div class="mi-desc">Steamed and salted.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="asian">
-  <h3 class="display">Dim Sum</h3>
-  <div class="sub">Vegetarian</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Truffle Edamame Dumpling</div><div class="mi-desc">Edamame and truffle, folded to order.</div></div>
-<div class="menu-item"><div class="mi-name">Spicy Veg Bao</div><div class="mi-desc">Fluffy bao, spiced vegetable filling.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Corn &amp; Water Chestnut Dumpling</div><div class="mi-desc">Sweet corn, water chestnut, chilli.</div></div>
-</div>
-  <div class="sub">Non-Vegetarian</div>
-<div class="menu-items">
-<div class="menu-item signature"><div class="mi-name">Char Siu Chicken Dumpling</div><div class="mi-desc">Barbecue-glazed chicken dumpling.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken &amp; Prawn Shumai</div><div class="mi-desc">Open-topped chicken and prawn.</div></div>
-<div class="menu-item"><div class="mi-name">Har Gau</div><div class="mi-desc">Crystal-skin prawn dumpling.</div></div>
-<div class="menu-item"><div class="mi-name">Chicken Gyoza</div><div class="mi-desc">Pan-fried, crisp-bottomed.</div></div>
-<div class="menu-item"><div class="mi-name">Chilean Seabass Dumpling</div><div class="mi-desc">Delicate seabass parcel.</div></div>
-<div class="menu-item"><div class="mi-name">Prawn &amp; Chives Dumpling</div><div class="mi-desc">Prawn and fragrant chive.</div></div>
-<div class="menu-item"><div class="mi-name">Lamb Basil Dumpling</div><div class="mi-desc">Minced lamb and basil.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="asian">
-  <h3 class="display">Mains</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Seafood in XO Sauce</div><div class="mi-desc">Mixed seafood in a rich XO sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Fish in Chilli Oil</div><div class="mi-desc">Poached fish in fragrant chilli oil.</div></div>
-<div class="menu-item"><div class="mi-name">Japanese Katsu Curry Chicken</div><div class="mi-desc">Crumbed chicken, Japanese curry.</div></div>
-<div class="menu-item"><div class="mi-name">Green Curry</div><div class="mi-desc">Thai green curry — veg, chicken or seafood.</div></div>
-<div class="menu-item"><div class="mi-name">Red Curry</div><div class="mi-desc">Thai red curry — veg, chicken or seafood.</div></div>
-<div class="menu-item"><div class="mi-name">Stir-Fry Chicken in Black Bean</div><div class="mi-desc">Wok-fried chicken, black bean.</div></div>
-<div class="menu-item"><div class="mi-name">Mapo Tofu with Vegetables</div><div class="mi-desc">Silken tofu, chilli-bean, Sichuan pepper.</div></div>
-<div class="menu-item"><div class="mi-name">Stir-Fry Seasonal Vegetables</div><div class="mi-desc">Wok-fresh market vegetables.</div></div>
-</div>
-</div>
-
-<div class="menu-cat" data-cat="asian">
-  <h3 class="display">Noodles &amp; Rice</h3>
-<div class="menu-items">
-<div class="menu-item"><div class="mi-name">Pad Thai Noodles</div><div class="mi-desc">Rice noodle, tamarind, peanut, egg.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Basil Noodles</div><div class="mi-desc">Chilli and basil — veg, chicken or seafood.</div></div>
-<div class="menu-item"><div class="mi-name">Kai Sen Noodles</div><div class="mi-desc">Seafood noodle — or vegetable.</div></div>
-<div class="menu-item"><div class="mi-name">Yaki Soba</div><div class="mi-desc">Stir-fried soba, savoury sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Pan Fried Noodles</div><div class="mi-desc">Black pepper or butter garlic.</div></div>
-<div class="menu-item"><div class="mi-name">Seafood XO Rice</div><div class="mi-desc">Fried rice in XO sauce.</div></div>
-<div class="menu-item"><div class="mi-name">Fried Rice</div><div class="mi-desc">Egg, chicken or seafood.</div></div>
-<div class="menu-item"><div class="mi-name">Chilli Basil Rice</div><div class="mi-desc">Wok rice, chilli and basil.</div></div>
-</div>
-</div>
-    <div class="center mt-3">
-      <p class="muted maxw-md" style="margin-inline:auto">Please let our team know of any allergies or dietary requirements — many dishes can be adapted. A full drinks &amp; signature cocktail list is available in-venue.</p>
-      <a class="btn btn--solid mt-2" href="reservations.html#reserve">Reserve a table</a>
+<section class="mch cv" id="m-salads" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. I · North Indian</span><h2>Salads</h2><span class="c">4 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Green Salad</span></h4><p class="mi__d">Garden fresh tomatoes, carrots, cucumber, beetroot &amp; onion served on bed of lettuce</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Spicy Chicken Caesar</span></h4><p class="mi__d">A traditional caesar salad served with an indian touch</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Hummus with Naan</span></h4><p class="mi__d">A Middle Eastern dip made with chickpeas, sesame seeds, Lemon juice, olive oil &amp; served with warm naan bread.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Watermelon &amp; Feta</span></h4><p class="mi__d">Fresh watermelon, feta cheese and mint dressed with a balsamic glaze.</p></article>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="wrap-wide">
-    <div class="footer-top">
-      <div class="footer-brand"><img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI"><p>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Where cultures connect.</p></div>
-      <div class="footer-col"><h5>Explore</h5><a href="lagos.html">Anvi Lagos — Dining</a><a href="social.html">Anvi Social — Events</a><a href="menu.html">The Menu</a><a href="about.html">Our Story</a></div>
-      <div class="footer-col"><h5>Visit</h5><a href="reservations.html#reserve">Reserve a table</a><a href="reservations.html#events">Private &amp; corporate events</a><a href="reservations.html#waitlist">Join the guest list</a><a href="reservations.html">Find us</a></div>
-      <div class="footer-col"><h5>Anvi, Lagos</h5><a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Ave+Victoria+Island+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Ave,<br>Victoria Island, Lagos</a><a href="tel:+2348110438371">+234 811 043 8371</a><a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">@anvilagos</a></div>
+<section class="mch cv" id="m-starters" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. II · North Indian</span><h2>Starters</h2><span class="c">6 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Masala Roomali</span></h4><p class="mi__d">Crispy Roomali topped with a tangy mix of onions, tomatoes, cucumber, green chillies, coriander, lemon juice and chaat masala.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Cheese Stuffed Mushroom</span></h4><p class="mi__d">Mushrooms stuffed with cheese and herbs.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Samosa (Veg)</span></h4><p class="mi__d">Stuffed with spiced potatoes or cheese &amp; deep fried.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Koliwada</span></h4><p class="mi__d">Fried snack where the fish is cut and marinated in a thick batter of chilli paste</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mixed Non-Veg Kebab Platter</span></h4><p class="mi__d">A Special platter designed by us that offers a selection of our signature chicken, mutton, fish and prawn kebabs.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Mixed Veg Kebab platter</span></h4><p class="mi__d">A platter designed with a selection of our veg kebabs including mushrooms, veggies &amp; paneer.</p></article>
     </div>
-    <div class="footer-bottom"><span>&copy; <span data-year>2026</span> Anvi Hospitality Ltd</span><span>Where Cultures Connect</span><span>Victoria Island &middot; Lagos &middot; Nigeria</span></div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-kebabs" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. III · North Indian</span><h2>From the Clay Oven — Kebabs</h2><span class="c">23 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Paneer Tikka</span></h4><p class="mi__d">Cubes of cottage cheese with green peppers mildly spiced and barbecued.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Zafrani Aloo Gobi</span></h4><p class="mi__d">Saffron spiced baby potatoes &amp; florette cooked together in a clay oven.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Hara Bhara Kebab</span></h4><p class="mi__d">A vegetarian delight.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Veg Malai Seekh Kebab</span></h4><p class="mi__d">Assorted vegetables, minced and added with cheese and selected spices.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Chicken</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Half Tandoori</span></h4><p class="mi__d">Chicken marinated in yogurt and spices, grilled in our clay oven.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Tikka</span></h4><p class="mi__d">Succulent nuggets of tender chicken marinated in yogurt and selected spices, grilled in tandoor.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Kalmi Kebab</span></h4><p class="mi__d">Chicken drumsticks marinated with ginger, garlic, cream and gram flour sauteed with butter sauce.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Pahadi Kebab</span></h4><p class="mi__d">Mint flavored boneless cubes of chicken cooked in the clay oven.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Malai Tikka</span></h4><p class="mi__d">Boneless chunks of chicken marinated in yoghurt, flavoured with cream and cheese; chargrilled.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Irani Kebab</span></h4><p class="mi__d">Boneless chicken marinated with mint yogurt and cashew nuts in a special seasoning.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Banjara</span></h4><p class="mi__d">Chicken cubes marinated with white sesame, brown onions and yogurt.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken &amp; Cheese Seekh Kebab</span></h4><p class="mi__d">RolIs of chicken mince and extra cheese, blended with selected spices.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Kalimiri</span></h4><p class="mi__d">Chicken kebab spiced with crushed black peppercorn and barbecued.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Mutton &amp; Lamb</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Mutton Boti Kebab</span></h4><p class="mi__d">Juicy mutton cubes marinated with ginger, garlic, and cinnamon with complementing additions and cooked in a clay oven.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mutton Seekh Kebab</span></h4><p class="mi__d">Rolls of lean mutton mince and blend of selected spices, grilled in clay oven.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mutton &amp; Cheese Seekh</span></h4><p class="mi__d">Rolls of lean mutton mince and blend of selected spices, grilled in clay oven.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Seafood</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Lasooni Prawns</span></h4><p class="mi__d">Prawns cooked in a clay oven with chef special spices and predominant in garlic</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Tikka</span></h4><p class="mi__d">Cubes of Fish marinated in traditional tandoori masala and barbecued</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Ajwain Tikka</span></h4><p class="mi__d">Cubes of boneless fish, marinated in cajun seeds, yogurt and exotic spices</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Zafrani Tikka</span></h4><p class="mi__d">A rich mix of saffron and cashew flavored fish tikka</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Pahadi Tikka</span></h4><p class="mi__d">Mint flavored boneless pieces of fish cooked in the clay oven.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Lobster Angara</span></h4><p class="mi__d">Freshly caught lobster marinated in a fiery masala &amp; cooked in a clay oven</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Tandoori Prawns</span></h4><p class="mi__d">Jumbo prawns marinated with spices cooked to perfection in clay oven</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-curries" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. IV · North Indian</span><h2>Curries &amp; Mains</h2><span class="c">15 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Paneer Kadhai</span></h4><p class="mi__d">Kadhai Paneer is chilly hot, semi dry and colorful with bell peppers</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Palak Paneer</span></h4><p class="mi__d">Cottage cheese cooked in a creamy spinach gravy</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Paneer Tikka Masala</span></h4><p class="mi__d">Grilled slices of homemade cottage cheese, capsicum, tomato and onion sauteed with tangy and spicy gravy</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Matar Paneer</span></h4><p class="mi__d">Paneer cubes &amp; peas in a spicy &amp; creamy tomato based sauce.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Vegetable Kolhapuri</span></h4><p class="mi__d">A spicy mixed vegetable blend.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Chicken</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Chicken Tikka Masala</span></h4><p class="mi__d">Chicken tikka sauteed in red tomato and onion gravy</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Malai Zaffrani</span></h4><p class="mi__d">Succulent pieces of chicken simmered in rich tomato buttered and finished with fenugreek</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Butter Chicken</span></h4><p class="mi__d">Shreded tandoori chicken simmered in rich tomato buttered and finished with fenugreek.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Mutton &amp; Lamb</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Mutton Korma</span></h4><p class="mi__d">Cubes of mutton cooked in a cashew creamy saffron flavored gravy.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mutton Ra-ra</span></h4><p class="mi__d">Mutton and tender mince combine into a mouth watering preparation.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mutton Roganjosh</span></h4><p class="mi__d">Roganjosh is a signature dish from the magnificent state of Kashmir. brimming with flavours of fennel, ginger and marked by striking red hue, it is indeed a celebration of flavours.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Seafood</h3>
+    <div class="mlist">
+      <article class="mi" data-sig><h4 class="mi__n"><span>Signature Prawn Malai Curry <span class="sig" title="House signature">✦</span></span></h4><p class="mi__d">Prawns in our signature spiced coconut curry.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Tawa Masala</span></h4><p class="mi__d">Fish cooked in a blend of onion, tomatoes and tampered with spicy gravy.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Prawn Bhuna</span></h4><p class="mi__d">Prawns cooked with a blend of spices, simmered in a gravy of tomatoes, onions, ginger, garlic and red chilli powder.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Lobster Masala</span></h4><p class="mi__d">Lobster cooked in an onion and red chilly masala.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-breads" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. V · North Indian</span><h2>Dal, Breads &amp; Rice</h2><span class="c">20 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Dal</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Ghee Dal Tadka</span></h4><p class="mi__d">Yellow lentil tempered with cumin and chilies</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Dal Makhani</span></h4><p class="mi__d">A rich healthy combination of black lentils and red kidney beans, tempered with butter and a hint of ginger.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Rajma</span></h4><p class="mi__d">Red kidney beans cooked &amp; simmered with onions, tomatoes &amp; spices.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Breads</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Garlic Naan</span></h4><p class="mi__d">Indian flatbread with garlic.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Assorted Bread Basket</span></h4><p class="mi__d">An assorted bread basket to share, with plain roti, ajwain roti &amp; pudina roti, paratha, kulcha &amp; butter naan.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Roomali</span></h4><p class="mi__d">Hand tossed, paper-thin Indian flatbread.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Tandoori Roti</span></h4><p class="mi__d">Whole wheat Indian bread cooked in a clay oven.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Cheese Kulcha</span></h4><p class="mi__d">Kulcha bread stuffed with cheese.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Butter Naan</span></h4><p class="mi__d">Indian flatbread with butter.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Butter Roti</span></h4><p class="mi__d">Whole wheal Indian bread topped with butter.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Garlic Cheese Naan</span></h4><p class="mi__d">Indian flatbread topped with butter, garlic &amp; cheese.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Plain Naan</span></h4><p class="mi__d">Plain Indian flatbread.</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Rice &amp; Biryani</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Mixed Vegetable Biryani</span></h4><p class="mi__d">Saffron flavored basmati rice delicacy cooked with mixed vegetables in traditional indian style.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mutton Biryani</span></h4><p class="mi__d">Saffron flavored basmati rice delicacy cooked with boneless succulent lamb pieces in traditional indian style.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Biryani</span></h4><p class="mi__d">Saffron flavored basmati rice delicacy cooked with succulent chicken pieces in traditional indian style.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Prawn Biryani</span></h4><p class="mi__d">Saffron flavored basmati rice delicacy cooked with prawns pieces in traditional style.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Lobster Biryani</span></h4><p class="mi__d">Saffron flavored basmati rice delicacy cooked with lobster pieces in traditional indian style.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Jeera Rice</span></h4><p class="mi__d">Basmati rice steamed with a bouquet of cadamom, cinnamon, cloves and bayleaves tossed with cumin seeds.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Jollof Rice</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Steamed Rice</span></h4><p class="mi__d">Classic steamed rice</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-desserts" data-cuisine="indian">
+  <header class="mch__head"><span class="mch__ro">No. VI · North Indian</span><h2>Desserts</h2><span class="c">7 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Gulab Jamun</span></h4><p class="mi__d">a beloved Indian dessert consisting of fried balls of a dough made from milk solids and semolina, soaked with an aromatic syrup spiced with green cardamom, rose water, saffron, and more.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Ras Malai</span></h4><p class="mi__d">Dumplings made from cottage or riccotta cheese soaked in sweetened, thickened milk delicately flavored with cardamom</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Sizzling Brownie &amp; Ice cream</span></h4><p class="mi__d">Our homemade brownie served with chocolate and caramel syrup and vanilla ice cream on a sizzling hot plate.</p></article>
+      <article class="mi" data-sig><h4 class="mi__n"><span>Signature Baked Yogurt <span class="sig" title="House signature">✦</span></span></h4><p class="mi__d">Our signature dessert - traditionally indian with a twist served with strawberry compote.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Carrot Halwa</span></h4><p class="mi__d">a Indian pudding made with fresh carrots, milk, sugar, ghee &amp; nuts.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Pavalova Tower</span></h4><p class="mi__d">a meringue-based dessert with a crunchy texture and soft inside served with strawberries and home-made cream</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Pain Perdu</span></h4><p class="mi__d">Classic french toast served with chocolate syrup, maple syrup, vanilla ice cream and assorted fruits.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-soups" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. VII · Pan-Asian</span><h2>Soups</h2><span class="c">4 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Hot &amp; Sour Chicken</span></h4><p class="mi__d">Claimed variously by the regional cuisines of Beijing and Sichuan as a regional dish.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Manchow Chicken</span></h4><p class="mi__d">Spicy Chinese broth served with chicken and crispy noodles.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Prawn Wonton Soup</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Sweet Corn Crab</span></h4><p class="mi__d">Crab simmered with soft and tender cream corn.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-cold" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. VIII · Pan-Asian</span><h2>Salads &amp; Cold Plates</h2><span class="c">5 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Silken Tofu</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Avocado Carpaccio</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Salmon Tartare</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Smoked Chicken &amp; Avocado Salad</span></h4></article>
+      <article class="mi" data-sig><h4 class="mi__n"><span>Anvi House Salad <span class="sig" title="House signature">✦</span></span></h4></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-small" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. IX · Pan-Asian</span><h2>Small Plates</h2><span class="c">19 dishes</span></header>
+  <div class="mgrp">
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Edamame</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Salt &amp; Pepper Tofu</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Burnt Garlic Mushroom</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Shrimp Tempura</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Barbeque Wings</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Shanghai Wings</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Yakitori</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Tom Yum Prawns</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Salt &amp; Pepper Prawns</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Thai Chilli Basil Chicken</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken with Dry Red Chilli</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilli Garlic Fish</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Spring Rolls (Veg)</span></h4><p class="mi__d">Crispy filo stuffed with exotic vegetables and sprouts</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Spring Rolls (Chicken)</span></h4><p class="mi__d">Crispy filo stuffed with exotic vegetables and sprouts.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Spring Rolls (Prawn)</span></h4><p class="mi__d">Crispy filo stuffed with exotic vegetables and sprouts.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Salt &amp; Pepper Calamari</span></h4><p class="mi__d">Bater Fried Cutle Fish tossed in herbs and spices</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Lollipop</span></h4><p class="mi__d">Crispy chicken coated with batter and serving along with schezwan sauce.</p></article>
+      <article class="mi" data-sig><h4 class="mi__n"><span>Anvi Prawns <span class="sig" title="House signature">✦</span></span></h4><p class="mi__d">Prawns and whole green chilies marinated with ginger, garlic, hot spices &amp; tossed With a homemade sauce. Garnished with curry leaves.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Rock Prawns</span></h4><p class="mi__d">Battered fried rock shrimps drizzled with tangy &amp; spicy mayo dressing</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-dimsum" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. X · Pan-Asian</span><h2>Dim Sum</h2><span class="c">12 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Truffle Edamame Dumpling</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Spicy Veg Bao</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Chilli Corn &amp; Water Chestnut Dumpling</span></h4></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Non-Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Chicken &amp; Prawn Shumai</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Har Gau</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chicken Gyoza</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Open Face Chicken Dumpling</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilean Seabass Dumpling</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Spicy Chicken Bao</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Char Siu Chicken Dumpling</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Prawn &amp; Chives Dumpling</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Lamb Basil Dumpling</span></h4></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-wok" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. XI · Pan-Asian</span><h2>Wok &amp; Mains</h2><span class="c">24 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Stir-Fry Seasonal Vegetables</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Katsu Curry (Veg)</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Mapo Tofu with Vegetables</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Chilli Paneer</span></h4><p class="mi__d">A fiery delicacy served with green chillies and peppers with cottage cheese cubes.</p></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Veg Manchurian</span></h4><p class="mi__d">Vegetables served in a medium spicy soya based sauce</p></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Non-Vegetarian</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Stir-Fry Chicken in Black Bean Sauce</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish in Chilli Oil</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Japanese Katsu Curry Chicken</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Seafood in XO Sauce</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Green Curry (Veg/Chicken/Seafood)</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Red Curry (Veg/Chicken/Seafood)</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilli Chicken</span></h4><p class="mi__d">A fiery delicacy served with boneless pieces of chicken, green chillies &amp; peppers.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Stir-Fry Chicken in Black Pepper Sauce</span></h4><p class="mi__d">Succulent chicken boneless pieces with our signature black pepper sauce</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Kung Pao Chicken</span></h4><p class="mi__d">Spicy, stir-fried chinese dish made with boneless pieces of chicken, peanuts, vegetables and chilli peppers.</p></article>
+      <article class="mi" data-sig><h4 class="mi__n"><span>Chicken 343 <span class="sig" title="House signature">✦</span></span></h4><p class="mi__d">Boneless chunks of chicken and whole green chilies marinated with ginger, garlic, hot spices &amp; tossed With a homemade sauce. Garnished with curry leaves.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Mongolian Lamb</span></h4><p class="mi__d">Stir-fried lamb, Chinese style, with a sweet &amp; savoury sauce.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Hoisin Lamb</span></h4><p class="mi__d">Tender pieces of lamb, Chinese style, in a Hoisin based gravy.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Crispy Lamb with Cumin, Green Onions &amp; Red Chilies</span></h4><p class="mi__d">Crispy strips of lamb in a sauce made with cumin, green chillies &amp; onions.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Fish Manchurian</span></h4><p class="mi__d">Boneless batter-fried fish cubes served in a medium spicy soya based sauce.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Sweet &amp; Sour Prawns</span></h4><p class="mi__d">Prawns served in a delicate, smooth and succulent gravy, half sweet &amp; half tangy</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilli Prawns</span></h4><p class="mi__d">Prawns in fiery delicacy served with green chilies and peppers.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Crispy Fish in Black Bean Sauce</span></h4><p class="mi__d">Batter-fried boneless fish cubes in a black bean sauce.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Szechuan Prawns</span></h4><p class="mi__d">Prawns tossed in a spicy red Szechuan sauce.</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Lobster in Sweet Chilli Sauce</span></h4><p class="mi__d">Lobster tossed in sweet chilli sauce.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="mch cv" id="m-noodles" data-cuisine="asian">
+  <header class="mch__head"><span class="mch__ro">No. XII · Pan-Asian</span><h2>Noodles &amp; Rice</h2><span class="c">11 dishes</span></header>
+  <div class="mgrp"><h3 class="mgrp__t">Noodles</h3>
+    <div class="mlist">
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Kai Sen Noodles (Veg/Seafood)</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Yaki Soba</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilli Mein</span></h4></article>
+      <article class="mi" data-veg><h4 class="mi__n"><span class="veg" title="Vegetarian" aria-label="Vegetarian"></span><span>Chilli Basil Noodles (Veg/Chicken/Seafood)</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Pan Fried Noodles (Black Pepper/Butter Garlic)</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Pad Thai Noodles</span></h4></article>
+    </div>
+  </div>
+  <div class="mgrp"><h3 class="mgrp__t">Rice</h3>
+    <div class="mlist">
+      <article class="mi"><h4 class="mi__n"><span>Fried Rice (Egg/Chicken/Seafood)</span></h4><p class="mi__d">Fried rice tossed with eggs, vegetables in soya sauce</p></article>
+      <article class="mi"><h4 class="mi__n"><span>Donburi Chicken</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Seafood XO Rice</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Chilli Basil Rice</span></h4></article>
+      <article class="mi"><h4 class="mi__n"><span>Pot Rice</span></h4></article>
+    </div>
+  </div>
+</section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec t-oxblood center">
+  <div class="wrap" style="max-width:660px">
+    <h2 class="d2" data-split>Read enough. <span class="ital" style="color:var(--peach)">Taste it.</span></h2>
+    <p class="lead mt-2" data-rv>The kitchen opens mid-August — the Founding 100 taste it first.</p>
+    <div class="row mt-3" style="justify-content:center" data-rv>
+      <a class="btn btn--acc" href="reservations.html#reserve">Reserve a table <span class="ar">→</span></a>
+      <a class="btn" href="reservations.html#list">Join the Founding 100</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot grain">
+  <hr class="checker checker--wide" aria-hidden="true" style="margin:0">
+  <div class="wrap-x">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="148" height="41">
+        <p>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Where cultures connect.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="lagos.html">Anvi Lagos — dining</a>
+        <a href="social.html">Anvi Social — the terrace</a>
+        <a href="menu.html">The menu</a>
+        <a href="about.html">Our story</a>
+      </div>
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <a href="reservations.html#reserve">Reserve a table</a>
+        <a href="reservations.html#host">Private &amp; corporate events</a>
+        <a href="reservations.html#list">Join the Founding 100</a>
+        <a href="reservations.html#find">Find us</a>
+      </div>
+      <div class="foot-col">
+        <h4>Anvi · Victoria Island</h4>
+        <a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Ave+Victoria+Island+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Ave,<br>Victoria Island, Lagos</a>
+        <a href="tel:+2348110438371">+234 811 043 8371</a>
+        <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">Instagram — @anvilagos</a>
+        <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">Instagram — @anvisocial</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-word" aria-hidden="true"><img src="assets/logo/anvi-wordmark-white.svg" alt="" loading="lazy"></div>
+  <div class="wrap-x">
+    <div class="foot-legal">
+      <span>© <span data-year>2026</span> Anvi Hospitality Limited · RC 8404218</span>
+      <span>Where cultures connect</span>
+      <span>Victoria Island · Lagos · Nigeria</span>
+    </div>
   </div>
 </footer>
 
-<script src="js/anvi.js?v=2"></script>
+<script src="js/anvi.js?v=3"></script>
 </body>
 </html>

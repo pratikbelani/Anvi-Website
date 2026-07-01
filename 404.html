@@ -8,30 +8,22 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<meta name="theme-color" content="#51241B">
-<link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=2">
-<style>
-  body.nf { min-height:100svh; display:grid; place-items:center; text-align:center; padding:2rem var(--gutter); }
-  .nf-wrap { max-width:560px; }
-  .nf-peacock { width:min(46vw,180px); color:var(--peach); opacity:.9; margin:0 auto 2rem; }
-  .nf-peacock img { width:100%; }
-  .nf-code { font-family:var(--f-ui); font-weight:500; letter-spacing:.34em; text-transform:uppercase; font-size:.7rem; color:var(--peach); }
-</style>
+<meta name="theme-color" content="#161210">
+<link rel="stylesheet" href="css/anvi.css?v=3">
 </head>
-<body class="nf">
-<a class="skip-link" href="#main">Skip to content</a>
-  <div class="nf-wrap" id="main">
-    <div class="nf-peacock"><img src="assets/logo/anvi-peacock-peach.svg" alt=""></div>
-    <p class="nf-code">Error 404</p>
-    <h1 class="d-lg mt-1">This table isn’t set.</h1>
-    <p class="lead mt-1">The page you’re looking for has moved or never existed — but the evening is still young.</p>
-    <div class="flex gap-1 wrap-flex mt-3" style="justify-content:center">
-      <a class="btn btn--gold" href="index.html">Back to ANVI</a>
-      <a class="btn" href="reservations.html#reserve">Reserve a table</a>
+<body data-noveil data-nochrome>
+<main class="nf grain">
+  <div>
+    <img src="assets/logo/anvi-peacock-peach.svg" alt="" style="width:min(40vw,180px);margin:0 auto 2rem;opacity:.85">
+    <p class="k k--rule" style="color:var(--peach);justify-content:center">404</p>
+    <h1 class="d2 mt-1">This table doesn't exist.</h1>
+    <p class="lead mt-2" style="margin-inline:auto">The page you're after isn't on the floor plan — let's walk you back.</p>
+    <div class="row mt-3" style="justify-content:center">
+      <a class="btn btn--acc" href="index.html" style="--b:var(--peach)">Back to Anvi <span class="ar">→</span></a>
+      <a class="btn" href="menu.html" style="--b:var(--ivory)">The menu</a>
     </div>
   </div>
-<script src="js/anvi.js?v=2"></script>
+</main>
+<script src="js/anvi.js?v=3"></script>
 </body>
 </html>

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANVI — Where Cultures Connect · Refined Indo-Asian Dining · Lagos</title>
-<meta name="description" content="ANVI is a modern hospitality destination in Victoria Island, Lagos, where refined Indian cuisine meets contemporary Asian influences. Dine, gather and celebrate across three floors. Where cultures connect.">
+<title>ANVI — Where Cultures Connect · Refined Indo-Asian Dining · Victoria Island, Lagos</title>
+<meta name="description" content="ANVI is a modern hospitality destination in Victoria Island, Lagos — refined Indian cuisine meets contemporary Asian influence across three floors: the dining room, the lounge and the social terrace. Soft launch mid-August 2026.">
 <meta property="og:title" content="ANVI — Where Cultures Connect">
-<meta property="og:description" content="Refined Indo-Asian dining & a social destination in Victoria Island, Lagos. Opening 2026.">
+<meta property="og:description" content="One building. One evening. Refined Indo-Asian dining and a social destination in Victoria Island, Lagos — opening mid-August 2026.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -20,17 +20,19 @@
 <meta name="theme-color" content="#51241B">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=2">
+<link rel="preload" href="assets/img/hero-fish.jpg" as="image" fetchpriority="high">
+<link rel="stylesheet" href="css/anvi.css?v=3">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "ANVI",
   "alternateName": "Anvi Lagos",
-  "description": "A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Dining, lounge and a rooftop social terrace in Victoria Island, Lagos.",
+  "description": "A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence — a dining room, a lounge with private dining rooms, and a rooftop social terrace in Victoria Island, Lagos.",
   "servesCuisine": ["Indian", "Pan-Asian", "Indo-Chinese"],
   "priceRange": "$$$",
   "telephone": "+234 811 043 8371",
+  "foundingDate": "2025-04-10",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1613B Adewunmi Ogunsanya Avenue",
@@ -38,293 +40,384 @@
     "addressRegion": "Lagos",
     "addressCountry": "NG"
   },
-  "openingHours": "Tu-Su 16:00-00:00",
   "image": "assets/img/og-cover.jpg",
   "sameAs": [
     "https://instagram.com/anvilagos",
     "https://instagram.com/anvisocial"
-  ]
+  ],
+  "parentOrganization": { "@type": "Organization", "name": "Anvi Hospitality Limited", "identifier": "RC 8404218" }
 }
 </script>
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-<div class="announce">Now taking shape in Victoria Island, Lagos · Opening 2026 &nbsp;—&nbsp; <a href="reservations.html#waitlist">Join the guest list</a></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="pgbar" aria-hidden="true"></div>
+<div class="ann">Soft launch · mid-August 2026 · Victoria Island &nbsp;—&nbsp; <a href="reservations.html#list">Join the Founding&nbsp;100</a></div>
 
-<header class="site-header">
-  <a class="brand-mark" href="index.html" aria-label="ANVI — home">
-    <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33">
+<header class="hd hd--dark" data-over-hero>
+  <a class="hd__brand" href="index.html" aria-label="ANVI — home">
+    <img class="lg-light" src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33">
+    <img class="lg-dark" src="assets/logo/anvi-wordmark-burgundy.svg" alt="ANVI" width="120" height="33">
   </a>
-  <nav class="nav" aria-label="Primary">
-    <a class="navlink" href="lagos.html">Dining</a>
-    <a class="navlink" href="social.html">Social</a>
-    <a class="navlink" href="menu.html">Menu</a>
-    <a class="navlink" href="about.html">Story</a>
-    <a class="navlink" href="reservations.html">Visit</a>
-    <div class="nav-cta">
-      <a class="btn btn--gold" href="reservations.html#reserve">Reserve</a>
-    </div>
+  <nav class="hd__nav" aria-label="Primary">
+    <a class="hd__link" href="lagos.html">Dine</a>
+    <a class="hd__link" href="social.html">Social</a>
+    <a class="hd__link" href="menu.html">Menu</a>
+    <a class="hd__link" href="about.html">Story</a>
+    <a class="hd__link" href="reservations.html">Visit</a>
+    <a class="btn btn--acc hd__cta" href="reservations.html#reserve">Reserve</a>
   </nav>
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 
-<!-- ============ HERO ============ -->
-<section class="hero" id="main">
-  <div class="hero__media"><img src="assets/img/hero-fish.jpg" alt="A signature dish plated at ANVI" fetchpriority="high"></div>
-  <div class="hero__wordmark"><img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI"></div>
-  <div class="hero__foot">
-    <div class="hero__tag">
-      <span>where</span><span>cultures</span><span>connect</span>
+<!-- ======================= HERO ======================= -->
+<section class="hero grain" id="main">
+  <div class="hero__media" aria-hidden="true">
+    <div class="hero__slide on"><img src="assets/img/hero-fish.jpg" alt="" fetchpriority="high" width="1500" height="1000"></div>
+    <div class="hero__slide"><img src="assets/img/int-chandelier.jpg" alt="" loading="lazy" width="1500" height="1000"></div>
+    <div class="hero__slide"><img src="assets/img/drink-coupe-smoke.jpg" alt="" loading="lazy" width="1500" height="1000"></div>
+  </div>
+  <div class="hero__side">Victoria Island · Lagos · 6.43° N</div>
+  <div class="hero__body">
+    <p class="k k--rule" data-rv>Anvi — Sanskrit for <em class="ital" style="text-transform:none;letter-spacing:.08em">“connected”</em></p>
+    <h1 class="d1 hero__title mt-1" data-split>Where cultures <span class="ital">connect.</span></h1>
+    <div class="hero__foot">
+      <div class="hero__meta" data-rv style="--d:2">
+        <span>Refined Indo-Asian dining · a social destination</span>
+        <span>Three floors · <b>the dining room</b> · <b>the lounge</b> · <b>the terrace</b></span>
+      </div>
+      <div class="tminus" data-count="2026-08-15" data-rv style="--d:3">
+        <b data-cd-days>—</b> days to soft launch <span aria-hidden="true">·</span> mid-August 2026
+      </div>
     </div>
   </div>
-  <div class="hero__scroll">Scroll</div>
+  <div class="hero__scroll" aria-hidden="true">The evening begins</div>
 </section>
 
-<!-- ============ INTRO ============ -->
-<section class="section on-cream" style="overflow:hidden">
-  <img class="peacock-watermark" src="assets/logo/anvi-peacock-burgundy.svg" alt="" style="right:-6%;top:8%">
+<!-- ======================= 01 · ARRIVE ======================= -->
+<section class="sec t-ivory" style="overflow:clip">
+  <img class="wm" src="assets/logo/anvi-peacock-burgundy.svg" alt="" style="right:-7%;top:4%" loading="lazy">
   <div class="wrap" style="position:relative;z-index:1">
-    <p class="kicker" data-reveal>Anvi · Sanskrit for “connected”</p>
-    <h2 class="d-lg mt-1 maxw-md" data-reveal data-reveal-delay="1">A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence.</h2>
-    <div class="grid cols-2 mt-3" style="align-items:end">
-      <p class="lead" data-reveal data-reveal-delay="2">From the first bite to the last sip, every moment at Anvi is curated for indulgence, connection and celebration.</p>
-      <div data-reveal data-reveal-delay="3">
-        <p class="muted">Set across three floors in the heart of Victoria Island, Anvi is not another restaurant — it is a destination. A curated sharing menu, signature cocktails, elevated design and a social terrace made for the city’s best nights. We sell the experience first, and the cuisine second.</p>
-        <a class="link-underline mt-2" style="display:inline-block" href="about.html">Read our story</a>
+    <p class="chap" data-rv><span class="chap__no">Chapter 01 — Arrive</span></p>
+    <h2 class="d2 mt-2" style="max-width:18ch" data-split>Not another restaurant. A <span class="ital acc">destination</span>.</h2>
+    <div class="grid g-2 mt-4" style="align-items:end">
+      <p class="lead" data-rv>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence — built on a curated menu, elevated design and meaningful social experiences.</p>
+      <div data-rv style="--d:1">
+        <p class="dim">Set across three floors in the heart of Victoria Island, Anvi moves the way an evening does — an unhurried dinner downstairs, a slow drink in the lounge, the city's best nights up on the terrace. We sell the experience first, and the cuisine second.</p>
+        <a class="lnk mt-2" style="display:inline-flex" href="about.html">Read our story <span class="ar">→</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="pattern-strip" aria-hidden="true"></div>
+<div class="t-ivory" style="padding-bottom:.2rem"><hr class="checker" aria-hidden="true"></div>
 
-<!-- ============ THREE EXPERIENCES ============ -->
-<section class="section">
-  <div class="wrap-wide">
-    <div class="eyebrow-line mb-2" data-reveal><span class="kicker">One destination · three worlds</span></div>
-    <h2 class="d-lg maxw-md" data-reveal>Dine downstairs. Host upstairs.</h2>
-    <p class="muted mt-1 maxw-sm" data-reveal data-reveal-delay="1">Three floors, each with its own rhythm — from unhurried family dinners to the loudest, most beautiful nights on the island.</p>
-  </div>
-  <div class="wrap-wide mt-3">
-    <div class="exp">
-      <article class="exp__card" data-reveal>
-        <img loading="lazy" src="assets/img/int-table.jpg" alt="The ground-floor dining room">
-        <div class="exp__inner">
-          <span class="floor">Ground Floor</span>
-          <h3 class="d-sm">The Dining Room</h3>
-          <p>Warm, welcoming and made for sharing. Contemporary Indian and Pan-Asian plates in an unhurried, all-ages setting.</p>
-          <a class="link-underline exp__more" href="lagos.html">Anvi Lagos</a>
+<!-- ======================= 02 · THE ASCENT ======================= -->
+<section class="ascent t-night grain" aria-label="The three floors">
+  <div class="ascent__stage">
+    <header class="asc-head">
+      <p class="chap" data-rv><span class="chap__no" style="color:var(--peach)">Chapter 02 — Ascend</span></p>
+      <h2 class="d3 mt-1" data-rv style="--d:1">One building. <span class="ital" style="color:var(--peach)">One evening.</span></h2>
+    </header>
+    <div class="asc-rail" aria-hidden="true">
+      <button type="button" class="on">G — Dine</button>
+      <button type="button">1 — Retreat</button>
+      <button type="button">2 — Rise</button>
+    </div>
+    <div class="asc-panels">
+      <article class="asc-p" id="floor-g">
+        <span class="asc-p__no" aria-hidden="true">G</span>
+        <div class="asc-p__media"><img src="assets/img/int-table.jpg" alt="The ground-floor dining room, laid for service" loading="lazy" width="1500" height="1000"></div>
+        <div class="asc-p__body">
+          <div>
+            <p class="asc-p__floor">Ground floor · Anvi Lagos</p>
+            <h3 class="d3 asc-p__title">The Dining Room</h3>
+          </div>
+          <div>
+            <p class="asc-p__desc">Warm, welcoming and made for sharing — contemporary Indian and Pan-Asian plates in an elegant, all-ages room built around the table.</p>
+            <p class="asc-p__specs"><span>All ages</span><span>72 covers</span><span>Booths &amp; family tables</span></p>
+            <a class="lnk mt-2" style="display:inline-flex" href="lagos.html">Enter the dining room <span class="ar">→</span></a>
+          </div>
         </div>
       </article>
-      <article class="exp__card" data-reveal data-reveal-delay="1">
-        <img loading="lazy" src="assets/img/int-bar.jpg" alt="The first-floor lounge and bar">
-        <div class="exp__inner">
-          <span class="floor">First Floor · 18+</span>
-          <h3 class="d-sm">The Lounge &amp; Bar</h3>
-          <p>A central bar, lounge seating and private dining suites with collapsible doors — for intimate gatherings and signature cocktails.</p>
-          <a class="link-underline exp__more" href="lagos.html#private">Private dining</a>
+      <article class="asc-p" id="floor-1">
+        <span class="asc-p__no" aria-hidden="true">1</span>
+        <div class="asc-p__media"><img src="assets/img/int-bar.jpg" alt="The first-floor bar and lounge" loading="lazy" width="1500" height="1000"></div>
+        <div class="asc-p__body">
+          <div>
+            <p class="asc-p__floor">First floor · 18+</p>
+            <h3 class="d3 asc-p__title">The Lounge &amp; Private Rooms</h3>
+          </div>
+          <div>
+            <p class="asc-p__desc">A central backlit bar, unhurried lounge seating and two private dining rooms behind collapsible walls — for signature cocktails and evenings that don't want an audience.</p>
+            <p class="asc-p__specs"><span>Central bar</span><span>Two private rooms · 20 &amp; 22</span><span>Combine for 42</span></p>
+            <a class="lnk mt-2" style="display:inline-flex" href="lagos.html#lounge">The lounge &amp; private dining <span class="ar">→</span></a>
+          </div>
         </div>
       </article>
-      <article class="exp__card" data-reveal data-reveal-delay="2">
-        <img loading="lazy" src="assets/img/social-dj.jpg" alt="The rooftop Social Terrace">
-        <div class="exp__inner">
-          <span class="floor">The Social Terrace</span>
-          <h3 class="d-sm">Anvi Social</h3>
-          <p>An enclosed glasshouse with a standout bar, DJ booth and LED stage. Launches, screenings, celebrations and curated nights.</p>
-          <a class="link-underline exp__more" href="social.html">Anvi Social</a>
+      <article class="asc-p" id="floor-2">
+        <span class="asc-p__no" aria-hidden="true">2</span>
+        <div class="asc-p__media"><img src="assets/img/social-dj.jpg" alt="The rooftop social terrace at night" loading="lazy" width="1500" height="1000"></div>
+        <div class="asc-p__body">
+          <div>
+            <p class="asc-p__floor">The terrace · Anvi Social · 18+</p>
+            <h3 class="d3 asc-p__title">The Social Terrace</h3>
+          </div>
+          <div>
+            <p class="asc-p__desc">A glasshouse above the island — standout bar, DJ booth, LED stage and VIP booths. Launches and networking by day; sound sessions and celebrations till late.</p>
+            <p class="asc-p__specs"><span>80–90 guests</span><span>DJ booth &amp; LED stage</span><span>VIP booths</span></p>
+            <a class="lnk mt-2" style="display:inline-flex" href="social.html">Discover Anvi Social <span class="ar">→</span></a>
+          </div>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ MARQUEE ============ -->
-<div class="marquee on-line-dark">
-  <div class="marquee__track">
-    <span>Indulgence</span><span>Connection</span><span>Celebration</span><span>Where cultures connect</span>
+<!-- ======================= NUMBERS ======================= -->
+<section class="t-oxblood">
+  <div class="stats">
+    <div class="stat t-oxblood" data-rv><b>3</b><span>Floors, one address</span></div>
+    <div class="stat t-oxblood" data-rv style="--d:1"><b>150</b><span>Dishes on the menu</span></div>
+    <div class="stat t-oxblood" data-rv style="--d:2"><b>2</b><span>Private dining rooms</span></div>
+    <div class="stat t-oxblood" data-rv style="--d:3"><b>90</b><span>Guests on the terrace</span></div>
+    <div class="stat t-oxblood" data-rv style="--d:4"><b>MMXXV</b><span>Est. · Victoria Island</span></div>
+  </div>
+</section>
+
+<!-- ======================= 03 · THE TABLE ======================= -->
+<section class="sec t-ivory cv">
+  <div class="wrap">
+    <div class="duo">
+      <div class="duo__media" data-rv="img">
+        <div class="frame frame--p framed"><img src="assets/img/food-grill-fish.jpg" alt="A whole grilled fish, dressed at the pass" loading="lazy" width="1500" height="1875"></div>
+        <p class="duo__caption"><span>From the robata</span><span>Fig. 01</span></p>
+      </div>
+      <div class="duo__body">
+        <p class="chap" data-rv><span class="chap__no">Chapter 03 — Dine</span></p>
+        <h2 class="d3 mt-2" data-split>Two great traditions, <span class="ital acc">one kitchen.</span></h2>
+        <p class="dim mt-2" data-rv>Our kitchen runs four stations — the tandoor's clay heat, the slow-built curry pot, the dim sum steamer and the wok's high flame. The menu travels from North Indian kebabs to Pan-Asian small plates, and every dish arrives to be passed, torn and shared.</p>
+        <p class="dim" data-rv>Look for the house signatures — the Anvi Prawns, the saffron-rich Signature Prawn Malai Curry, dim sum folded to order.</p>
+        <div class="row mt-3" data-rv style="--d:1">
+          <a class="btn" href="menu.html">Explore the menu <span class="ar">→</span></a>
+          <a class="btn btn--fill" href="reservations.html#reserve">Reserve a table</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="mq t-ivory" aria-hidden="true">
+  <div class="mq__t">
+    <span>Anvi Prawns</span><span class="ital">dim sum, folded to order</span><span>Saffron Dum Biryani</span><span>Lobster XO</span><span class="ital">from the clay oven</span><span>Chicken 343</span><span>Prawn Malai Curry</span>
   </div>
 </div>
 
-<!-- ============ ANVI LAGOS FEATURE ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="split">
-      <div class="split__media framed" data-reveal><img loading="lazy" src="assets/img/food-grill-fish.jpg" alt="A whole grilled fish, ANVI Lagos"></div>
-      <div class="split__body" data-reveal data-reveal-delay="1">
-        <p class="kicker">Anvi Lagos · The Table</p>
-        <h2 class="d-md mt-1">Refined Indo-Asian, made for sharing.</h2>
-        <p class="muted mt-2">A curated menu that travels from North Indian clay-oven kebabs and slow-built curries to Pan-Asian dim sum, wok and robata. Built around the table — plates arrive to be passed, torn and shared.</p>
-        <p class="muted">Our kitchen leads with a handful of signatures you’ll come back for: the Anvi Prawns, a saffron-rich Prawn Malai Curry, and dim sum folded to order.</p>
-        <div class="flex gap-1 wrap-flex mt-3">
-          <a class="btn" href="menu.html">Explore the menu</a>
-          <a class="btn btn--gold" href="reservations.html#reserve">Reserve a table</a>
-        </div>
+<!-- ======================= SIGNATURES SHELF ======================= -->
+<section class="sec t-sand cv">
+  <div class="wrap-x">
+    <div class="row between" style="align-items:flex-end">
+      <div>
+        <p class="k k--rule" data-rv>The signatures</p>
+        <h2 class="d3 mt-1" data-rv style="--d:1">Come for the flavours,<br><span class="ital acc">stay for the finesse.</span></h2>
+      </div>
+      <div class="shelf-nav" data-rv>
+        <button type="button" data-shelf-prev aria-label="Scroll signatures back">←</button>
+        <button type="button" data-shelf-next aria-label="Scroll signatures forward">→</button>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ============ SIGNATURE DISHES ============ -->
-<section class="section on-soil">
-  <div class="wrap-wide">
-    <div class="center" style="max-width:60ch;margin-inline:auto">
-      <p class="kicker" data-reveal>Signatures</p>
-      <h2 class="d-lg mt-1" data-reveal data-reveal-delay="1">Come for the flavours, stay for the finesse.</h2>
+  <div class="shelf-wrap mt-3" data-rv>
+    <div class="shelf" tabindex="0" aria-label="Signature dishes — scroll horizontally">
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/food-prawns.jpg" alt="Anvi Prawns" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">House signature ✦</p>
+        <h3 class="shelf-card__name">Anvi Prawns</h3>
+        <p class="shelf-card__desc">Prawns &amp; whole green chillies, ginger, garlic and hot spices, tossed in a homemade sauce with curry leaves.</p>
+      </article>
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/food-curry.jpg" alt="Signature Prawn Malai Curry" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">From the curry pot ✦</p>
+        <h3 class="shelf-card__name">Prawn Malai Curry</h3>
+        <p class="shelf-card__desc">The signature — prawns simmered slow in a saffron-rich, velvet coconut gravy.</p>
+      </article>
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/food-biryani.jpg" alt="Saffron Dum Biryani" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">Sealed &amp; slow-cooked</p>
+        <h3 class="shelf-card__name">Dum Biryani</h3>
+        <p class="shelf-card__desc">Saffron basmati under a sealed crust — chicken, mutton, prawn or lobster.</p>
+      </article>
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/chef-plating.jpg" alt="A chef plating at the pass" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">The steamer</p>
+        <h3 class="shelf-card__name">Dim Sum</h3>
+        <p class="shelf-card__desc">Har gau, shumai, truffle edamame dumplings — folded to order, twelve ways.</p>
+      </article>
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/drink-coupe-smoke.jpg" alt="A smoked signature cocktail" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">The bar</p>
+        <h3 class="shelf-card__name">Signature Cocktails</h3>
+        <p class="shelf-card__desc">Asian and Indian flavours through a classic lens — smoke, spice and stone fruit.</p>
+      </article>
+      <article class="shelf-card">
+        <div class="frame"><img src="assets/img/food-dessert.jpg" alt="Signature Baked Yogurt dessert" loading="lazy" width="1200" height="1600"></div>
+        <p class="shelf-card__tag">To finish ✦</p>
+        <h3 class="shelf-card__name">Signature Baked Yogurt</h3>
+        <p class="shelf-card__desc">The house dessert — silk-textured, gently set, gone too fast.</p>
+      </article>
     </div>
-    <div class="dish-grid mt-3">
-      <article class="dish" data-reveal>
-        <div class="dish__img"><img loading="lazy" src="assets/img/food-prawns.jpg" alt="Anvi Prawns"></div>
-        <span class="dish__tag">House Signature</span>
-        <h3 class="dish__name">Anvi Prawns</h3>
-        <p class="dish__desc">Prawns &amp; whole green chillies marinated with ginger, garlic and hot spices, tossed in a homemade sauce and finished with curry leaves.</p>
-      </article>
-      <article class="dish" data-reveal data-reveal-delay="1">
-        <div class="dish__img"><img loading="lazy" src="assets/img/food-curry.jpg" alt="Fish Tawa Masala"></div>
-        <span class="dish__tag">From the Curry Pot</span>
-        <h3 class="dish__name">Fish Tawa Masala</h3>
-        <p class="dish__desc">Fish in a blend of onion and tomato, tempered with a fragrant, spiced gravy — built for warm naan and rice.</p>
-      </article>
-      <article class="dish" data-reveal data-reveal-delay="2">
-        <div class="dish__img"><img loading="lazy" src="assets/img/food-biryani.jpg" alt="Dum Biryani"></div>
-        <span class="dish__tag">From the Clay Oven</span>
-        <h3 class="dish__name">Saffron Biryani</h3>
-        <p class="dish__desc">Saffron-flavoured basmati, sealed and slow-cooked in the traditional style — with lamb, chicken, prawn or lobster.</p>
-      </article>
-    </div>
-    <div class="center mt-3"><a class="btn btn--gold" href="menu.html">The full menu</a></div>
   </div>
+  <div class="wrap"><a class="lnk" style="display:inline-flex" href="menu.html">The full menu — 150 dishes <span class="ar">→</span></a></div>
 </section>
 
-<!-- ============ ANVI SOCIAL FEATURE ============ -->
-<section class="section on-burgundy" style="overflow:hidden">
-  <img class="peacock-watermark" src="assets/logo/anvi-peacock-peach.svg" alt="" style="left:-8%;bottom:-6%;opacity:.12">
+<!-- ======================= 04 · AFTER DARK ======================= -->
+<section class="sec t-night grain cv" style="overflow:clip">
+  <img class="wm" src="assets/logo/anvi-peacock-peach.svg" alt="" style="left:-9%;bottom:-8%;opacity:.07" loading="lazy">
   <div class="wrap" style="position:relative;z-index:1">
-    <div class="split split--reverse">
-      <div class="split__media framed" data-reveal><img loading="lazy" src="assets/img/social-laugh.jpg" alt="A celebration at ANVI Social"></div>
-      <div class="split__body" data-reveal data-reveal-delay="1">
-        <p class="kicker">Anvi Social · The Terrace</p>
-        <h2 class="d-md mt-1">A home for connection, culture &amp; celebration.</h2>
-        <p class="mt-2" style="color:var(--sand)">The top-floor glasshouse is where Anvi turns up the volume — brand launches and networking by day, DJs, sound sessions and private celebrations by night. A standout bar, an LED stage, VIP booths, and a room that transforms to whatever the night demands.</p>
-        <div class="flex gap-1 wrap-flex mt-3">
-          <a class="btn btn--gold" href="social.html">Discover Anvi Social</a>
-          <a class="btn" href="reservations.html#events">Enquire about events</a>
+    <div class="duo duo--rev">
+      <div class="duo__media duo__media--tall" data-rv="img">
+        <div class="frame frame--p framed"><img src="assets/img/social-laugh.jpg" alt="Friends laughing over cocktails at Anvi Social" loading="lazy" width="1500" height="2000"></div>
+        <p class="duo__caption"><span>The terrace, after dark</span><span>Fig. 02</span></p>
+      </div>
+      <div class="duo__body">
+        <p class="chap" data-rv><span class="chap__no" style="color:var(--peach)">Chapter 04 — Rise</span></p>
+        <h2 class="d3 mt-2" data-split>A home for connection, culture &amp; <span class="ital" style="color:var(--peach)">celebration.</span></h2>
+        <p class="dim mt-2" data-rv>When the plates clear, the evening climbs. Anvi Social is the glasshouse on top — brand launches, screenings and networking by day; DJs, sound sessions and private celebrations by night. Dine downstairs, host upstairs.</p>
+        <div class="row mt-3" data-rv style="--d:1">
+          <a class="btn btn--acc" href="social.html">Discover Anvi Social <span class="ar">→</span></a>
+          <a class="btn" href="reservations.html#host">Host an event</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ACTIVATIONS ============ -->
-<section class="section">
+<!-- ======================= PROGRAMME ======================= -->
+<section class="sec t-ivory cv">
   <div class="wrap">
-    <div class="grid cols-2" style="align-items:end">
-      <div data-reveal>
-        <p class="kicker">The Calendar</p>
-        <h2 class="d-md mt-1">A programme, not just a place.</h2>
+    <div class="grid g-2" style="align-items:end">
+      <div>
+        <p class="k k--rule" data-rv>The calendar</p>
+        <h2 class="d3 mt-1" data-rv style="--d:1">A programme,<br>not just a place.</h2>
       </div>
-      <p class="muted" data-reveal data-reveal-delay="1">Signature experiences that give you a reason to return — from the chef’s counter to the sound system.</p>
+      <p class="dim" data-rv style="--d:2">Signature experiences that give you a reason to return — from the chef's counter to the sound system. The full calendar goes live with opening season.</p>
     </div>
-    <div class="acts mt-3">
-      <div class="act" data-reveal>
-        <span class="idx">01</span>
-        <div><h4>Chef’s Table</h4><p>A front-row seat to the pass — a multi-course menu built and plated before you.</p></div>
-        <span class="cadence">Bimonthly</span>
+    <div class="prog mt-3">
+      <div class="prog__item" data-rv>
+        <span class="prog__no">01</span>
+        <div><h3 class="prog__name">Chef's Table</h3><p class="prog__desc">A front-row seat to the pass — a multi-course menu built and plated before you.</p></div>
+        <span class="prog__where">Anvi Lagos</span><span class="prog__when">Bimonthly</span>
       </div>
-      <div class="act" data-reveal>
-        <span class="idx">02</span>
-        <div><h4>Guest Chef Series</h4><p>Visiting chefs take over the kitchen for a limited residency.</p></div>
-        <span class="cadence">Quarterly</span>
+      <div class="prog__item" data-rv>
+        <span class="prog__no">02</span>
+        <div><h3 class="prog__name">Guest Chef Series</h3><p class="prog__desc">Visiting chefs take over the kitchen for a limited residency.</p></div>
+        <span class="prog__where">Anvi Lagos</span><span class="prog__when">Quarterly</span>
       </div>
-      <div class="act" data-reveal>
-        <span class="idx">03</span>
-        <div><h4>Sound Sessions</h4><p>Resident and guest selectors on the terrace, till late.</p></div>
-        <span class="cadence">Weekends</span>
+      <div class="prog__item" data-rv>
+        <span class="prog__no">03</span>
+        <div><h3 class="prog__name">Supper Club</h3><p class="prog__desc">A long table, a set menu and strangers who leave as friends.</p></div>
+        <span class="prog__where">Anvi Lagos</span><span class="prog__when">Seasonal</span>
       </div>
-      <div class="act" data-reveal>
-        <span class="idx">04</span>
-        <div><h4>Founder’s Club</h4><p>An invitation-only table for the city’s builders and creatives.</p></div>
-        <span class="cadence">Bimonthly</span>
+      <div class="prog__item" data-rv>
+        <span class="prog__no">04</span>
+        <div><h3 class="prog__name">Sound Sessions</h3><p class="prog__desc">Resident and guest selectors on the terrace, till late.</p></div>
+        <span class="prog__where">Anvi Social</span><span class="prog__when">Weekends</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GALLERY ============ -->
-<section class="section" style="padding-top:0">
-  <div class="wrap-wide">
-    <div class="gallery">
-      <a class="tall" href="social.html" data-reveal><img loading="lazy" src="assets/img/drink-glow.jpg" alt="A glowing cocktail"></a>
-      <a class="wide" href="lagos.html" data-reveal data-reveal-delay="1"><img loading="lazy" src="assets/img/int-chandelier.jpg" alt="The dining room after dark"></a>
-      <a href="menu.html" data-reveal data-reveal-delay="2"><img loading="lazy" src="assets/img/food-dessert.jpg" alt="Dessert plating"></a>
-      <a href="social.html" data-reveal><img loading="lazy" src="assets/img/social-champagne.jpg" alt="Champagne on the terrace"></a>
-      <a href="lagos.html" data-reveal data-reveal-delay="1"><img loading="lazy" src="assets/img/chef-plating.jpg" alt="A chef plating a dish"></a>
-      <a class="wide" href="menu.html" data-reveal data-reveal-delay="2"><img loading="lazy" src="assets/img/food-crab-bisque.jpg" alt="Crab and bisque"></a>
-      <a href="social.html" data-reveal><img loading="lazy" src="assets/img/social-couple.jpg" alt="An evening at Anvi Social"></a>
+      <div class="prog__item" data-rv>
+        <span class="prog__no">05</span>
+        <div><h3 class="prog__name">Creative Collective</h3><p class="prog__desc">A curated room of the city's makers — art, music, film and food.</p></div>
+        <span class="prog__where">Anvi Social</span><span class="prog__when">Monthly</span>
+      </div>
+      <div class="prog__item" data-rv>
+        <span class="prog__no">06</span>
+        <div><h3 class="prog__name">Founder's Club</h3><p class="prog__desc">An invitation-only table for the island's builders and creatives.</p></div>
+        <span class="prog__where">Anvi Social</span><span class="prog__when">Bimonthly</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ WAITLIST CTA ============ -->
-<section class="section on-cream center" id="waitlist" style="overflow:hidden">
-  <img class="peacock-watermark" src="assets/logo/anvi-peacock-burgundy.svg" alt="" style="left:50%;top:50%;transform:translate(-50%,-50%);opacity:.04;width:min(70vw,760px)">
+<!-- ======================= GALLERY ======================= -->
+<section class="sec sec--flush-t t-ivory cv">
+  <div class="wrap-x">
+    <div class="gal">
+      <a class="s-tall" href="assets/img/drink-glow.jpg" data-rv><img src="assets/img/drink-glow.jpg" alt="A glowing cocktail at the bar" loading="lazy" width="900" height="1200"></a>
+      <a class="s-wide" href="assets/img/int-chandelier.jpg" data-rv style="--d:1"><img src="assets/img/int-chandelier.jpg" alt="The dining room under the chandelier" loading="lazy" width="1500" height="1000"></a>
+      <a href="assets/img/food-dessert.jpg" data-rv style="--d:2"><img src="assets/img/food-dessert.jpg" alt="Dessert, plated" loading="lazy" width="900" height="900"></a>
+      <a href="assets/img/social-champagne.jpg" data-rv><img src="assets/img/social-champagne.jpg" alt="Champagne on the terrace" loading="lazy" width="900" height="900"></a>
+      <a href="assets/img/chef-kitchen.jpg" data-rv style="--d:1"><img src="assets/img/chef-kitchen.jpg" alt="The kitchen at full tilt" loading="lazy" width="900" height="900"></a>
+      <a class="s-wide" href="assets/img/food-crab-bisque.jpg" data-rv style="--d:2"><img src="assets/img/food-crab-bisque.jpg" alt="Crab, bisque and garnish" loading="lazy" width="1500" height="1000"></a>
+      <a href="assets/img/social-couple.jpg" data-rv><img src="assets/img/social-couple.jpg" alt="An evening for two at Anvi Social" loading="lazy" width="900" height="900"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FOUNDING 100 ======================= -->
+<section class="sec t-oxblood center" id="list" style="overflow:clip">
+  <img class="wm" src="assets/logo/anvi-peacock-peach.svg" alt="" style="left:50%;top:50%;transform:translate(-50%,-50%);width:min(72vw,700px);opacity:.06" loading="lazy">
   <div class="wrap" style="position:relative;z-index:1;max-width:720px">
-    <p class="kicker" data-reveal>Opening 2026</p>
-    <h2 class="d-lg mt-1" data-reveal data-reveal-delay="1">Be first to the table.</h2>
-    <p class="lead mt-1" data-reveal data-reveal-delay="2">Join the guest list for a first look at the space, the menu and priority reservations for opening season.</p>
-    <form class="mt-3" data-anvi-form data-reveal data-reveal-delay="3" style="max-width:520px;margin-inline:auto">
-      <div class="form-body">
-        <div class="field-row">
-          <div class="field"><label for="w-name">Name</label><input id="w-name" name="name" type="text" required autocomplete="name"></div>
-          <div class="field"><label for="w-email">Email</label><input id="w-email" name="email" type="email" required autocomplete="email"></div>
+    <p class="k k--rule" style="color:var(--sand)" data-rv>Opening season · mid-August 2026</p>
+    <h2 class="d2 mt-1" data-split>Be one of the <span class="ital" style="color:var(--peach)">Founding 100.</span></h2>
+    <p class="lead mt-2" data-rv>The first hundred names on the list get the first look — a seat at the soft launch, the menu before anyone else, and priority reservations for opening season.</p>
+    <form class="mt-3" data-anvi data-rv style="--d:1;max-width:520px;margin-inline:auto;text-align:left">
+      <div class="fbody">
+        <div class="fld-row">
+          <div class="fld"><label for="f-name">Name</label><input id="f-name" name="name" type="text" required autocomplete="name"></div>
+          <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
         </div>
-        <div class="field"><label for="w-wa">WhatsApp (optional)</label><input id="w-wa" name="whatsapp" type="tel" autocomplete="tel"></div>
-        <button class="btn btn--solid" type="submit" style="width:100%;justify-content:center">Join the guest list</button>
-        <p class="form-note">By joining you agree to receive occasional updates from Anvi. No noise — just the good stuff.</p>
+        <div class="fld"><label for="f-wa">WhatsApp <span style="opacity:.6">(for the good stuff only)</span></label><input id="f-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+234 ..."></div>
+        <button class="btn btn--acc btn--wide" type="submit">Join the Founding 100</button>
+        <p class="fnote center">One or two updates a month. No noise — just first looks and first seats.</p>
       </div>
-      <div class="form-success"><h3 class="d-sm">You’re on the list.</h3><p class="muted mt-1">Thank you — we’ll be in touch with your first look at Anvi.</p></div>
+      <div class="fok"><h3 class="d5">You're on the list.</h3><p class="dim mt-1">Welcome to the Founding 100 — your first look at Anvi is on its way.</p></div>
     </form>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="wrap-wide">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI">
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-foot grain">
+  <hr class="checker checker--wide" aria-hidden="true" style="margin:0">
+  <div class="wrap-x">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="148" height="41">
         <p>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Where cultures connect.</p>
       </div>
-      <div class="footer-col">
-        <h5>Explore</h5>
-        <a href="lagos.html">Anvi Lagos — Dining</a>
-        <a href="social.html">Anvi Social — Events</a>
-        <a href="menu.html">The Menu</a>
-        <a href="about.html">Our Story</a>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="lagos.html">Anvi Lagos — dining</a>
+        <a href="social.html">Anvi Social — the terrace</a>
+        <a href="menu.html">The menu</a>
+        <a href="about.html">Our story</a>
       </div>
-      <div class="footer-col">
-        <h5>Visit</h5>
+      <div class="foot-col">
+        <h4>Visit</h4>
         <a href="reservations.html#reserve">Reserve a table</a>
-        <a href="reservations.html#events">Private &amp; corporate events</a>
-        <a href="reservations.html#waitlist">Join the guest list</a>
-        <a href="reservations.html">Find us</a>
+        <a href="reservations.html#host">Private &amp; corporate events</a>
+        <a href="reservations.html#list">Join the Founding 100</a>
+        <a href="reservations.html#find">Find us</a>
       </div>
-      <div class="footer-col">
-        <h5>Anvi, Lagos</h5>
+      <div class="foot-col">
+        <h4>Anvi · Victoria Island</h4>
         <a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Ave+Victoria+Island+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Ave,<br>Victoria Island, Lagos</a>
         <a href="tel:+2348110438371">+234 811 043 8371</a>
-        <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">@anvilagos</a>
-        <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">@anvisocial</a>
+        <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">Instagram — @anvilagos</a>
+        <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">Instagram — @anvisocial</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Anvi Hospitality Ltd</span>
-      <span>Where Cultures Connect</span>
+  </div>
+  <div class="foot-word" aria-hidden="true"><img src="assets/logo/anvi-wordmark-white.svg" alt="" loading="lazy"></div>
+  <div class="wrap-x">
+    <div class="foot-legal">
+      <span>© <span data-year>2026</span> Anvi Hospitality Limited · RC 8404218</span>
+      <span>Where cultures connect</span>
       <span>Victoria Island · Lagos · Nigeria</span>
     </div>
   </div>
 </footer>
 
-<script src="js/anvi.js?v=2"></script>
+<script src="js/anvi.js?v=3"></script>
 </body>
 </html>

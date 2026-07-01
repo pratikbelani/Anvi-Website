@@ -16,10 +16,13 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#51241B">
-<link rel="stylesheet" href="css/anvi.css">
+<link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="css/anvi.css?v=2">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="announce">Anvi Hospitality Ltd · Victoria Island, Lagos &nbsp;—&nbsp; <a href="reservations.html#waitlist">Join the guest list</a></div>
 
 <header class="site-header">
@@ -36,7 +39,7 @@
 </header>
 
 <!-- HERO -->
-<section class="pagehero">
+<section class="pagehero" id="main">
   <div class="pagehero__media"><img src="assets/img/int-booth.jpg" alt="An intimate corner at Anvi" fetchpriority="high"></div>
   <div class="pagehero__inner wrap-wide">
     <p class="kicker" data-reveal>Our Story</p>
@@ -134,6 +137,6 @@
   </div>
 </footer>
 
-<script src="js/anvi.js"></script>
+<script src="js/anvi.js?v=2"></script>
 </body>
 </html>

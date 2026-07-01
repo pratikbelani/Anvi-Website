@@ -18,7 +18,9 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#51241B">
-<link rel="stylesheet" href="css/anvi.css">
+<link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="css/anvi.css?v=2">
 <style>
   /* ---------- Coming Soon — self-contained luxury landing ---------- */
   html, body { height: 100%; }
@@ -97,6 +99,7 @@
 </style>
 </head>
 <body class="cs">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="cs-stage">
 
   <div class="cs-bg"><img loading="lazy" src="assets/img/int-oxblood.jpg" alt=""></div>
@@ -110,7 +113,7 @@
   </header>
 
   <!-- CENTER -->
-  <main class="cs-center">
+  <main class="cs-center" id="main">
     <p class="cs-kicker cs-anim cs-d2">A modern hospitality destination</p>
     <div class="cs-wordmark cs-anim cs-d2"><img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI"></div>
     <p class="cs-tag cs-anim cs-d3">Where cultures connect</p>
@@ -152,7 +155,7 @@
 
 </div>
 
-<script src="js/anvi.js"></script>
+<script src="js/anvi.js?v=2"></script>
 <script>
   /* Countdown — set the opening target here (Lagos time, WAT +01:00).
      Strategy target: soft launch mid-August 2026. Confirm & edit before launch. */

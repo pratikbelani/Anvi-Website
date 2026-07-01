@@ -9,7 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#51241B">
-<link rel="stylesheet" href="css/anvi.css">
+<link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="css/anvi.css?v=2">
 <style>
   body.nf { min-height:100svh; display:grid; place-items:center; text-align:center; padding:2rem var(--gutter); }
   .nf-wrap { max-width:560px; }
@@ -19,7 +21,8 @@
 </style>
 </head>
 <body class="nf">
-  <div class="nf-wrap">
+<a class="skip-link" href="#main">Skip to content</a>
+  <div class="nf-wrap" id="main">
     <div class="nf-peacock"><img src="assets/logo/anvi-peacock-peach.svg" alt=""></div>
     <p class="nf-code">Error 404</p>
     <h1 class="d-lg mt-1">This table isn’t set.</h1>
@@ -29,6 +32,6 @@
       <a class="btn" href="reservations.html#reserve">Reserve a table</a>
     </div>
   </div>
-<script src="js/anvi.js"></script>
+<script src="js/anvi.js?v=2"></script>
 </body>
 </html>

@@ -16,10 +16,13 @@
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#51241B">
-<link rel="stylesheet" href="css/anvi.css">
+<link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
+<link rel="stylesheet" href="css/anvi.css?v=2">
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="announce">A living menu · dishes and pricing evolve with the season &nbsp;—&nbsp; <a href="reservations.html#reserve">Reserve a table</a></div>
 
 <header class="site-header">
@@ -36,7 +39,7 @@
 </header>
 
 <!-- HERO -->
-<section class="pagehero" style="min-height:60svh">
+<section class="pagehero" id="main" style="min-height:60svh">
   <div class="pagehero__media"><img src="assets/img/food-biryani.jpg" alt="A signature Anvi dish" fetchpriority="high"></div>
   <div class="pagehero__inner wrap-wide">
     <p class="kicker" data-reveal>The Menu</p>
@@ -50,10 +53,22 @@
     <div class="center" style="max-width:60ch;margin-inline:auto">
       <p class="muted">Our kitchen moves between two great traditions — the clay ovens and slow curries of North India, and the dim sum, wok and robata of Pan-Asia. Dishes are made for sharing. Look for the <span style="color:var(--peach)">&#10022;</span> — those are the house signatures.</p>
     </div>
-    <div class="menu-tabs mt-3">
-      <button class="menu-tab active" data-target="all">All</button>
-      <button class="menu-tab" data-target="indian">North Indian</button>
-      <button class="menu-tab" data-target="asian">Pan-Asian</button>
+    <div class="menu-toolbar mt-3">
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-target="all">All</button>
+        <button class="menu-tab" data-target="indian">North Indian</button>
+        <button class="menu-tab" data-target="asian">Pan-Asian</button>
+      </div>
+      <div class="menu-search" role="search">
+        <input id="menu-search" type="search" placeholder="Search the menu — a dish, an ingredient…" aria-label="Search the menu">
+      </div>
+      <p class="menu-count" id="menu-count" aria-live="polite"></p>
+    </div>
+
+    <div id="menu-empty" class="menu-empty hidden">
+      <p class="d-sm" style="font-family:var(--f-display);color:var(--burgundy)">Nothing on the pass by that name.</p>
+      <p class="muted mt-1" style="margin-inline:auto">Try another ingredient — or clear the search and browse the full menu.</p>
+      <button class="menu-tab" id="menu-clear" style="margin-top:1.5rem">Clear search</button>
     </div>
 
 <div class="menu-cat" data-cat="indian">
@@ -301,6 +316,6 @@
   </div>
 </footer>
 
-<script src="js/anvi.js"></script>
+<script src="js/anvi.js?v=2"></script>
 </body>
 </html>

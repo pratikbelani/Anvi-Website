@@ -17,54 +17,55 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<meta name="theme-color" content="#161210">
+<meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=3">
+<link rel="stylesheet" href="css/anvi.css?v=7">
 <style>
   .peek-top { position: absolute; top: 1.6rem; left: 0; right: 0; z-index: 5;
     display: flex; justify-content: space-between; align-items: center; padding-inline: var(--gut);
-    font-family: var(--f-ui); font-weight: 500; font-size: .6rem; letter-spacing: .28em;
+    font-family: var(--f-ui); font-weight: 500; font-size: .58rem; letter-spacing: .3em;
     text-transform: uppercase; color: rgba(224,218,208,.6); }
   .peek-foot { position: absolute; bottom: 1.4rem; left: 0; right: 0; z-index: 5;
     display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-inline: var(--gut);
-    font-family: var(--f-ui); font-weight: 500; font-size: .56rem; letter-spacing: .24em;
+    font-family: var(--f-ui); font-weight: 500; font-size: .54rem; letter-spacing: .26em;
     text-transform: uppercase; color: rgba(224,218,208,.45); }
-  .peek-foot a:hover { color: var(--peach); }
-  .peek-form { display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; max-width: 560px; }
-  .peek-form .fld { flex: 1 1 200px; margin: 0; text-align: left; }
-  .peek-form .fld input { border-color: rgba(224,218,208,.3); color: var(--ivory); }
-  .peek-form .fld input:focus { border-color: var(--peach); }
-  .peek-form .fld label { color: var(--peach); }
-  .peek-form .btn { flex: 1 1 100%; margin-top: .4rem; }
+  .peek-foot a:hover { color: var(--gold); }
+  .peek-form { display: flex; gap: .8rem 1.2rem; flex-wrap: wrap; justify-content: center; max-width: 560px; }
+  .peek-form .fld { flex: 1 1 200px; margin: 0; }
+  .peek-form .btn { flex: 1 1 100%; margin-top: .4rem; justify-content: center; }
   .peek-form .fbody { display: contents; }
   .peek-form.sent .fbody { display: none; }
-  .peek .fok { border-color: var(--peach); color: var(--ivory); }
-  @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.4rem; } }
+  .peek .fok { border-color: var(--gold); color: var(--ivory); }
+  .peek__mark { width: min(26vw, 96px); color: var(--gold); }
+  /* dither the AI-upscaled placeholder photo inside the reveal */
+  .peek.grain::after { opacity: .12; }
+  .peek__back img { filter: saturate(.96) contrast(1.03); }
+  @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.2rem; } }
 </style>
 </head>
 <body data-noveil data-nochrome class="peek-page">
 
 <main class="peek grain" aria-label="ANVI — coming soon">
-  <div class="peek__back" aria-hidden="true"><img src="assets/img/int-chandelier.jpg" alt="" fetchpriority="high" width="1500" height="1000"></div>
+  <div class="peek__back" aria-hidden="true"><img src="assets/img/hero-fish.jpg" alt="" fetchpriority="high" width="1500" height="1000"></div>
   <div class="peek__cover" aria-hidden="true"></div>
   <p class="peek__hint">Move to take a peek</p>
 
   <div class="peek-top">
     <span>Victoria Island · Lagos</span>
-    <span>Est. MMXXV</span>
+    <span>Est. 2026</span>
   </div>
 
   <div class="peek__body">
-    <svg class="peek__mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <ellipse cx="50" cy="50" rx="30" ry="44" stroke="currentColor" stroke-width="1.4"/>
-      <ellipse cx="50" cy="54" rx="19" ry="30" stroke="currentColor" stroke-width="1.2"/>
-      <ellipse cx="50" cy="58" rx="10" ry="17" stroke="currentColor" stroke-width="1"/>
-      <circle cx="50" cy="61" r="3.4" fill="currentColor"/>
+    <svg class="peek__mark" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M22 100 V48 A28 30 0 0 1 78 48 V100" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M30 100 V50 A20 22 0 0 1 70 50 V100" stroke="currentColor" stroke-width="1"/>
+      <ellipse cx="50" cy="62" rx="9" ry="14" stroke="currentColor" stroke-width="1"/>
+      <circle cx="50" cy="65" r="2.8" fill="currentColor"/>
     </svg>
     <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" style="width:min(56vw,300px)" width="300" height="83">
     <h1 class="d3" style="max-width:16ch">Something worth peeking at.</h1>
-    <p class="lead" style="color:var(--sand);max-width:44ch">Refined Indo-Asian dining, a lounge and a glasshouse terrace — one address, mid-August 2026. Where cultures connect.</p>
+    <p class="lead" style="color:var(--sand);max-width:44ch">Refined Indo-Asian dining across two floors, and the Social House above — one address, mid-August 2026. Where cultures connect.</p>
 
     <div class="cd" data-count="2026-08-15" role="timer" aria-label="Countdown to soft launch">
       <div><b data-cd-d>--</b><span>Days</span></div>
@@ -75,11 +76,11 @@
 
     <form class="peek-form" data-anvi>
       <div class="fbody">
-        <div class="fld"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
-        <div class="fld"><label for="p-wa">WhatsApp <span style="opacity:.6">(optional)</span></label><input id="p-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+234 ..."></div>
-        <button class="btn btn--acc" type="submit" style="--b:var(--peach)">Join the Founding 100 <span class="ar">→</span></button>
+        <div class="fld fld--dark"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
+        <div class="fld fld--dark"><label for="p-wa">WhatsApp <span style="opacity:.6">(optional)</span></label><input id="p-wa" name="whatsapp" type="tel" autocomplete="tel" placeholder="+234 ..."></div>
+        <button class="btn" type="submit">Join the Founding 100 <span class="ar">→</span></button>
       </div>
-      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You're on the list.</h2><p class="dim mt-1">First looks and first seats — see you in August.</p></div>
+      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You're on the list.</h2><p class="mt-1" style="color:#A08E7D">First looks and first seats — see you in August.</p></div>
     </form>
   </div>
 
@@ -90,6 +91,6 @@
   </div>
 </main>
 
-<script src="js/anvi.js?v=3"></script>
+<script src="js/anvi.js?v=7"></script>
 </body>
 </html>

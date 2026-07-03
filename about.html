@@ -17,10 +17,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<meta name="theme-color" content="#51241B">
+<meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=3">
+<link rel="stylesheet" href="css/anvi.css?v=7">
 </head>
 <body>
 
@@ -28,19 +28,23 @@
 <div class="pgbar" aria-hidden="true"></div>
 <div class="ann">Soft launch · mid-August 2026 · Victoria Island &nbsp;—&nbsp; <a href="reservations.html#list">Join the Founding&nbsp;100</a></div>
 
-<header class="hd hd--dark" data-over-hero>
-  <a class="hd__brand" href="index.html" aria-label="ANVI — home">
-    <img class="lg-light" src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33">
-    <img class="lg-dark" src="assets/logo/anvi-wordmark-burgundy.svg" alt="ANVI" width="120" height="33">
-  </a>
+<header class="hd">
+  <a class="hd__mini" href="reservations.html#reserve">Reserve</a>
   <nav class="hd__nav" aria-label="Primary">
-    <a class="hd__link" href="lagos.html">Dine</a>
-    <a class="hd__link" href="social.html">Social</a>
-    <a class="hd__link" href="menu.html">Menu</a>
-    <a class="hd__link" href="about.html" aria-current="page">Story</a>
-    <a class="hd__link" href="reservations.html">Visit</a>
-    <a class="btn btn--acc hd__cta" href="reservations.html#reserve">Reserve</a>
+    <div class="hd__group hd__group--l">
+      <a class="hd__link" href="lagos.html">Dine</a>
+      <a class="hd__link" href="social.html">Social</a>
+      <a class="hd__link" href="menu.html">Menu</a>
+    </div>
+    <div class="hd__group hd__group--r">
+      <a class="hd__link" href="about.html" aria-current="page">Story</a>
+      <a class="hd__link" href="reservations.html">Visit</a>
+      <a class="btn hd__cta" href="reservations.html#reserve">Reserve</a>
+    </div>
   </nav>
+  <a class="hd__brand" href="index.html" aria-label="ANVI — home">
+    <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="120" height="33">
+  </a>
   <button class="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 
@@ -48,60 +52,58 @@
 <section class="phero grain" id="main">
   <div class="phero__media"><img src="assets/img/chef-kitchen.jpg" alt="The Anvi kitchen mid-service" fetchpriority="high" width="1500" height="1000"></div>
   <div class="phero__body">
-    <p class="k k--rule" style="color:var(--peach)" data-rv>The story · अन्वि</p>
-    <h1 class="d2 mt-1" data-split>One who brings people <span class="ital" style="color:var(--peach)">together.</span></h1>
+    <p class="k" data-rv>The story · अन्वि · est. 2026</p>
+    <h1 class="d2 mt-2" data-split>One who brings people <span class="ital gilt">together.</span></h1>
     <p class="phero__meta" data-rv style="--d:2">
       <span><b>Anvi</b> — Sanskrit · "connected"</span>
-      <span>Est. <b>MMXXV</b> · Victoria Island</span>
+      <span>Victoria Island · <b>Lagos</b></span>
     </p>
   </div>
 </section>
 
 <!-- THE NAME -->
-<section class="sec t-ivory" style="overflow:clip">
-  <img class="wm" src="assets/logo/anvi-peacock-burgundy.svg" alt="" style="right:-6%;top:6%" loading="lazy">
+<section class="sec t-night center" style="overflow:clip">
+  <img class="wm" src="assets/logo/anvi-peacock-peach.svg" alt="" style="right:-7%;top:2%" loading="lazy">
   <div class="wrap" style="position:relative;z-index:1">
-    <p class="chap" data-rv><span class="chap__no">01 — The name</span></p>
-    <h2 class="d2 mt-2" style="max-width:22ch" data-split>We named the house after <span class="ital acc">the reason it exists.</span></h2>
-    <div class="grid g-2 mt-4" style="align-items:start">
-      <p class="lead" data-rv>Anvi comes from the Sanskrit for <em>connected</em> — one who brings people together. Everything else follows from that.</p>
-      <div data-rv style="--d:1">
-        <p class="dim">Lagos already knows how to celebrate. What it was missing was a single address where an unhurried family dinner, a slow cocktail and the island's best night out could happen under one roof — where Indian and Pan-Asian traditions could sit at the same table, and where the room itself does the introducing.</p>
-        <p class="dim">Anvi Hospitality was founded in April 2025 by the Belani family to build exactly that: not another restaurant, but a modern hospitality destination that sells the experience first and the cuisine second.</p>
-      </div>
+    <p class="orn" data-rv><span class="eye">✦</span></p>
+    <p class="k mt-2" data-rv>The name</p>
+    <h2 class="d2 mt-2" style="max-width:20ch;margin-inline:auto" data-split>We named the house after <span class="ital gilt">the reason it exists.</span></h2>
+    <p class="lead mt-3" style="max-width:50ch;margin-inline:auto" data-rv>Anvi comes from the Sanskrit for <em>connected</em> — one who brings people together. Everything else follows from that.</p>
+    <div class="grid g-2 mt-4" style="text-align:left;gap:clamp(2rem,5vw,4.5rem)">
+      <p class="dropcap dim" data-rv>Lagos already knows how to celebrate. What it was missing was a single address where an unhurried family dinner, a slow cocktail and the island's best night out could happen under one roof — where Indian and Pan-Asian traditions sit at the same table, and the room itself does the introducing.</p>
+      <p class="dropcap dim" data-rv style="--d:1">Anvi Hospitality was founded in April 2025 by the Belani family to build exactly that: not another restaurant, but a modern hospitality destination that sells the experience first and the cuisine second.</p>
     </div>
   </div>
 </section>
 
-<div class="t-ivory"><hr class="checker" aria-hidden="true"></div>
-
 <!-- VISION / MISSION -->
-<section class="sec t-oxblood cv" style="overflow:clip">
+<section class="sec t-oxblood grain" style="overflow:clip">
+  <hr class="checker" aria-hidden="true" style="position:absolute;top:0;left:0;right:0;margin:0">
   <div class="wrap">
-    <p class="chap" data-rv><span class="chap__no" style="color:var(--peach)">02 — The intent</span></p>
-    <div class="grid g-2 mt-3" style="gap:clamp(2.5rem,6vw,6rem)">
+    <div class="grid g-2" style="gap:clamp(3rem,7vw,7rem)">
       <div class="quote" data-rv>
+        <p class="orn mb-2" aria-hidden="true"><span class="eye">✦</span></p>
         <p>To establish Anvi as the premier destination for innovative dining and entertainment in Lagos — blending Indian and Pan-Asian influences with global trends.</p>
         <cite>The vision</cite>
       </div>
       <div class="quote" data-rv style="--d:1">
+        <p class="orn mb-2" aria-hidden="true"><span class="eye">✦</span></p>
         <p>To create a versatile space where exceptional food, timeless design and vibrant entertainment converge — an experience that bridges cultures and generations.</p>
         <cite>The mission</cite>
       </div>
     </div>
   </div>
+  <hr class="checker" aria-hidden="true" style="position:absolute;bottom:0;left:0;right:0;margin:0">
 </section>
 
 <!-- VALUES -->
-<section class="sec t-ivory cv">
+<section class="sec t-night">
   <div class="wrap">
-    <div class="grid g-2" style="align-items:end">
-      <div>
-        <p class="k k--rule" data-rv>03 — What we hold</p>
-        <h2 class="d3 mt-1" data-rv style="--d:1">Five values, <span class="ital acc">no small print.</span></h2>
-      </div>
+    <div class="center">
+      <p class="k" data-rv>What we hold</p>
+      <h2 class="d3 mt-2" data-rv style="--d:1">Five values, <span class="ital gilt">no small print.</span></h2>
     </div>
-    <div class="vals mt-3">
+    <div class="vals mt-4">
       <div class="val" data-rv><h3 class="display">Connection</h3><p>Building bridges between cultures, generations and the people at the next table.</p></div>
       <div class="val" data-rv><h3 class="display">Innovation</h3><p>Continuously evolving — in the kitchen, behind the bar and on the calendar.</p></div>
       <div class="val" data-rv><h3 class="display">Excellence</h3><p>Perfection attempted in every detail, from the fold of a dumpling to the fall of the light.</p></div>
@@ -112,55 +114,57 @@
 </section>
 
 <!-- DESIGN -->
-<section class="sec t-night grain cv">
+<section class="sec t-soil grain">
   <div class="wrap">
     <div class="duo">
-      <div class="duo__media duo__media--tall" data-rv="img">
-        <div class="frame frame--p framed"><img src="assets/img/int-chandelier.jpg" alt="The dining room beneath the chandelier" loading="lazy" width="1500" height="2000"></div>
-        <p class="duo__caption"><span>The room</span><span>Fig. 01</span></p>
+      <div class="duo__media" data-rv="img">
+        <div class="arch-frame"><div class="arch"><img src="assets/img/int-chandelier.jpg" alt="The dining room beneath the chandelier" loading="lazy" width="1500" height="2000"></div></div>
+        <p class="duo__caption"><span>The room</span><span>Warm, dark, tactile</span></p>
       </div>
       <div class="duo__body">
-        <p class="chap" data-rv><span class="chap__no" style="color:var(--peach)">04 — The design</span></p>
-        <h2 class="d3 mt-2" data-split>Warm, dark and <span class="ital" style="color:var(--peach)">tactile.</span></h2>
+        <p class="k" data-rv>The design</p>
+        <h2 class="d3 mt-2" data-split>Warm, dark and <span class="ital gilt">tactile.</span></h2>
         <p class="dim mt-2" data-rv>The palette is drawn from the things the kitchen touches — saffron burgundy, ivory stone, sandalwood, kohl. Oxblood leather against cream plaster; marble underfoot; brass at the door; a chandelier that behaves like a slow firework.</p>
-        <p class="dim" data-rv>Look closer and the details repeat: hand-drawn checkerboards, terracotta diamonds and the peacock — our sign that the evening has somewhere to strut.</p>
+        <p class="dim" data-rv>Look closer and the details repeat: hand-drawn checkerboards, terracotta diamonds, arches you walk through and arches you drink under — and the peacock, our sign that the evening has somewhere to strut.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- THE PEACOCK -->
-<section class="sec t-sand center cv" style="overflow:clip">
+<section class="sec t-night center" style="overflow:clip">
   <div class="wrap" style="max-width:760px">
-    <img src="assets/logo/anvi-peacock-burgundy.svg" alt="The Anvi peacock mark" style="width:min(52vw,300px);margin-inline:auto" data-rv>
-    <h2 class="d3 mt-3" data-split>The peacock walks <span class="ital acc">both worlds.</span></h2>
+    <img src="assets/logo/anvi-peacock-peach.svg" alt="The Anvi peacock mark" style="width:min(52vw,300px);margin-inline:auto" data-rv>
+    <h2 class="d3 mt-3" data-split>The peacock walks <span class="ital gilt">both worlds.</span></h2>
     <p class="lead mt-2" data-rv>India's national bird, at home in a Lagos garden — proud, unhurried and impossible to ignore. It marks our signatures on the menu and our best nights on the calendar.</p>
   </div>
 </section>
 
 <!-- TIMELINE -->
-<section class="sec t-ivory cv">
+<section class="sec sec--flush-t t-night">
   <div class="wrap">
-    <p class="k k--rule" data-rv>05 — The road to opening</p>
+    <div class="center">
+      <p class="k" data-rv>The road to opening</p>
+    </div>
     <div class="prog mt-3">
       <div class="prog__item" data-rv>
-        <span class="prog__no">2025</span>
-        <div><h3 class="prog__name">Incorporated</h3><p class="prog__desc">Anvi Hospitality Limited is founded in April; the Victoria Island address is secured.</p></div>
+        <span class="prog__no">01</span>
+        <div><h3 class="prog__name">The groundwork</h3><p class="prog__desc">Anvi Hospitality Limited is incorporated and the Victoria Island address is secured — the year of drawings and decisions.</p></div>
         <span class="prog__when">April 2025</span>
       </div>
       <div class="prog__item" data-rv>
-        <span class="prog__no">2025–26</span>
-        <div><h3 class="prog__name">Designed &amp; built</h3><p class="prog__desc">Three floors are drawn, argued over and built — dining room, lounge and the glasshouse terrace.</p></div>
-        <span class="prog__when">The fit-out</span>
+        <span class="prog__no">02</span>
+        <div><h3 class="prog__name">Designed &amp; built</h3><p class="prog__desc">Three floors are drawn, argued over and built — dining room, the bar floor and the Social House.</p></div>
+        <span class="prog__when">2025–26</span>
       </div>
       <div class="prog__item" data-rv>
-        <span class="prog__no">2026</span>
+        <span class="prog__no">03</span>
         <div><h3 class="prog__name">Soft launch</h3><p class="prog__desc">Doors open in mid-August — the Founding 100 first, then the city.</p></div>
-        <span class="prog__when">Mid-August</span>
+        <span class="prog__when">Mid-August 2026</span>
       </div>
       <div class="prog__item" data-rv>
-        <span class="prog__no">Beyond</span>
-        <div><h3 class="prog__name">The programme begins</h3><p class="prog__desc">Chef's tables, guest residencies, sound sessions — a calendar, not just a room.</p></div>
+        <span class="prog__no">04</span>
+        <div><h3 class="prog__name">The programme begins</h3><p class="prog__desc">The Chef's Table and Sound Sessions arrive first — the calendar grows from there.</p></div>
         <span class="prog__when">Opening season</span>
       </div>
     </div>
@@ -168,57 +172,51 @@
 </section>
 
 <!-- CTA -->
-<section class="sec t-oxblood center">
-  <div class="wrap" style="max-width:660px">
-    <h2 class="d2" data-split>Be there when the story <span class="ital" style="color:var(--peach)">starts.</span></h2>
-    <div class="row mt-3" style="justify-content:center" data-rv>
-      <a class="btn btn--acc" href="reservations.html#list">Join the Founding 100 <span class="ar">→</span></a>
-      <a class="btn" href="lagos.html">Explore the floors</a>
+<section class="sec t-oxblood grain center">
+  <div class="wrap" style="max-width:680px">
+    <p class="orn" data-rv><span class="eye">✦</span></p>
+    <h2 class="d2 mt-3" data-split>Be there when the story <span class="ital gilt">starts.</span></h2>
+    <div class="row row--center mt-3" data-rv>
+      <a class="btn" href="reservations.html#list">Join the Founding 100 <span class="ar">→</span></a>
+      <a class="btn btn--ivory" href="lagos.html">Explore the floors</a>
     </div>
   </div>
 </section>
 
+<a class="nextstop" href="lagos.html">
+  <span class="k">Now see it for yourself</span>
+  <span class="go">Step inside — Anvi Lagos <span class="ar">→</span></span>
+</a>
+
 <footer class="site-foot grain">
-  <hr class="checker checker--wide" aria-hidden="true" style="margin:0">
-  <div class="wrap-x">
-    <div class="foot-main">
-      <div class="foot-brand">
-        <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" width="148" height="41">
-        <p>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Where cultures connect.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Explore</h4>
-        <a href="lagos.html">Anvi Lagos — dining</a>
-        <a href="social.html">Anvi Social — the terrace</a>
-        <a href="menu.html">The menu</a>
-        <a href="about.html">Our story</a>
-      </div>
-      <div class="foot-col">
-        <h4>Visit</h4>
-        <a href="reservations.html#reserve">Reserve a table</a>
-        <a href="reservations.html#host">Private &amp; corporate events</a>
-        <a href="reservations.html#list">Join the Founding 100</a>
-        <a href="reservations.html#find">Find us</a>
-      </div>
-      <div class="foot-col">
-        <h4>Anvi · Victoria Island</h4>
-        <a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Ave+Victoria+Island+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Ave,<br>Victoria Island, Lagos</a>
-        <a href="tel:+2348110438371">+234 811 043 8371</a>
-        <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">Instagram — @anvilagos</a>
-        <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">Instagram — @anvisocial</a>
-      </div>
-    </div>
+  <hr class="checker" aria-hidden="true" style="margin:0">
+  <div class="foot-crest">
+    <img class="peacock" src="assets/logo/anvi-peacock-peach.svg" alt="" loading="lazy">
+    <img class="word" src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" loading="lazy">
+    <p>A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence. Where cultures connect.</p>
   </div>
-  <div class="foot-word" aria-hidden="true"><img src="assets/logo/anvi-wordmark-white.svg" alt="" loading="lazy"></div>
-  <div class="wrap-x">
-    <div class="foot-legal">
-      <span>© <span data-year>2026</span> Anvi Hospitality Limited · RC 8404218</span>
-      <span>Where cultures connect</span>
-      <span>Victoria Island · Lagos · Nigeria</span>
-    </div>
+  <nav class="foot-links" aria-label="Footer">
+    <a href="lagos.html">Dine</a>
+    <a href="social.html">Social</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">Story</a>
+    <a href="reservations.html">Visit</a>
+    <a href="reservations.html#host">Host an event</a>
+    <a href="reservations.html#list">Founding 100</a>
+  </nav>
+  <div class="foot-contact">
+    <a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Ave+Victoria+Island+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Ave, Victoria Island</a>
+    <a href="tel:+2348110438371">+234 811 043 8371</a>
+    <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">@anvilagos</a>
+    <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">@anvisocial</a>
+  </div>
+  <div class="foot-legal">
+    <span>© <span data-year>2026</span> Anvi Hospitality Limited · RC 8404218</span>
+    <span>Where cultures connect</span>
+    <span>Victoria Island · Lagos · Nigeria</span>
   </div>
 </footer>
 
-<script src="js/anvi.js?v=3"></script>
+<script src="js/anvi.js?v=7"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* ANVI — one building, one evening · interaction engine (v2, no dependencies) */
+/* ANVI — The Invitation · interaction engine (v3, no dependencies) */
 (function () {
   "use strict";
   var doc = document, root = doc.documentElement;
@@ -8,44 +8,38 @@
   var $ = function (s, c) { return (c || doc).querySelector(s); };
   var $$ = function (s, c) { return [].slice.call((c || doc).querySelectorAll(s)); };
 
-  /* ============ entrance veil — once per session ============ */
+  /* ============ entrance veil — a gold arch draws itself (once per session) ============ */
   (function () {
     if (RM || doc.body.hasAttribute("data-noveil")) return;
     try {
-      if (sessionStorage.getItem("anvi2")) return;
-      sessionStorage.setItem("anvi2", "1");
+      if (sessionStorage.getItem("anvi3")) return;
+      sessionStorage.setItem("anvi3", "1");
     } catch (e) { return; }
     var v = doc.createElement("div");
     v.className = "veil";
     v.setAttribute("aria-hidden", "true");
     v.innerHTML =
-      '<div class="veil__mark"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-      '<ellipse class="draw" cx="50" cy="50" rx="30" ry="44" stroke="currentColor" stroke-width="1.4"/>' +
-      '<ellipse class="draw" cx="50" cy="54" rx="19" ry="30" stroke="currentColor" stroke-width="1.2" style="animation-delay:.12s"/>' +
-      '<ellipse class="draw" cx="50" cy="58" rx="10" ry="17" stroke="currentColor" stroke-width="1" style="animation-delay:.24s"/>' +
-      '<circle cx="50" cy="61" r="3.4" fill="currentColor"/></svg></div>';
+      '<div class="veil__mark"><svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+      '<path class="draw" d="M22 100 V48 A28 30 0 0 1 78 48 V100" stroke="currentColor" stroke-width="1.4"/>' +
+      '<path class="draw" d="M30 100 V50 A20 22 0 0 1 70 50 V100" stroke="currentColor" stroke-width="1" style="animation-delay:.15s"/>' +
+      '<ellipse class="draw" cx="50" cy="62" rx="9" ry="14" stroke="currentColor" stroke-width="1" style="animation-delay:.3s"/>' +
+      '<circle cx="50" cy="65" r="2.8" fill="currentColor"/></svg></div>';
     doc.body.appendChild(v);
     requestAnimationFrame(function () { requestAnimationFrame(function () { v.classList.add("veil--in"); }); });
-    setTimeout(function () { v.classList.add("veil--lift"); }, 1350);
-    setTimeout(function () { v.parentNode && v.parentNode.removeChild(v); }, 2350);
+    setTimeout(function () { v.classList.add("veil--lift"); }, 1500);
+    setTimeout(function () { v.parentNode && v.parentNode.removeChild(v); }, 2600);
   })();
 
-  /* ============ header: tint after hero, hide on scroll down ============ */
+  /* ============ header: tint after start, hide on scroll down ============ */
   (function () {
     var hd = $(".hd");
     if (!hd) return;
-    var overHero = hd.hasAttribute("data-over-hero");
     var lastY = window.scrollY, tick = false;
     function apply() {
       var y = window.scrollY;
       hd.classList.toggle("hd--tint", y > 24);
-      if (overHero) {
-        var hero = $(".hero, .phero");
-        var heroH = hero ? hero.offsetHeight : 480;
-        hd.classList.toggle("hd--dark", y < heroH - 80);
-      }
-      if (y > lastY + 6 && y > 320 && !doc.body.classList.contains("nav-open")) hd.classList.add("hd--hide");
-      else if (y < lastY - 4 || y < 320) hd.classList.remove("hd--hide");
+      if (y > lastY + 6 && y > 340 && !doc.body.classList.contains("nav-open")) hd.classList.add("hd--hide");
+      else if (y < lastY - 4 || y < 340) hd.classList.remove("hd--hide");
       lastY = y;
       var bar = $(".pgbar");
       if (bar) {
@@ -121,131 +115,64 @@
     els.forEach(function (el) { io.observe(el); });
   })();
 
-  /* ============ hero slideshow (ken burns crossfade) ============ */
+  /* ============ arch slideshow (hero) ============ */
   (function () {
-    var slides = $$(".hero__slide");
+    var slides = $$(".arch__slide");
     if (slides.length < 2 || RM) return;
     var i = 0;
     setInterval(function () {
       slides[i].classList.remove("on");
       i = (i + 1) % slides.length;
       slides[i].classList.add("on");
-    }, 7000);
+    }, 6500);
   })();
 
-  /* ============ parallax frames ============ */
+  /* ============ pointer parallax — layered depth on the hero shrine ============ */
   (function () {
-    if (RM) return;
-    var frames = $$(".frame--p");
-    if (!frames.length) return;
-    var tick = false;
-    function apply() {
-      var vh = window.innerHeight;
-      frames.forEach(function (f) {
-        var r = f.getBoundingClientRect();
-        if (r.bottom < 0 || r.top > vh) return;
-        var p = (r.top + r.height / 2 - vh / 2) / (vh / 2);   /* -1 … 1 */
-        var img = f.firstElementChild;
-        if (img) img.style.transform = "translateY(" + (p * -7) + "%)";
+    if (RM || !FINE) return;
+    var scene = $("[data-plx-scene]");
+    if (!scene) return;
+    var els = $$("[data-plx]", scene);
+    if (!els.length) return;
+    var tx = 0, ty = 0, cx = 0, cy = 0, running = false;
+    function loop() {
+      cx += (tx - cx) * 0.065;
+      cy += (ty - cy) * 0.065;
+      els.forEach(function (el) {
+        var d = parseFloat(el.getAttribute("data-plx")) || 8;
+        el.style.transform = "translate3d(" + (-cx * d).toFixed(2) + "px," + (-cy * d).toFixed(2) + "px,0)";
       });
-      tick = false;
+      if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) requestAnimationFrame(loop);
+      else running = false;
     }
-    window.addEventListener("scroll", function () { if (!tick) { tick = true; requestAnimationFrame(apply); } }, { passive: true });
-    window.addEventListener("resize", apply);
-    apply();
-  })();
-
-  /* ============ the ascent — pinned floor journey ============ */
-  (function () {
-    var asc = $(".ascent");
-    if (!asc) return;
-    var panels = $$(".asc-p", asc);
-    var railBtns = $$(".asc-rail button", asc);
-    if (panels.length < 2) return;
-    var pinnable = window.matchMedia("(min-width: 900px) and (min-height: 560px)");
-    var active = -1, tick = false;
-
-    function setActive(i) {
-      if (i === active) return;
-      active = i;
-      panels.forEach(function (p, j) { p.classList.toggle("on", j === i); });
-      railBtns.forEach(function (b, j) { b.classList.toggle("on", j === i); });
-    }
-    function onScroll() {
-      var r = asc.getBoundingClientRect();
-      var total = asc.offsetHeight - window.innerHeight;
-      var prog = Math.min(Math.max(-r.top / (total || 1), 0), 0.9999);
-      setActive(Math.floor(prog * panels.length));
-      tick = false;
-    }
-    function enable() {
-      asc.classList.add("ascent--pin");
-      setActive(0);
-      window.addEventListener("scroll", req, { passive: true });
-      onScroll();
-    }
-    function disable() {
-      asc.classList.remove("ascent--pin");
-      panels.forEach(function (p) { p.classList.remove("on"); });
-      window.removeEventListener("scroll", req);
-    }
-    function req() { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }
-    function decide() { if (pinnable.matches && !RM) enable(); else disable(); }
-    railBtns.forEach(function (b, i) {
-      b.addEventListener("click", function () {
-        var total = asc.offsetHeight - window.innerHeight;
-        var top = asc.getBoundingClientRect().top + window.scrollY;
-        window.scrollTo({ top: top + (total * (i + 0.5)) / panels.length, behavior: RM ? "auto" : "smooth" });
-      });
+    function kick() { if (!running) { running = true; requestAnimationFrame(loop); } }
+    scene.addEventListener("pointermove", function (e) {
+      var r = scene.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width - 0.5;
+      ty = (e.clientY - r.top) / r.height - 0.5;
+      kick();
     });
-    pinnable.addEventListener ? pinnable.addEventListener("change", decide) : pinnable.addListener(decide);
-    decide();
+    scene.addEventListener("pointerleave", function () { tx = 0; ty = 0; kick(); });
+  })();
+
+  /* ============ door tilt — arches lean toward the hand ============ */
+  (function () {
+    if (RM || !FINE) return;
+    $$(".door").forEach(function (door) {
+      var frame = $(".arch-frame", door);
+      if (!frame) return;
+      door.addEventListener("pointermove", function (e) {
+        var r = door.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        var y = (e.clientY - r.top) / r.height - 0.5;
+        frame.style.transform = "perspective(700px) rotateY(" + (x * 4).toFixed(2) + "deg) rotateX(" + (-y * 3).toFixed(2) + "deg)";
+      });
+      door.addEventListener("pointerleave", function () { frame.style.transform = ""; });
+    });
   })();
 
   /* ============ marquee: duplicate for seamless loop ============ */
   $$(".mq__t").forEach(function (t) { t.innerHTML += t.innerHTML; });
-
-  /* ============ shelf: drag-to-scroll + arrows ============ */
-  $$(".shelf-wrap").forEach(function (wrapEl) {
-    var shelf = $(".shelf", wrapEl);
-    if (!shelf) return;
-    var prev = $("[data-shelf-prev]", wrapEl), next = $("[data-shelf-next]", wrapEl);
-    function by(dir) {
-      var card = shelf.firstElementChild;
-      var w = card ? card.getBoundingClientRect().width + 24 : 320;
-      shelf.scrollBy({ left: dir * w * 1.5, behavior: RM ? "auto" : "smooth" });
-    }
-    prev && prev.addEventListener("click", function () { by(-1); });
-    next && next.addEventListener("click", function () { by(1); });
-    if (!FINE) return;
-    var down = false, startX = 0, startL = 0, moved = false;
-    shelf.addEventListener("pointerdown", function (e) {
-      down = true; moved = false; startX = e.clientX; startL = shelf.scrollLeft;
-      shelf.classList.add("dragging");
-    });
-    window.addEventListener("pointermove", function (e) {
-      if (!down) return;
-      var dx = e.clientX - startX;
-      if (Math.abs(dx) > 4) moved = true;
-      shelf.scrollLeft = startL - dx;
-    });
-    window.addEventListener("pointerup", function () { down = false; shelf.classList.remove("dragging"); });
-    shelf.addEventListener("click", function (e) { if (moved) { e.preventDefault(); } }, true);
-  });
-
-  /* ============ magnetic buttons ============ */
-  (function () {
-    if (!FINE || RM) return;
-    $$(".btn").forEach(function (b) {
-      b.addEventListener("pointermove", function (e) {
-        var r = b.getBoundingClientRect();
-        var x = (e.clientX - r.left - r.width / 2) / r.width;
-        var y = (e.clientY - r.top - r.height / 2) / r.height;
-        b.style.transform = "translate(" + x * 5 + "px," + y * 4 + "px)";
-      });
-      b.addEventListener("pointerleave", function () { b.style.transform = ""; });
-    });
-  })();
 
   /* ============ countdown (data-count="YYYY-MM-DD") ============ */
   $$("[data-count]").forEach(function (el) {
@@ -292,7 +219,7 @@
         if (e.key === "Escape") close();
         if (e.key === "ArrowLeft") show(idx - 1);
         if (e.key === "ArrowRight") show(idx + 1);
-        if (e.key === "Tab") { /* simple focus trap */
+        if (e.key === "Tab") {
           var f = $$("button", lb);
           var first = f[0], last = f[f.length - 1];
           if (e.shiftKey && doc.activeElement === first) { last.focus(); e.preventDefault(); }
@@ -411,7 +338,6 @@
       apply();
       search && search.focus();
     });
-    /* scrollspy */
     if ("IntersectionObserver" in window && railLinks.length) {
       var spy = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
@@ -426,7 +352,7 @@
     apply();
   })();
 
-  /* ============ segmented switcher (reservations) ============ */
+  /* ============ segmented switcher ============ */
   $$(".seg").forEach(function (seg) {
     var btns = $$("button", seg);
     var thumb = doc.createElement("span");
@@ -449,12 +375,6 @@
         });
       });
     });
-    requestAnimationFrame(function () {
-      var b = $(".on", seg) || btns[0];   /* re-query — a deep link may have switched tabs since init */
-      b && move(b);
-    });
-    window.addEventListener("resize", function () { var b = $(".on", seg); b && move(b); });
-    /* deep link: #host → host tab (on load and on hash change) */
     function fromHash() {
       var want = location.hash.replace("#", "");
       var btn = btns.filter(function (b) { return b.getAttribute("data-panel") === want; })[0];
@@ -462,6 +382,11 @@
     }
     window.addEventListener("hashchange", fromHash);
     if (location.hash) fromHash();
+    requestAnimationFrame(function () {
+      var b = $(".on", seg) || btns[0];   /* re-query — a deep link may have switched tabs since init */
+      b && move(b);
+    });
+    window.addEventListener("resize", function () { var b = $(".on", seg); b && move(b); });
   });
 
   /* ============ steppers ============ */
@@ -517,28 +442,29 @@
   (function () {
     var peek = $(".peek");
     if (!peek) return;
-    var R = Math.min(window.innerWidth, 520) * 0.26;
+    /* radius is computed per event, not at init — a backgrounded/zero-width
+       tab at load would otherwise freeze it at 0 */
+    function radius() { return (Math.min(window.innerWidth, 520) * 0.21) || 110; }
     function setVars(x, y, r) {
       peek.style.setProperty("--peek-x", x + "px");
       peek.style.setProperty("--peek-y", y + "px");
       peek.style.setProperty("--peek-r", r + "px");
     }
-    if (RM) { setVars(window.innerWidth / 2, window.innerHeight * 0.42, R); peek.classList.add("peeking"); return; }
-    var tx = window.innerWidth / 2, ty = window.innerHeight * 0.42, cx = tx, cy = ty, cr = 0, tr = 0, raf;
-    function loop() {
+    if (RM) { setVars(window.innerWidth / 2, window.innerHeight * 0.4, radius()); peek.classList.add("peeking"); return; }
+    var tx = window.innerWidth / 2, ty = window.innerHeight * 0.4, cx = tx, cy = ty, cr = 0, tr = 0;
+    (function loop() {
       cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12; cr += (tr - cr) * 0.1;
       setVars(cx, cy, cr);
-      raf = requestAnimationFrame(loop);
-    }
-    loop();
+      requestAnimationFrame(loop);
+    })();
     function at(e) {
       var p = e.touches ? e.touches[0] : e;
       var rect = peek.getBoundingClientRect();
       tx = p.clientX - rect.left; ty = p.clientY - rect.top;
     }
-    peek.addEventListener("pointermove", function (e) { at(e); tr = R; peek.classList.add("peeking"); });
+    peek.addEventListener("pointermove", function (e) { at(e); tr = radius(); peek.classList.add("peeking"); });
     peek.addEventListener("pointerleave", function () { tr = 0; peek.classList.remove("peeking"); });
-    peek.addEventListener("touchmove", function (e) { at(e); tr = R; peek.classList.add("peeking"); }, { passive: true });
+    peek.addEventListener("touchmove", function (e) { at(e); tr = radius(); peek.classList.add("peeking"); }, { passive: true });
     peek.addEventListener("touchend", function () { tr = 0; peek.classList.remove("peeking"); });
   })();
 

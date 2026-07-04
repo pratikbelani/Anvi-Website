@@ -1,20 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/", "destination": "/coming-soon.html" }
-  ],
-  "redirects": [
-    { "source": "/coming-soon.html", "destination": "/", "permanent": false },
-    { "source": "/index.html", "destination": "/", "permanent": false },
-    { "source": "/lagos.html", "destination": "/", "permanent": false },
-    { "source": "/social.html", "destination": "/", "permanent": false },
-    { "source": "/menu.html", "destination": "/", "permanent": false },
-    { "source": "/about.html", "destination": "/", "permanent": false },
-    { "source": "/reservations.html", "destination": "/", "permanent": false },
-    { "source": "/lagos", "destination": "/", "permanent": false },
-    { "source": "/social", "destination": "/", "permanent": false },
-    { "source": "/menu", "destination": "/", "permanent": false },
-    { "source": "/about", "destination": "/", "permanent": false },
-    { "source": "/reservations", "destination": "/", "permanent": false },
-    { "source": "/index", "destination": "/", "permanent": false }
+  "routes": [
+    { "src": "^/$", "dest": "/coming-soon.html" },
+    { "src": "^/(index|coming-soon|lagos|social|menu|about|reservations)(\\.html)?/?$", "status": 307, "headers": { "Location": "/" } },
+    { "handle": "filesystem" }
   ]
 }

@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Once your site has a domain, replace the line below with its real address
-# e.g. Sitemap: https://anvilagos.com/sitemap.xml
-Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml
+Sitemap: https://anvilagos.com/sitemap.xml

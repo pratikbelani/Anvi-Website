@@ -401,16 +401,52 @@
     });
   });
 
-  /* ============ forms (front-end demo — wire to CRM before launch) ============ */
+  /* ============ forms — delivered to the house inbox via Web3Forms ============ */
+  /* The key is public by design: it can only send mail TO the inbox it belongs to. */
+  var FORM_KEY = "PASTE-WEB3FORMS-KEY-HERE";
   $$("form[data-anvi]").forEach(function (form) {
     var ok = $(".fok", form);
     ok && ok.setAttribute("role", "status");
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      form.classList.add("sent");
-      ok && ok.classList.add("show");
-      try { console.log("[ANVI] form (demo):", Object.fromEntries(new FormData(form).entries())); } catch (err) {}
+      /* demo fallback until the key is installed */
+      if (!/^[0-9a-f]{8}-[0-9a-f-]{20,}$/i.test(FORM_KEY)) {
+        form.classList.add("sent");
+        ok && ok.classList.add("show");
+        try { console.log("[ANVI] form (demo):", Object.fromEntries(new FormData(form).entries())); } catch (err) {}
+        return;
+      }
+      var data = Object.fromEntries(new FormData(form).entries());
+      if (data.botcheck) return;               /* honeypot — drop bots silently */
+      delete data.botcheck;
+      data.access_key = FORM_KEY;
+      data.subject = form.getAttribute("data-subject") || "New enquiry — anvilagos.com";
+      data.from_name = "ANVI Website";
+      if (data.email) data.replyto = data.email;
+      data.page = location.href;
+      var btn = $('[type="submit"]', form);
+      var oldBtn = btn ? btn.innerHTML : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      var stale = $(".ferr", form);
+      stale && stale.remove();
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data)
+      }).then(function (r) { return r.json(); }).then(function (res) {
+        if (!res.success) throw new Error(res.message || "send failed");
+        form.classList.add("sent");
+        ok && ok.classList.add("show");
+      }).catch(function () {
+        if (btn) { btn.disabled = false; btn.innerHTML = oldBtn; }
+        var p = doc.createElement("p");
+        p.className = "ferr";
+        p.setAttribute("role", "alert");
+        p.style.cssText = "flex:1 1 100%;font-family:var(--f-ui);font-size:.72rem;letter-spacing:.08em;color:#C96F5A;text-align:center;margin-top:.7rem";
+        p.innerHTML = "That didn&rsquo;t go through &mdash; please try again, or <a href=\"https://wa.me/2348110438371\" target=\"_blank\" rel=\"noopener\" style=\"border-bottom:1px solid currentColor\">WhatsApp us</a> directly.";
+        form.appendChild(p);
+      });
     });
   });
 

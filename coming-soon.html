@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=8">
+<link rel="stylesheet" href="css/anvi.css?v=9">
 <style>
   .peek-top { position: absolute; top: 1.6rem; left: 0; right: 0; z-index: 5;
     display: flex; justify-content: space-between; align-items: center; padding-inline: var(--gut);
@@ -83,7 +83,8 @@
     </div>
 
     <p class="dim" style="font-size:.88rem">Be first through the doors.</p>
-    <form class="peek-form" data-anvi style="max-width:640px">
+    <form class="peek-form" data-anvi style="max-width:640px" data-subject="Guest list — Take a Peek page">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="fbody">
         <div class="fld fld--dark"><label for="p-name">Name</label><input id="p-name" name="name" type="text" required autocomplete="name" placeholder="Your name"></div>
         <div class="fld fld--dark"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
@@ -101,6 +102,6 @@
   </div>
 </main>
 
-<script src="js/anvi.js?v=8"></script>
+<script src="js/anvi.js?v=9"></script>
 </body>
 </html>

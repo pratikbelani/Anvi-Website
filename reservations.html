@@ -21,7 +21,7 @@
 <meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=8">
+<link rel="stylesheet" href="css/anvi.css?v=9">
 </head>
 <body>
 
@@ -84,7 +84,8 @@
           <p class="dim" data-rv>Six or fewer books the ground or first floor directly; for larger tables and the private dining room, our team will call to shape the evening.</p>
           <p class="dim mt-2" style="font-size:.9rem" data-rv>Prefer to talk? <a href="https://wa.me/2348110438371" target="_blank" rel="noopener" style="border-bottom:1px solid var(--s-line)">WhatsApp us</a> or call <a href="tel:+2348110438371" style="border-bottom:1px solid var(--s-line)">+234 811 043 8371</a>.</p>
         </div>
-        <form class="invite" data-anvi data-rv>
+        <form class="invite" data-anvi data-rv data-subject="Table reservation request">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="fbody">
             <div class="fld-row">
               <div class="fld"><label for="r-name">Name</label><input id="r-name" name="name" type="text" required autocomplete="name"></div>
@@ -142,7 +143,8 @@
           </ul>
           <p class="dim mt-2" style="font-size:.9rem" data-rv>Our events team replies with formats, sample menus and a walkthrough date.</p>
         </div>
-        <form class="invite" data-anvi data-rv>
+        <form class="invite" data-anvi data-rv data-subject="Event enquiry — host a floor">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="fbody">
             <div class="fld-row">
               <div class="fld"><label for="h-name">Name</label><input id="h-name" name="name" type="text" required autocomplete="name"></div>
@@ -194,7 +196,8 @@
           <p class="dim mt-2" data-rv>The first hundred names on the list are our founding guests — a seat at the soft launch in mid-August, the menu before anyone else, and priority reservations through opening season.</p>
           <p class="dim" data-rv>One or two updates a month, by email or WhatsApp. No noise — just first looks and first seats.</p>
         </div>
-        <form class="invite" data-anvi data-rv>
+        <form class="invite" data-anvi data-rv data-subject="Guest list signup — Visit page">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="fbody">
             <div class="invite__seal" aria-hidden="true">
               <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -317,6 +320,6 @@
   </div>
 </footer>
 
-<script src="js/anvi.js?v=8"></script>
+<script src="js/anvi.js?v=9"></script>
 </body>
 </html>

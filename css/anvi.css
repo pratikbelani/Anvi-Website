@@ -838,7 +838,10 @@ form.sent .fbody { display: none; }
   text-align: center; padding: 4.5rem var(--gut); isolation: isolate; }
 .peek__back { position: absolute; inset: 0; z-index: -2; }
 .peek__back img { width: 100%; height: 100%; object-fit: cover; }
-.peek__cover { position: absolute; inset: 0; z-index: -1; background: var(--night);
+/* Solid by default — the mask is applied only while .peeking, because iOS
+   Safari renders a zero-radius gradient hole as fully transparent (cover gone). */
+.peek__cover { position: absolute; inset: 0; z-index: -1; background: var(--night); }
+.peek.peeking .peek__cover {
   -webkit-mask-image: radial-gradient(circle var(--peek-r, 0px) at var(--peek-x, 50%) var(--peek-y, 42%), transparent 97%, #000 100%);
           mask-image: radial-gradient(circle var(--peek-r, 0px) at var(--peek-x, 50%) var(--peek-y, 42%), transparent 97%, #000 100%); }
 .peek__hint { position: absolute; z-index: 4; left: 50%; top: 40%; transform: translate(-50%, -50%);

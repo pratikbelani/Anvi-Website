@@ -455,6 +455,8 @@
     (function loop() {
       cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12; cr += (tr - cr) * 0.1;
       setVars(cx, cy, cr);
+      /* class gates the mask: solid cover whenever the hole is closed */
+      peek.classList.toggle("peeking", cr > 1.5);
       requestAnimationFrame(loop);
     })();
     function at(e) {
@@ -462,10 +464,13 @@
       var rect = peek.getBoundingClientRect();
       tx = p.clientX - rect.left; ty = p.clientY - rect.top;
     }
-    peek.addEventListener("pointermove", function (e) { at(e); tr = radius(); peek.classList.add("peeking"); });
-    peek.addEventListener("pointerleave", function () { tr = 0; peek.classList.remove("peeking"); });
-    peek.addEventListener("touchmove", function (e) { at(e); tr = radius(); peek.classList.add("peeking"); }, { passive: true });
-    peek.addEventListener("touchend", function () { tr = 0; peek.classList.remove("peeking"); });
+    function openPeek(e) { at(e); tr = radius(); }
+    peek.addEventListener("pointermove", openPeek);
+    peek.addEventListener("pointerdown", openPeek);
+    peek.addEventListener("pointerleave", function () { tr = 0; });
+    peek.addEventListener("touchstart", openPeek, { passive: true });
+    peek.addEventListener("touchmove", openPeek, { passive: true });
+    peek.addEventListener("touchend", function () { tr = 0; });
   })();
 
   /* footer year */

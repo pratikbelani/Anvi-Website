@@ -42,7 +42,14 @@
   /* dither the AI-upscaled placeholder photo inside the reveal */
   .peek.grain::after { opacity: .12; }
   .peek__back img { filter: saturate(.96) contrast(1.03); }
+  /* keep the hint clear of the lockup: park it in the quiet zone above the footer */
+  .peek__hint { top: auto; bottom: 3.3rem; }
   @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.2rem; } }
+  @media (max-width: 640px) {
+    .peek__hint { bottom: auto; top: 3.2rem; }
+    .peek__mark { width: min(20vw, 72px); }
+    .peek-foot { position: static; margin-top: 1.6rem; padding-bottom: 1.2rem; }
+  }
 </style>
 </head>
 <body data-noveil data-nochrome class="peek-page">

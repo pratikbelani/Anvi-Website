@@ -403,7 +403,7 @@
 
   /* ============ forms — delivered to the house inbox via Web3Forms ============ */
   /* The key is public by design: it can only send mail TO the inbox it belongs to. */
-  var FORM_KEY = "PASTE-WEB3FORMS-KEY-HERE";
+  var FORM_KEY = "656e8777-441f-45d7-af24-ca17cc6c2602";
   $$("form[data-anvi]").forEach(function (form) {
     var ok = $(".fok", form);
     ok && ok.setAttribute("role", "status");

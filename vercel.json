@@ -1,5 +1,7 @@
 {
   "routes": [
+    { "src": "^/sneak/?$", "status": 307, "headers": { "Location": "/sneak/index.html" } },
+    { "src": "^/sneak/(.*)$", "dest": "/$1" },
     { "src": "^/$", "dest": "/coming-soon.html" },
     { "src": "^/(index|coming-soon|lagos|social|menu|about|reservations)(\\.html)?/?$", "status": 307, "headers": { "Location": "/" } },
     { "handle": "filesystem" }

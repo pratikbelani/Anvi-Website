@@ -38,12 +38,12 @@ GitHub Pages, S3).
 
 | File | Page | Notes |
 |------|------|-------|
-| `index.html` | **Home** | The shrine hero (arch slideshow, pointer parallax, live T-minus), the invitation manifesto, **the Three Doors** (arch-framed floors with tilt), medallions, **the Banquet Card** (first tastes, in development), Anvi Social feature, the two opening rituals, arched colonnade gallery, Founding 100 RSVP card |
-| `lagos.html` | **Dine** | The Dining Room (72 covers), The Bar & Dining (first floor, 18+), **the** private dining room, the kitchen's four crafts, Chef's Table |
+| `index.html` | **Home** | The shrine hero (arch slideshow, pointer parallax, live T-minus), the invitation manifesto, **the Three Doors** (arch-framed floors with tilt), medallions, **the Banquet Card** (first tastes, in development), Anvi Social feature, the two opening rituals, arched colonnade gallery, guest-list invitation card |
+| `lagos.html` | **Dine** | The Dining Room (72 covers), Bar One (first floor, 18+), **the** private dining room, the kitchen's four crafts, Chef's Table |
 | `social.html` | **Social** | **The Social House** (80–90 guests, 18+) — bar, DJ booth + LED stage, VIP booths, host feature, Sound Sessions |
 | `menu.html` | **Menu** | Mirrors the family's working draft — **Food Menu v3 (Blended Indo-Asian)**: 75 dishes in 9 craft chapters ("in tasting" until opening; drinks list teased as *to follow*); scrollspy rail, search, vegetarian filter, print stylesheet |
 | `about.html` | **Story** | The name, vision & mission (verbatim), five values in roman numerals, design philosophy, the peacock, road-to-opening |
-| `reservations.html` | **Visit** | Three journeys (Reserve / Host / Founding 100) with deep links (`#reserve` `#host` `#list`), forms on invitation cards, house notes, contact & hours |
+| `reservations.html` | **Visit** | Three journeys (Reserve / Host / The Guest List) with deep links (`#reserve` `#host` `#list`), forms on invitation cards, house notes, contact & hours |
 | `coming-soon.html` | **Take a Peek** | The pre-launch landing from the Digitol plan: interactive **peephole** over the room, live countdown, **email + WhatsApp capture**. Point the storefront QR here. |
 | `404.html` | Not found | "This door doesn't open." |
 
@@ -53,10 +53,10 @@ GitHub Pages, S3).
 
 - **Soft launch: 28 August 2026 (confirmed).** All countdowns target `2026-08-28`
   (`data-count` in index, reservations, coming-soon — keep the three + CLAUDE.md in agreement).
-- **The Founding 100** — pre-launch waitlist capture (email **and WhatsApp**) on the home
-  page, visit page and peek page; framed as a numbered invitation. This is the CRM spine the
+- **The guest list** — pre-launch waitlist capture (email **and WhatsApp**) on the home
+  page, visit page and peek page; framed as an invitation. This is the CRM spine the
   strategy review and the Digitol plan prioritise.
-- **Confirmed facts only** — Ground: dining (72 covers, all ages). First: **bar & dining**
+- **Confirmed facts only** — Ground: dining (72 covers, all ages). First: **Bar One**
   with ONE private dining room (18+). Second: the **Social House** (80–90, 18+) — never
   "terrace". Public branding is **Est. 2026**. (All confirmed by Pratik, 2–3 Jul 2026.)
 - **House notes** — dress code, 18+ floors, smoking, photography, outside food — condensed
@@ -106,17 +106,17 @@ evening: Home → Dine → Social House → Menu → Reserve (Story → Dine).
 1. **Photography** — images are the AI-upscaled brand-guideline shots (ETHR Design), used
    as placeholders. Confirm rights or swap in the real shoot (filenames are semantic:
    `food-*`, `int-*`, `social-*`, `drink-*`).
-2. **Wire the forms** — all four forms (reserve / host / Founding 100 / peek) validate and
-   show success states but only log to the console. Point `form[data-anvi]` in `js/anvi.js`
-   at a real endpoint (Formspree / CRM webhook / WATI) — this is the guest-data capture the
-   Digitol engagement is about.
-3. **Lock the date** — update the three `data-count` attributes and the "mid-August" copy
-   when the soft-launch date is confirmed.
+2. **Forms — DONE.** All five `data-anvi` forms (reserve / host / guest list ×2 / peek)
+   deliver to the house Gmail via Web3Forms — key in `js/anvi.js`, honeypot `botcheck`,
+   browser-only submits (their free tier blocks server-side posts). Later: re-key to
+   info@anvilagos.com.
+3. **Lock the date — DONE.** 28 August 2026, confirmed 21 Jul; the three `data-count`
+   attributes and CLAUDE.md agree.
 4. **Confirm contact & handles** — phone `+234 811 043 8371`, address
    `1613B Adewunmi Ogunsanya Ave`, `@anvilagos` / `@anvisocial`; add the public reservations
    email + domain (then fill `sitemap.xml` / `robots.txt`).
-5. **Hours & pricing** — trading hours and menu prices are deliberately absent
-   ("a living menu"); add at opening.
+5. **Hours — published** (Mon–Sun, 12 pm–11 pm; marked interim on the Visit page).
+   **Pricing** — deliberately absent ("a living menu") until opening.
 6. **Analytics + Google Business Profile** — add your snippet; the strategy flags Google as
    where Lagos diners *confirm* a venue.
 

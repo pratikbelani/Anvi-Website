@@ -51,8 +51,8 @@ GitHub Pages, S3).
 
 ## What's wired in from the strategy docs
 
-- **Soft launch: mid-August 2026.** All countdowns target `2026-08-15 18:00 WAT` —
-  change `data-count="2026-08-15"` (index, reservations, coming-soon) when the date locks.
+- **Soft launch: 28 August 2026 (confirmed).** All countdowns target `2026-08-28`
+  (`data-count` in index, reservations, coming-soon — keep the three + CLAUDE.md in agreement).
 - **The Founding 100** — pre-launch waitlist capture (email **and WhatsApp**) on the home
   page, visit page and peek page; framed as a numbered invitation. This is the CRM spine the
   strategy review and the Digitol plan prioritise.

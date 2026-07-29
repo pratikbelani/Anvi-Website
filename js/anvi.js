@@ -438,6 +438,7 @@
         if (!res.success) throw new Error(res.message || "send failed");
         form.classList.add("sent");
         ok && ok.classList.add("show");
+        try { window.va && window.va("event", { name: "Form sent", data: { form: data.subject } }); } catch (err) {}
       }).catch(function () {
         if (btn) { btn.disabled = false; btn.innerHTML = oldBtn; }
         var p = doc.createElement("p");

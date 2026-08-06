@@ -36,9 +36,10 @@ straight back. Nothing else needs undoing.
    `data-count="2026-09-15"` attributes (index, reservations, coming-soon).
 2. **Swap the sitemap**, then resubmit it. Open `sitemap.xml`, delete the single tease-phase
    `<url>`, and uncomment the launch-day block underneath it — otherwise Google only ever
-   sees the homepage. Once it's pushed, go to Search Console → Sitemaps and resubmit, then
-   URL-inspect each page and Request Indexing. Until you do, the inner pages stay unindexed
-   even though they're now public.
+   sees the homepage. Once it's pushed, go to Search Console → Sitemaps and resubmit
+   `https://anvilagos.com/sitemap.xml` (the full URL — a domain property rejects the bare
+   filename), then URL-inspect each page and Request Indexing. Until you do, the inner pages
+   stay unindexed even though they're now public.
 3. **Send a test through each form** from a real phone, not the desktop — reserve, host,
    guest list, and the peek form. All five must land in the inbox.
 4. **Check the contact details** are the ones you want public on opening day: the phone

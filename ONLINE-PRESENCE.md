@@ -28,22 +28,23 @@ ever stranded on a personal login.
 Each one needs a sign-in, so these are yours to click. **Where a step ends in a token or
 an ID, paste it to me and I'll wire it in and redeploy.**
 
-### 1. Google Search Console — do this first
+### 1. Google Search Console — DONE (6 Aug 2026)
 
-It's how you learn what Lagos actually searches to find you, and it feeds everything else.
+Domain property `anvilagos.com`, owned by **pratik@anvilagos.com**. Auto-verified through
+Namecheap as the domain provider, so there was no TXT record to add by hand.
 
-1. <https://search.google.com/search-console> → sign in as **pratik@anvilagos.com**
-2. Choose **Domain** (the left-hand option), enter `anvilagos.com`
-3. Google shows a **TXT record**. Add it at Namecheap → Domain List → Manage →
-   Advanced DNS → Add New Record → type `TXT Record`, host `@`, value = the string Google gave.
-   **Do not touch the MX, SPF or DKIM rows — those are the company's email.**
-4. Wait a few minutes, click **Verify**
-5. Then → **Sitemaps** → submit `sitemap.xml`
+- **Sitemap submitted** — status Success, 1 page discovered (correct for the tease)
+- **Homepage indexed** — "URL is on Google", served over HTTPS
+- **Re-crawl requested** after the structured data went live
 
-Pick **Domain** rather than URL-prefix: it covers apex, www, http and https in one, and it
-survives launch day. (If you'd rather not touch DNS, the fallback is an HTML meta tag —
-send it to me and note that it has to go on `coming-soon.html`, since that's what serves
-at `/` during the tease. Putting it on `index.html` would fail verification.)
+Two things worth knowing for next time:
+
+- On a **Domain** property the sitemap must be the **full URL** —
+  `https://anvilagos.com/sitemap.xml`. A bare `sitemap.xml` is rejected as
+  "Invalid sitemap address". (Only URL-prefix properties take the relative form.)
+- The account matters. Chrome defaults to belani.pratik@gmail.com, which cannot see this
+  property. Append `&authuser=pratik@anvilagos.com` to a Search Console URL to switch, or
+  add the Gmail address as a second Owner under Settings → Users and permissions.
 
 ### 2. Google Analytics 4
 

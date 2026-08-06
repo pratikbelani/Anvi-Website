@@ -9,10 +9,13 @@ Static HTML/CSS/JS, no build step. Live: https://anvilagos.com (Vercel, auto-dep
 - After ANY edit to css/anvi.css or js/anvi.js: bump the `?v=` query on BOTH files in ALL
   eight HTML pages, or phones serve stale cached assets.
 
-## Launch date — CONFIRMED: 28 August 2026
-Soft launch is locked: **2026-08-28**. Four places must always agree — this line and the
-three `data-count="2026-08-28"` attributes (coming-soon.html, index.html, reservations.html).
-If the date ever moves: change all four together, then grep pages for "late August" copy.
+## Launch date — CURRENT TARGET: 15 September 2026
+Soft launch: **2026-09-15** (provisional — moved from 28 Aug on 6 Aug 2026, "for now").
+Four places must always agree — this line and the three `data-count="2026-09-15"` attributes
+(coming-soon.html, index.html, reservations.html).
+If the date moves again: change all four, then grep the pages for month copy —
+`grep -rn "mid-September\|September" --include="*.html" .` catches the announce bars, meta
+descriptions, the About road-to-opening, the peek success message and the Visit heading.
 
 ## Canon — never contradict
 - Floors: G "The Dining Room" (all ages, no bar service) · 1 "Bar One" (18+, one private

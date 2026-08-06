@@ -51,7 +51,7 @@ GitHub Pages, S3).
 
 ## What's wired in from the strategy docs
 
-- **Soft launch: 28 August 2026 (confirmed).** All countdowns target `2026-08-28`
+- **Soft launch: 15 September 2026 (current target).** All countdowns target `2026-09-15`
   (`data-count` in index, reservations, coming-soon — keep the three + CLAUDE.md in agreement).
 - **The guest list** — pre-launch waitlist capture (email **and WhatsApp**) on the home
   page, visit page and peek page; framed as an invitation. This is the CRM spine the
@@ -110,8 +110,8 @@ evening: Home → Dine → Social House → Menu → Reserve (Story → Dine).
    deliver to the house Gmail via Web3Forms — key in `js/anvi.js`, honeypot `botcheck`,
    browser-only submits (their free tier blocks server-side posts). Later: re-key to
    info@anvilagos.com.
-3. **Lock the date — DONE.** 28 August 2026, confirmed 21 Jul; the three `data-count`
-   attributes and CLAUDE.md agree.
+3. **Lock the date** — currently 15 September 2026, moved from 28 August on 6 Aug and still
+   provisional. The three `data-count` attributes and CLAUDE.md agree; confirm before print.
 4. **Confirm contact & handles** — phone `+234 811 043 8371`, address
    `1613B Adewunmi Ogunsanya Ave`, `@anvilagos` / `@anvisocial`; add the public reservations
    email + domain (then fill `sitemap.xml` / `robots.txt`).

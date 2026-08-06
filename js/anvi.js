@@ -438,7 +438,10 @@
         if (!res.success) throw new Error(res.message || "send failed");
         form.classList.add("sent");
         ok && ok.classList.add("show");
+        /* Vercel's Hobby tier drops custom events, so GA4 is what actually records the
+           conversion — send to both and let whichever is listening pick it up. */
         try { window.va && window.va("event", { name: "Form sent", data: { form: data.subject } }); } catch (err) {}
+        try { window.gtag && window.gtag("event", "generate_lead", { form_name: data.subject, page_location: location.href }); } catch (err) {}
       }).catch(function () {
         if (btn) { btn.disabled = false; btn.innerHTML = oldBtn; }
         var p = doc.createElement("p");

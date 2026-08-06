@@ -865,4 +865,7 @@ form.sent .fbody { display: none; }
   .d1 { font-size: clamp(3rem, 15vw, 5rem); }
   .hero { padding-bottom: 5.5rem; }
   .hero__mandala-l, .hero__mandala-r { display: none; }
+  /* at 375px the kicker ran to 335px and wrapped, orphaning "2026" on its own
+     line; tightening the tracking brings it back to one line */
+  .hero__k { letter-spacing: .28em; }
 }

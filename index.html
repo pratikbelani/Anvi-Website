@@ -29,7 +29,11 @@
 <meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="preload" href="assets/img/real-dining-tree.jpg" as="image" fetchpriority="high">
+<!-- imagesrcset/imagesizes must mirror the <img> below, or the preload fetches the full
+     2400px file and the srcset saving is lost -->
+<link rel="preload" as="image" href="assets/img/real-dining-tree.jpg"
+      imagesrcset="assets/img/real-dining-tree-1200.jpg 1200w, assets/img/real-dining-tree-1800.jpg 1800w, assets/img/real-dining-tree.jpg 2400w"
+      imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="css/anvi.css?v=12">
 <script type="application/ld+json">
 {
@@ -91,7 +95,7 @@
 <!-- ======================= HERO · THE SHRINE ======================= -->
 <section class="hero grain" id="main" data-plx-scene>
   <div class="hero__room" aria-hidden="true" data-plx="4" style="inset:-2.5%">
-    <img src="assets/img/real-dining-tree.jpg" alt="" fetchpriority="high" width="2400" height="1429">
+    <img src="assets/img/real-dining-tree.jpg" alt="" fetchpriority="high" width="2400" height="1429" srcset="assets/img/real-dining-tree-1200.jpg 1200w, assets/img/real-dining-tree-1800.jpg 1800w, assets/img/real-dining-tree.jpg 2400w" sizes="100vw">
   </div>
   <div class="mandala hero__mandala-l" aria-hidden="true" data-plx="16">
     <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
@@ -132,7 +136,7 @@
     <div class="hero__archwrap">
       <div class="arch-frame" data-plx="7">
         <div class="arch arch--slides" aria-hidden="true">
-          <div class="arch__slide on"><img src="assets/img/hero-fish.jpg" alt="" width="1500" height="1000" fetchpriority="high"></div>
+          <div class="arch__slide on"><img src="assets/img/hero-fish.jpg" alt="" width="1500" height="1000" fetchpriority="high" srcset="assets/img/hero-fish-1200.jpg 1200w, assets/img/hero-fish-1800.jpg 1800w, assets/img/hero-fish.jpg 2850w" sizes="100vw"></div>
           <div class="arch__slide"><img src="assets/img/food-prawns.jpg" alt="" width="1200" height="1600" loading="lazy"></div>
           <div class="arch__slide"><img src="assets/img/drink-coupe-smoke.jpg" alt="" width="1200" height="1600" loading="lazy"></div>
         </div>
@@ -180,7 +184,7 @@
     <div class="doors mt-4">
       <a class="door" href="lagos.html" data-rv>
         <div data-rv="img" style="display:block">
-          <div class="arch-frame"><div class="arch"><img src="assets/img/real-dining-tables.jpg" alt="The ground-floor dining room" loading="lazy" width="2400" height="1351"></div></div>
+          <div class="arch-frame"><div class="arch"><img src="assets/img/real-dining-tables.jpg" alt="The ground-floor dining room" loading="lazy" width="2400" height="1351" srcset="assets/img/real-dining-tables-1200.jpg 1200w, assets/img/real-dining-tables-1800.jpg 1800w, assets/img/real-dining-tables.jpg 2400w" sizes="100vw"></div></div>
         </div>
         <span class="door__floor">G</span>
         <h3 class="d4 door__name">The Dining Room</h3>
@@ -190,7 +194,7 @@
       </a>
       <a class="door" href="lagos.html#bar" data-rv style="--d:1">
         <div data-rv="img" style="display:block">
-          <div class="arch-frame"><div class="arch"><img src="assets/img/real-barone-arch.jpg" alt="Bar One — the first-floor bar" loading="lazy" width="1500" height="1876"></div></div>
+          <div class="arch-frame"><div class="arch"><img src="assets/img/real-barone-arch.jpg" alt="Bar One — the first-floor bar" loading="lazy" width="1500" height="1876" srcset="assets/img/real-barone-arch-1200.jpg 1200w, assets/img/real-barone-arch.jpg 1500w" sizes="100vw"></div></div>
         </div>
         <span class="door__floor">1</span>
         <h3 class="d4 door__name">Bar One</h3>
@@ -200,7 +204,7 @@
       </a>
       <a class="door" href="social.html" data-rv style="--d:2">
         <div data-rv="img" style="display:block">
-          <div class="arch-frame"><div class="arch"><img src="assets/img/real-socialhouse.jpg" alt="The Social House at night" loading="lazy" width="2400" height="1493"></div></div>
+          <div class="arch-frame"><div class="arch"><img src="assets/img/real-socialhouse.jpg" alt="The Social House at night" loading="lazy" width="2400" height="1493" srcset="assets/img/real-socialhouse-1200.jpg 1200w, assets/img/real-socialhouse-1800.jpg 1800w, assets/img/real-socialhouse.jpg 2400w" sizes="100vw"></div></div>
         </div>
         <span class="door__floor">2</span>
         <h3 class="d4 door__name">The Social House</h3>
@@ -231,7 +235,7 @@
   <div class="wrap-x">
     <div class="banquet">
       <div data-rv="img" class="banquet-side">
-        <div class="arch-frame"><div class="arch"><img src="assets/img/food-biryani.jpg" alt="Saffron dum biryani" loading="lazy" width="1200" height="1600"></div></div>
+        <div class="arch-frame"><div class="arch"><img src="assets/img/food-biryani.jpg" alt="Saffron dum biryani" loading="lazy" width="1200" height="1600" srcset="assets/img/food-biryani-1200.jpg 1200w, assets/img/food-biryani-1800.jpg 1800w, assets/img/food-biryani.jpg 1922w" sizes="100vw"></div></div>
       </div>
       <div class="invite center" data-rv>
         <div class="invite__seal" aria-hidden="true">
@@ -334,7 +338,7 @@
     <div class="gal">
       <a href="assets/img/drink-glow.jpg" data-rv><img src="assets/img/drink-glow.jpg" alt="A glowing cocktail at the bar" loading="lazy" width="900" height="1200"></a>
       <a href="assets/img/chef-plating.jpg" data-rv style="--d:1"><img src="assets/img/chef-plating.jpg" alt="A chef plating at the pass" loading="lazy" width="1200" height="1600"></a>
-      <a href="assets/img/social-champagne.jpg" data-rv style="--d:2"><img src="assets/img/social-champagne.jpg" alt="Champagne in the Social House" loading="lazy" width="900" height="900"></a>
+      <a href="assets/img/social-champagne.jpg" data-rv style="--d:2"><img src="assets/img/social-champagne.jpg" alt="Champagne in the Social House" loading="lazy" width="900" height="900" srcset="assets/img/social-champagne-1200.jpg 1200w, assets/img/social-champagne-1800.jpg 1800w, assets/img/social-champagne.jpg 1923w" sizes="100vw"></a>
       <a href="assets/img/food-dessert.jpg" data-rv style="--d:3"><img src="assets/img/food-dessert.jpg" alt="Dessert, plated" loading="lazy" width="900" height="900"></a>
     </div>
   </div>

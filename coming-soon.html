@@ -15,6 +15,48 @@
 <meta property="og:image:alt" content="ANVI — Where Cultures Connect">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://anvilagos.com/assets/img/og-cover.jpg">
+<!-- During the tease this is the ONLY page Google can crawl (every other URL 307s here),
+     so the Restaurant entity has to live here too, matching the Google Business Profile
+     name / address / phone exactly. Hours carry validFrom: we are not open yet. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "ANVI",
+  "alternateName": "Anvi Lagos",
+  "url": "https://anvilagos.com",
+  "description": "A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence — a dining room, Bar One on the first floor with its private dining room, and the Social House events floor in Victoria Island, Lagos. Opening 15 September 2026.",
+  "servesCuisine": ["Indian", "Pan-Asian", "Indo-Chinese"],
+  "priceRange": "$$$",
+  "telephone": "+234 811 043 8371",
+  "email": "info@anvilagos.com",
+  "foundingDate": "2026",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "12:00",
+    "closes": "23:00",
+    "validFrom": "2026-09-15"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1613B Adewunmi Ogunsanya Avenue",
+    "addressLocality": "Victoria Island",
+    "addressRegion": "Lagos",
+    "addressCountry": "NG"
+  },
+  "image": "https://anvilagos.com/assets/img/og-cover.jpg",
+  "sameAs": [
+    "https://instagram.com/anvilagos",
+    "https://instagram.com/anvisocial"
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Anvi Hospitality Limited",
+    "identifier": "RC 8404218"
+  }
+}
+</script>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="icon" type="image/svg+xml" href="assets/logo/anvi-peacock-burgundy.svg">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -55,7 +97,9 @@
 <body data-noveil data-nochrome class="peek-page">
 
 <main class="peek grain" aria-label="ANVI — coming soon">
-  <div class="peek__back" aria-hidden="true"><img src="assets/img/facade-crown.jpg" alt="" fetchpriority="high" width="2880" height="1538" style="object-position:72% 40%"></div>
+  <div class="peek__back" aria-hidden="true"><img src="assets/img/facade-crown.jpg"
+    srcset="assets/img/facade-crown-1200.jpg 1200w, assets/img/facade-crown-1920.jpg 1920w, assets/img/facade-crown.jpg 2880w"
+    sizes="100vw" alt="" fetchpriority="high" width="2880" height="1538" style="object-position:72% 40%"></div>
   <div class="peek__cover" aria-hidden="true"></div>
   <p class="peek__hint">Move to take a peek</p>
 

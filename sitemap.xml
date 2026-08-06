@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace https://anvilagos.com with the real domain once live
-     (e.g. https://anvilagos.com). coming-soon.html is intentionally excluded;
-     if it becomes the public root during the tease phase, list it instead. -->
+<!-- TEASE PHASE. vercel.json redirects every page URL to "/", so listing the inner
+     pages here would hand Google six URLs that bounce. Only the public root is listed.
+
+     ON LAUNCH DAY, when vercel.json is deleted, replace the single <url> below with
+     the six commented out beneath it and refresh every <lastmod>. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anvilagos.com/index.html</loc><lastmod>2026-07-01</lastmod><priority>1.0</priority></url>
-  <url><loc>https://anvilagos.com/lagos.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://anvilagos.com/social.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://anvilagos.com/menu.html</loc><lastmod>2026-07-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://anvilagos.com/about.html</loc><lastmod>2026-07-01</lastmod><priority>0.6</priority></url>
-  <url><loc>https://anvilagos.com/reservations.html</loc><lastmod>2026-07-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anvilagos.com/</loc><lastmod>2026-08-06</lastmod><priority>1.0</priority></url>
+
+  <!-- launch-day set:
+  <url><loc>https://anvilagos.com/</loc><lastmod>2026-09-15</lastmod><priority>1.0</priority></url>
+  <url><loc>https://anvilagos.com/lagos.html</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://anvilagos.com/social.html</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://anvilagos.com/menu.html</loc><lastmod>2026-09-15</lastmod><priority>0.8</priority></url>
+  <url><loc>https://anvilagos.com/reservations.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://anvilagos.com/about.html</loc><lastmod>2026-09-15</lastmod><priority>0.6</priority></url>
+  -->
 </urlset>

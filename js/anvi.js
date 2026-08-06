@@ -445,7 +445,9 @@
         p.className = "ferr";
         p.setAttribute("role", "alert");
         p.style.cssText = "flex:1 1 100%;font-family:var(--f-ui);font-size:.72rem;letter-spacing:.08em;color:#C96F5A;text-align:center;margin-top:.7rem";
-        p.innerHTML = "That didn&rsquo;t go through &mdash; please try again, or <a href=\"https://wa.me/2348110438371\" target=\"_blank\" rel=\"noopener\" style=\"border-bottom:1px solid currentColor\">WhatsApp us</a> directly.";
+        /* carry the form's subject into the chat so nothing is lost when the send fails */
+        var wa = "https://wa.me/2348110438371?text=" + encodeURIComponent("Hello ANVI, my enquiry didn’t send through the website — " + data.subject);
+        p.innerHTML = "That didn&rsquo;t go through &mdash; please try again, or <a href=\"" + wa + "\" target=\"_blank\" rel=\"noopener\" style=\"border-bottom:1px solid currentColor\">WhatsApp us</a> directly.";
         form.appendChild(p);
       });
     });

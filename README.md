@@ -117,8 +117,10 @@ evening: Home → Dine → Social House → Menu → Reserve (Story → Dine).
    email + domain (then fill `sitemap.xml` / `robots.txt`).
 5. **Hours — published** (Mon–Sun, 12 pm–11 pm; marked interim on the Visit page).
    **Pricing** — deliberately absent ("a living menu") until opening.
-6. **Analytics + Google Business Profile** — add your snippet; the strategy flags Google as
-   where Lagos diners *confirm* a venue.
+6. **Analytics + Google — DONE (6 Aug).** GA4 (`G-DDBRX91YCR`), Vercel Analytics + Speed
+   Insights, Search Console (verified, sitemap in), and the Google Business Profile (live,
+   details fixed) are all connected. Remaining: GBP hours + photos in early September, and
+   the Bing import. See `ONLINE-PRESENCE.md` for the full state.
 
 ---
 
@@ -126,15 +128,16 @@ evening: Home → Dine → Social House → Menu → Reserve (Story → Dine).
 
 The repo ships with a `vercel.json` **gate**: on Vercel, visitors see **only the
 coming-soon page** at the root URL, and every other page (`/menu.html`, `/lagos`,
-etc.) bounces back to it with a temporary redirect. Assets stay reachable, nothing
-is cached permanently, and the full site remains hidden until you flip it.
+etc.) bounces back to it with a temporary redirect. Assets stay reachable (and now
+carry browser cache headers — a year for versioned css/js and fonts, a week for
+images), and the full site remains hidden until you flip it.
 
 **Deploy (one time, ~5 min):**
 1. Create a free account at vercel.com — sign up **with GitHub**.
 2. "Add New… → Project" → import **Anvi-Website** → framework: *Other*, no build
    command, output directory: (leave default) → **Deploy**.
-3. You get a URL like `anvi-website.vercel.app`. Every `git push` redeploys it
-   automatically.
+3. You get a project URL (the live one is `anvi-website-keu4`, serving anvilagos.com).
+   Every `git push` redeploys it automatically.
 
 **To launch the full site later:** delete `vercel.json` (or just its `rewrites`
 and `redirects`), commit, push. That's the whole flip.

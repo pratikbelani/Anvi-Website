@@ -85,6 +85,15 @@
   .peek-foot a:hover { color: var(--gold); }
   .peek-form { display: flex; gap: .8rem 1.2rem; flex-wrap: wrap; justify-content: center; max-width: 560px; }
   .peek-form .fld { flex: 1 1 200px; margin: 0; }
+  /* Solid, opaque field fill. The cursor 'peek' spotlight reveals the bright
+     facade directly behind the form while you type, which washed out the
+     ivory text on the previously-transparent fields. An opaque fill keeps
+     whatever you enter legible no matter what the reveal shows behind it. */
+  .peek-form .fld input {
+    background: #1e1714; border: 1px solid rgba(224,218,208,.18);
+    border-radius: 7px; padding: .62rem .8rem; color: var(--ivory); }
+  .peek-form .fld input::placeholder { color: rgba(224,218,208,.42); }
+  .peek-form .fld input:focus { border-color: var(--gold); background: #251c17; }
   .peek-form .btn { flex: 1 1 100%; margin-top: .4rem; justify-content: center; }
   .peek-form .fbody { display: contents; }
   .peek-form.sent .fbody { display: none; }

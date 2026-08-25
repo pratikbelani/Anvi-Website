@@ -11,17 +11,17 @@
   gtag("js", new Date());
   gtag("config", "G-DDBRX91YCR");
 </script>
-<title>Take a Peek — ANVI · Opening Mid-September 2026 · Victoria Island, Lagos</title>
-<meta name="description" content="Something is taking shape behind the cover on Adewunmi Ogunsanya Avenue. ANVI — modern Indo-Asian cuisine. Restaurant, bar and Social House. Take a peek — doors open mid-September 2026.">
-<meta property="og:title" content="Take a Peek — ANVI is coming">
-<meta property="og:description" content="Modern Indo-Asian cuisine — restaurant, bar &amp; Social House. Victoria Island, Lagos. Doors open mid-September 2026.">
+<title>ANVI · Modern Indo-Asian Cuisine · Victoria Island, Lagos · Opening September 2026</title>
+<meta name="description" content="ANVI - Where Cultures Connect. Modern Indo-Asian restaurant, bar and Social House opening September 2026 on Adewunmi Ogunsanya Avenue, Victoria Island, Lagos. Join the guest list.">
+<meta property="og:title" content="ANVI - Where Cultures Connect">
+<meta property="og:description" content="Modern Indo-Asian restaurant, bar and Social House opening September 2026 on Adewunmi Ogunsanya Avenue, Victoria Island, Lagos. Join the guest list.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://anvilagos.com/">
 <link rel="canonical" href="https://anvilagos.com/">
 <meta property="og:image" content="https://anvilagos.com/assets/img/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="ANVI — Where Cultures Connect">
+<meta property="og:image:alt" content="ANVI · Where Cultures Connect">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://anvilagos.com/assets/img/og-cover.jpg">
 <!-- During the tease this is the ONLY page Google can crawl (every other URL 307s here),
@@ -34,7 +34,7 @@
   "name": "ANVI",
   "alternateName": "Anvi Lagos",
   "url": "https://anvilagos.com",
-  "description": "A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence — a dining room, Bar One on the first floor with its private dining room, and the Social House events floor in Victoria Island, Lagos. Opening 15 September 2026.",
+  "description": "A modern hospitality destination where refined Indian cuisine meets contemporary Asian influence - a dining room, Bar One on the first floor with its private dining room, and the Social House events floor in Victoria Island, Lagos. Opening 15 September 2026.",
   "servesCuisine": ["Indian", "Pan-Asian", "Indo-Chinese"],
   "priceRange": "$$$",
   "acceptsReservations": true,
@@ -103,28 +103,35 @@
   /* dither the AI-upscaled placeholder photo inside the reveal */
   .peek.grain::after { opacity: .12; }
   .peek__back img { filter: saturate(.96) contrast(1.03); }
-  /* keep the hint clear of the lockup: park it in the quiet zone above the footer */
-  .peek__hint { top: auto; bottom: 3.3rem; }
+  /* the hint lives in the top strip: centred between the corner lines on desktop,
+     third stacked line on mobile - it can never collide with the lockup again */
+  .peek-top .peek__hint { position: static; transform: none; color: rgba(224,218,208,.6); }
   @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.2rem; } }
   @media (max-width: 640px) {
-    .peek__hint { bottom: auto; top: 3.2rem; }
-    .peek__mark { width: min(20vw, 72px); }
+    /* the corner lines are longer since the copy pack ("Victoria Island, Lagos" /
+       "Opening September 2026") - stack them centred so they can't collide with
+       the hint, and move the hint below the stack */
+    .peek-top { flex-direction: column; align-items: center; gap: .3rem; text-align: center; }
+    /* three stacked strip lines need the body to start lower */
+    .peek { padding-top: 7.6rem; }
+    /* with the eyebrow added, the phone's top zone is crowded - the ornamental
+       arch mark duplicates the wordmark, so it yields on small screens */
+    .peek__mark { display: none; }
     .peek-foot { position: static; margin-top: 1.6rem; padding-bottom: 1.2rem; }
   }
 </style>
 </head>
 <body data-noveil data-nochrome class="peek-page">
 
-<main class="peek grain" aria-label="ANVI — coming soon">
+<main class="peek grain" aria-label="ANVI - coming soon">
   <div class="peek__back" aria-hidden="true"><img src="assets/img/facade-crown.jpg"
     srcset="assets/img/facade-crown-1200.jpg 1200w, assets/img/facade-crown-1920.jpg 1920w, assets/img/facade-crown.jpg 2880w"
     sizes="100vw" alt="" fetchpriority="high" width="2880" height="1538" style="object-position:72% 40%"></div>
   <div class="peek__cover" aria-hidden="true"></div>
-  <p class="peek__hint">Move to take a peek</p>
-
   <div class="peek-top">
-    <span>Victoria Island · Lagos</span>
-    <span>Est. 2026</span>
+    <span>Victoria Island, Lagos</span>
+    <span class="peek__hint">Move to take a peek</span>
+    <span>Opening September 2026</span>
   </div>
 
   <div class="peek__body">
@@ -134,10 +141,12 @@
       <ellipse cx="50" cy="62" rx="9" ry="14" stroke="currentColor" stroke-width="1"/>
       <circle cx="50" cy="65" r="2.8" fill="currentColor"/>
     </svg>
+    <p class="k" style="font-size:.6rem;color:rgba(224,218,208,.7)">Where Cultures Connect</p>
     <img src="assets/logo/anvi-wordmark-white.svg" alt="ANVI" style="width:min(56vw,300px)" width="300" height="83">
     <h1 class="d4" style="color:var(--ivory)">Modern Indo-Asian Cuisine</h1>
     <p class="k" style="color:var(--gold)">Restaurant · Bar · Social House</p>
 
+    <p class="k" style="font-size:.58rem;color:rgba(224,218,208,.55);margin-bottom:-.6rem">Doors open in</p>
     <div class="cd" data-count="2026-09-15" role="timer" aria-label="Countdown to soft launch">
       <div><b data-cd-d>--</b><span>Days</span></div>
       <div><b data-cd-h>--</b><span>Hours</span></div>
@@ -149,18 +158,19 @@
     <form class="peek-form" data-anvi style="max-width:640px" data-subject="Guest list — Take a Peek page">
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="fbody">
-        <div class="fld fld--dark"><label for="p-name">Name</label><input id="p-name" name="name" type="text" required autocomplete="name" placeholder="Your name"></div>
+        <div class="fld fld--dark"><label for="p-name">First name</label><input id="p-name" name="name" type="text" required autocomplete="given-name" placeholder="Your first name"></div>
         <div class="fld fld--dark"><label for="p-email">Email</label><input id="p-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"></div>
-        <div class="fld fld--dark"><label for="p-wa">WhatsApp</label><input id="p-wa" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+234 ..."></div>
-        <button class="btn" type="submit">Keep me posted <span class="ar">→</span></button>
+        <div class="fld fld--dark"><label for="p-wa">WhatsApp number</label><input id="p-wa" name="whatsapp" type="tel" required autocomplete="tel" placeholder="+234 ..."></div>
+        <button class="btn" type="submit">Join the guest list <span class="ar">→</span></button>
+        <p class="dim" style="flex:1 1 100%;text-align:center;font-size:.72rem;margin-top:.1rem">We only use this to send your invitation. No spam, ever.</p>
       </div>
-      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You'll hear it first.</h2><p class="mt-1" style="color:#A08E7D">We'll be in touch before the doors open — see you in September.</p></div>
+      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You're on the list.</h2><p class="mt-1" style="color:#A08E7D">Your invitation arrives before the doors open in September. Follow <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener" style="color:var(--gold)">@anvilagos</a> in the meantime.</p></div>
     </form>
   </div>
 
   <div class="peek-foot">
     <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener">@anvilagos</a>
-    <span>1613B Adewunmi Ogunsanya Ave</span>
+    <a href="https://maps.google.com/?q=1613B+Adewunmi+Ogunsanya+Avenue,+Victoria+Island,+Lagos" target="_blank" rel="noopener">1613B Adewunmi Ogunsanya Avenue</a>
     <a href="https://instagram.com/anvisocial" target="_blank" rel="noopener">@anvisocial</a>
   </div>
 </main>

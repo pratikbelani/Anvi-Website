@@ -456,6 +456,21 @@
     });
   });
 
+  /* ============ WhatsApp referral - "Bring a friend" ============ */
+  /* The invite reads in the guest's voice and names no month, so a forwarded
+     message stays true even if the opening date moves. wa.me with no number
+     lets WhatsApp ask the guest who to send it to - a contact or a group. */
+  (function () {
+    var MSG = "Just added my name to the guest list for ANVI, new Indo-Asian spot opening in VI. It looks seriously good and they send you an invitation before the doors open. Put your name down too: https://anvilagos.com/?utm_source=whatsapp";
+    $$("a[data-wa-share]").forEach(function (a) {
+      a.href = "https://wa.me/?text=" + encodeURIComponent(MSG);
+      a.addEventListener("click", function () {
+        try { window.gtag && window.gtag("event", "share", { method: "WhatsApp", content_type: "guest_list_invite" }); } catch (err) {}
+        try { window.va && window.va("event", { name: "Referral share", data: { method: "whatsapp" } }); } catch (err) {}
+      });
+    });
+  })();
+
   /* date inputs — no past dates */
   (function () {
     var d = new Date();

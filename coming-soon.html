@@ -73,7 +73,7 @@
 <meta name="theme-color" content="#141110">
 <link rel="preload" href="assets/fonts/EternalCmp-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/SilkSerifText-Light.otf" as="font" type="font/otf" crossorigin>
-<link rel="stylesheet" href="css/anvi.css?v=13">
+<link rel="stylesheet" href="css/anvi.css?v=14">
 <style>
   .peek-top { position: absolute; top: 1.6rem; left: 0; right: 0; z-index: 5;
     display: flex; justify-content: space-between; align-items: center; padding-inline: var(--gut);
@@ -106,7 +106,35 @@
   /* the hint lives in the top strip: centred between the corner lines on desktop,
      third stacked line on mobile - it can never collide with the lockup again */
   .peek-top .peek__hint { position: static; transform: none; color: rgba(224,218,208,.6); }
-  @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.2rem; } }
+  /* referral - a quiet courtesy inside the success card. The button keeps an
+     opaque fill for the same reason the form fields have one: the cursor peek
+     can reveal the bright facade behind it while the gold label must stay
+     legible. The block enters as a second beat just as fokIn lands. */
+  .refer { margin-top: 1.7rem; display: grid; justify-items: center; gap: .9rem;
+    animation: referIn .5s var(--ease) .45s both; }
+  @keyframes referIn { from { opacity: 0; transform: translateY(8px); } }
+  /* the global reduced-motion rule zeroes durations but not delays - with fill
+     "both" the block would sit invisible for 450ms, so kill it outright */
+  @media (prefers-reduced-motion: reduce) { .refer { animation: none; } }
+  .refer-rule { width: 2.6rem; height: 1px; background: rgba(212,142,97,.4); }
+  .refer-line { margin: 0; font-family: var(--f-body); font-size: .95rem; line-height: 1.5;
+    color: rgba(224,218,208,.72); max-width: 32ch; text-align: center; }
+  .refer-btn { display: inline-flex; align-items: center; justify-content: center; gap: .7em;
+    min-height: 48px; width: min(100%, 320px); padding: .55em 1.6em;
+    font-family: var(--f-ui); font-weight: 500; font-size: .64rem; line-height: 1.4;
+    letter-spacing: .26em; text-transform: uppercase; text-decoration: none;
+    color: var(--gold); border: 1px solid rgba(212,142,97,.45); background: #1B1512;
+    border-radius: 7px;
+    transition: border-color .45s var(--ease), background-color .45s var(--ease); }
+  .refer-btn:hover { border-color: var(--gold); background: #241C16; }
+  .refer-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-color: var(--gold); }
+  .refer-ico { width: 1.05rem; height: 1.05rem; flex: none; color: #25D366; }
+  .refer-ar { transition: transform .45s var(--ease); }
+  .refer-btn:hover .refer-ar, .refer-btn:focus-visible .refer-ar { transform: translateX(.35em); }
+  .refer-note { margin: 0; font-family: var(--f-ui); font-weight: 500; font-size: .54rem;
+    letter-spacing: .24em; text-transform: uppercase; text-align: center;
+    color: rgba(224,218,208,.6); }
+  @media (max-height: 700px) { .peek__mark { display: none; } .cd b { font-size: 2.2rem; } .refer-note { display: none; } }
   @media (max-width: 640px) {
     /* the corner lines are longer since the copy pack ("Victoria Island, Lagos" /
        "Opening September 2026") - stack them centred so they can't collide with
@@ -118,6 +146,9 @@
        arch mark duplicates the wordmark, so it yields on small screens */
     .peek__mark { display: none; }
     .peek-foot { position: static; margin-top: 1.6rem; padding-bottom: 1.2rem; }
+    /* success card sits near the bottom on phones - widest, lowest tap target */
+    .refer { margin-top: 1.3rem; gap: .8rem; }
+    .refer-btn { width: 100%; }
   }
 </style>
 </head>
@@ -164,7 +195,16 @@
         <button class="btn" type="submit">Join the guest list <span class="ar">→</span></button>
         <p class="dim" style="flex:1 1 100%;text-align:center;font-size:.72rem;margin-top:.1rem">We only use this to send your invitation. No spam, ever.</p>
       </div>
-      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You're on the list.</h2><p class="mt-1" style="color:#A08E7D">Your invitation arrives before the doors open in September. Follow <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener" style="color:var(--gold)">@anvilagos</a> in the meantime.</p></div>
+      <div class="fok" style="flex:1 1 100%"><h2 class="d5">You're on the list.</h2><p class="mt-1" style="color:#A08E7D">Your invitation arrives before the doors open. Follow <a href="https://instagram.com/anvilagos" target="_blank" rel="noopener" style="color:var(--gold)">@anvilagos</a> in the meantime.</p>
+        <div class="refer">
+          <span class="refer-rule" aria-hidden="true"></span>
+          <p class="refer-line">Save a friend a seat.</p>
+          <a class="refer-btn" href="#" data-wa-share target="_blank" rel="noopener" aria-describedby="refer-note">
+            <svg class="refer-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z"/></svg>
+            <span>Pass it on</span> <span class="refer-ar" aria-hidden="true">&rarr;</span>
+          </a>
+          <p class="refer-note" id="refer-note">Opens WhatsApp with your invite ready to send</p>
+        </div></div>
     </form>
   </div>
 
@@ -179,6 +219,6 @@
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
-<script src="js/anvi.js?v=13"></script>
+<script src="js/anvi.js?v=14"></script>
 </body>
 </html>

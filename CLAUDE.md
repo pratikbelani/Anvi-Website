@@ -9,9 +9,9 @@ Static HTML/CSS/JS, no build step. Live: https://anvilagos.com (Vercel, auto-dep
 - After ANY edit to css/anvi.css or js/anvi.js: bump the `?v=` query on BOTH files in ALL
   eight HTML pages, or phones serve stale cached assets.
 
-## Launch date — CURRENT TARGET: 1 October 2026
-Soft launch: **2026-10-01** (moved from 15 Sep on 1 Sep 2026 — chefs/managers arriving on time + training + food trials need the runway; provisional). 1 Oct 2026 is a Thursday.
-Four places must always agree — this line and the three `data-count="2026-10-01"` attributes
+## Launch date — CURRENT TARGET: 15 October 2026
+Soft launch: **2026-10-15** (moved 1 Oct → 15 Oct on 21 Sep 2026; earlier moved from 15 Sep and 28 Aug; provisional). 15 Oct 2026 is a Thursday.
+Four places must always agree — this line and the three `data-count="2026-10-15"` attributes
 (coming-soon.html, index.html, reservations.html).
 If the date moves again: change all four, then grep the pages for month copy —
 `grep -rn "mid-September\|September" --include="*.html" .` catches the announce bars, meta

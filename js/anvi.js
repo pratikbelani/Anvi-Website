@@ -174,14 +174,41 @@
   /* ============ marquee: duplicate for seamless loop ============ */
   $$(".mq__t").forEach(function (t) { t.innerHTML += t.innerHTML; });
 
-  /* ============ countdown (data-count="YYYY-MM-DD") ============ */
+  /* ============ countdown ============ */
+  /* data-count carries an explicit instant, e.g. "2026-10-15T18:00:00+01:00"
+     (6 pm Lagos, WAT), so every visitor counts to the same moment whatever
+     their own timezone. A bare "YYYY-MM-DD" still works and means 6 pm WAT.
+     At zero the digits give way to data-cd-done (default "Now open"). */
   $$("[data-count]").forEach(function (el) {
-    var target = new Date(el.getAttribute("data-count") + "T18:00:00+01:00").getTime();
+    var raw = el.getAttribute("data-count");
+    var target = new Date(raw.indexOf("T") === -1 ? raw + "T18:00:00+01:00" : raw).getTime();
+    if (isNaN(target)) return;
     var d = $("[data-cd-d]", el), h = $("[data-cd-h]", el), m = $("[data-cd-m]", el), s = $("[data-cd-s]", el);
     var plain = $("[data-cd-days]", el) || (el.hasAttribute("data-cd-days") ? el : null);
+    var timer;
     function two(n) { return n < 10 ? "0" + n : "" + n; }
+    function opened() {
+      clearInterval(timer);
+      var txt = el.getAttribute("data-cd-done") || "Now open";
+      if (d || h || m || s) {
+        var box = doc.createElement("div"), b = doc.createElement("b");
+        b.className = "cd-open";
+        b.textContent = txt;
+        box.appendChild(b);
+        el.innerHTML = "";
+        el.appendChild(box);
+        el.removeAttribute("role");
+        el.setAttribute("aria-label", txt);
+      } else {
+        el.textContent = txt;
+      }
+      el.classList.add("cd--done");
+      var lbl = el.previousElementSibling;
+      if (lbl && lbl.hasAttribute("data-cd-label")) lbl.hidden = true;
+    }
     function tickCd() {
-      var diff = Math.max(target - Date.now(), 0);
+      var diff = target - Date.now();
+      if (diff <= 0) { opened(); return; }
       var days = Math.floor(diff / 864e5);
       if (plain) plain.textContent = days;
       if (d) d.textContent = two(days);
@@ -189,8 +216,8 @@
       if (m) m.textContent = two(Math.floor(diff / 6e4) % 60);
       if (s) s.textContent = two(Math.floor(diff / 1e3) % 60);
     }
+    timer = setInterval(tickCd, (h || m || s) ? 1000 : 6e4);
     tickCd();
-    setInterval(tickCd, (h || m || s) ? 1000 : 6e4);
   });
 
   /* ============ gallery lightbox ============ */
@@ -502,6 +529,9 @@
     /* radius is computed per event, not at init — a backgrounded/zero-width
        tab at load would otherwise freeze it at 0 */
     function radius() { return (Math.min(window.innerWidth, 520) * 0.21) || 110; }
+    /* phones and tablets have no cursor to "move" - ask for a tap instead */
+    var hint = $(".peek__hint", peek);
+    if (hint && window.matchMedia("(hover: none)").matches) hint.textContent = "Tap to take a peek";
     function setVars(x, y, r) {
       peek.style.setProperty("--peek-x", x + "px");
       peek.style.setProperty("--peek-y", y + "px");
@@ -518,16 +548,25 @@
     })();
     function at(e) {
       var p = e.touches ? e.touches[0] : e;
+      if (!p) return;
       var rect = peek.getBoundingClientRect();
       tx = p.clientX - rect.left; ty = p.clientY - rect.top;
     }
-    function openPeek(e) { at(e); tr = radius(); }
-    peek.addEventListener("pointermove", openPeek);
-    peek.addEventListener("pointerdown", openPeek);
-    peek.addEventListener("pointerleave", function () { tr = 0; });
+    var shut;
+    function openPeek(e) { clearTimeout(shut); at(e); tr = radius(); }
+    /* mouse and pen: the hole follows the cursor and closes when it leaves */
+    function notTouch(fn) { return function (e) { if (e.pointerType !== "touch") fn(e); }; }
+    peek.addEventListener("pointermove", notTouch(openPeek));
+    peek.addEventListener("pointerdown", notTouch(openPeek));
+    peek.addEventListener("pointerleave", notTouch(function () { tr = 0; }));
+    /* touch: a tap opens the hole where the finger lands and holds it long
+       enough to see; a drag carries it along (even while the page scrolls,
+       since touchmove keeps firing when pointer events are cancelled) */
     peek.addEventListener("touchstart", openPeek, { passive: true });
     peek.addEventListener("touchmove", openPeek, { passive: true });
-    peek.addEventListener("touchend", function () { tr = 0; });
+    function closeSoon() { clearTimeout(shut); shut = setTimeout(function () { tr = 0; }, 2200); }
+    peek.addEventListener("touchend", closeSoon);
+    peek.addEventListener("touchcancel", closeSoon);
   })();
 
   /* footer year */

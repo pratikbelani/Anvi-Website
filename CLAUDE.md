@@ -11,8 +11,11 @@ Static HTML/CSS/JS, no build step. Live: https://anvilagos.com (Vercel, auto-dep
 
 ## Launch date — CURRENT TARGET: 15 October 2026
 Soft launch: **2026-10-15** (moved 1 Oct → 15 Oct on 21 Sep 2026; earlier moved from 15 Sep and 28 Aug; provisional). 15 Oct 2026 is a Thursday.
-Four places must always agree — this line and the three `data-count="2026-10-15"` attributes
-(coming-soon.html, index.html, reservations.html).
+Doors (and the countdowns) are timed to 6:00 PM Lagos time (WAT, UTC+1).
+Four places must always agree - this line and the three `data-count="2026-10-15T18:00:00+01:00"`
+attributes (coming-soon.html, index.html, reservations.html). Also keep the schema.org
+`validFrom` in coming-soon.html and index.html on the same instant. At zero the countdowns
+switch to "Now open" (override per element with `data-cd-done`).
 If the date moves again: change all four, then grep the pages for month copy —
 `grep -rn "mid-September\|September" --include="*.html" .` catches the announce bars, meta
 descriptions, the About road-to-opening, the peek success message and the Visit heading.

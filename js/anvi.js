@@ -539,13 +539,21 @@
     }
     if (RM) { setVars(window.innerWidth / 2, window.innerHeight * 0.4, radius()); peek.classList.add("peeking"); return; }
     var tx = window.innerWidth / 2, ty = window.innerHeight * 0.4, cx = tx, cy = ty, cr = 0, tr = 0;
-    (function loop() {
+    /* the easing loop only runs while the hole is moving or resizing, then
+       sleeps - left running every frame from load, its style writes kept slow
+       phones busy and held back the first paint */
+    var raf = 0;
+    function frame() {
       cx += (tx - cx) * 0.12; cy += (ty - cy) * 0.12; cr += (tr - cr) * 0.1;
+      if (Math.abs(tx - cx) < 0.5 && Math.abs(ty - cy) < 0.5 && Math.abs(tr - cr) < 0.5) {
+        cx = tx; cy = ty; cr = tr; raf = 0;
+      } else raf = requestAnimationFrame(frame);
       setVars(cx, cy, cr);
       /* class gates the mask: solid cover whenever the hole is closed */
       peek.classList.toggle("peeking", cr > 1.5);
-      requestAnimationFrame(loop);
-    })();
+    }
+    function kick() { if (!raf) raf = requestAnimationFrame(frame); }
+    setVars(cx, cy, cr);
     function at(e) {
       var p = e.touches ? e.touches[0] : e;
       if (!p) return;
@@ -553,18 +561,18 @@
       tx = p.clientX - rect.left; ty = p.clientY - rect.top;
     }
     var shut;
-    function openPeek(e) { clearTimeout(shut); at(e); tr = radius(); }
+    function openPeek(e) { clearTimeout(shut); at(e); tr = radius(); kick(); }
     /* mouse and pen: the hole follows the cursor and closes when it leaves */
     function notTouch(fn) { return function (e) { if (e.pointerType !== "touch") fn(e); }; }
     peek.addEventListener("pointermove", notTouch(openPeek));
     peek.addEventListener("pointerdown", notTouch(openPeek));
-    peek.addEventListener("pointerleave", notTouch(function () { tr = 0; }));
+    peek.addEventListener("pointerleave", notTouch(function () { tr = 0; kick(); }));
     /* touch: a tap opens the hole where the finger lands and holds it long
        enough to see; a drag carries it along (even while the page scrolls,
        since touchmove keeps firing when pointer events are cancelled) */
     peek.addEventListener("touchstart", openPeek, { passive: true });
     peek.addEventListener("touchmove", openPeek, { passive: true });
-    function closeSoon() { clearTimeout(shut); shut = setTimeout(function () { tr = 0; }, 2200); }
+    function closeSoon() { clearTimeout(shut); shut = setTimeout(function () { tr = 0; kick(); }, 2200); }
     peek.addEventListener("touchend", closeSoon);
     peek.addEventListener("touchcancel", closeSoon);
   })();
